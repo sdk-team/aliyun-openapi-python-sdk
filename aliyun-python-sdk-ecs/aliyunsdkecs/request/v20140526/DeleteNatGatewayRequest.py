@@ -29,6 +29,12 @@ class DeleteNatGatewayRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
+	def get_NatGatewayId(self):
+		return self.get_query_params().get('NatGatewayId')
+
+	def set_NatGatewayId(self,NatGatewayId):
+		self.add_query_param('NatGatewayId',NatGatewayId)
+
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
 
@@ -40,12 +46,6 @@ class DeleteNatGatewayRequest(RpcRequest):
 
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
-
-	def get_NatGatewayId(self):
-		return self.get_query_params().get('NatGatewayId')
-
-	def set_NatGatewayId(self,NatGatewayId):
-		self.add_query_param('NatGatewayId',NatGatewayId)
 
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')

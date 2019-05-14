@@ -29,6 +29,12 @@ class ModifyEipAddressAttributeRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
+	def get_AllocationId(self):
+		return self.get_query_params().get('AllocationId')
+
+	def set_AllocationId(self,AllocationId):
+		self.add_query_param('AllocationId',AllocationId)
+
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
 
@@ -46,12 +52,6 @@ class ModifyEipAddressAttributeRequest(RpcRequest):
 
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
-
-	def get_AllocationId(self):
-		return self.get_query_params().get('AllocationId')
-
-	def set_AllocationId(self,AllocationId):
-		self.add_query_param('AllocationId',AllocationId)
 
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')

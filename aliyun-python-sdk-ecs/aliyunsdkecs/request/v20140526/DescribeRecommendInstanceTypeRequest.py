@@ -29,18 +29,6 @@ class DescribeRecommendInstanceTypeRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_ResourceOwnerAccount(self):
-		return self.get_query_params().get('ResourceOwnerAccount')
-
-	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
-		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
-
-	def get_OwnerAccount(self):
-		return self.get_query_params().get('OwnerAccount')
-
-	def set_OwnerAccount(self,OwnerAccount):
-		self.add_query_param('OwnerAccount',OwnerAccount)
-
 	def get_channel(self):
 		return self.get_query_params().get('channel')
 
@@ -53,23 +41,11 @@ class DescribeRecommendInstanceTypeRequest(RpcRequest):
 	def set_NetworkType(self,NetworkType):
 		self.add_query_param('NetworkType',NetworkType)
 
-	def get_OwnerId(self):
-		return self.get_query_params().get('OwnerId')
-
-	def set_OwnerId(self,OwnerId):
-		self.add_query_param('OwnerId',OwnerId)
-
 	def get_operator(self):
 		return self.get_query_params().get('operator')
 
 	def set_operator(self,operator):
 		self.add_query_param('operator',operator)
-
-	def get_token(self):
-		return self.get_query_params().get('token')
-
-	def set_token(self,token):
-		self.add_query_param('token',token)
 
 	def get_Scene(self):
 		return self.get_query_params().get('Scene')
@@ -88,3 +64,27 @@ class DescribeRecommendInstanceTypeRequest(RpcRequest):
 
 	def set_proxyId(self,proxyId):
 		self.add_query_param('proxyId',proxyId)
+
+	def get_ResourceOwnerAccount(self):
+		return self.get_query_params().get('ResourceOwnerAccount')
+
+	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
+		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
+
+	def get_OwnerAccount(self):
+		return self.get_query_params().get('OwnerAccount')
+
+	def set_OwnerAccount(self,OwnerAccount):
+		self.add_query_param('OwnerAccount',OwnerAccount)
+
+	def get_OwnerId(self):
+		return self.get_query_params().get('OwnerId')
+
+	def set_OwnerId(self,OwnerId):
+		self.add_query_param('OwnerId',OwnerId)
+
+	def get_token(self):
+		return self.get_query_params().get('token')
+
+	def set_token(self,token):
+		self.add_query_param('token',token)

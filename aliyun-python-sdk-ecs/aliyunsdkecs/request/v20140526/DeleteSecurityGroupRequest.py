@@ -29,6 +29,12 @@ class DeleteSecurityGroupRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
+	def get_SecurityGroupId(self):
+		return self.get_query_params().get('SecurityGroupId')
+
+	def set_SecurityGroupId(self,SecurityGroupId):
+		self.add_query_param('SecurityGroupId',SecurityGroupId)
+
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
 
@@ -40,12 +46,6 @@ class DeleteSecurityGroupRequest(RpcRequest):
 
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
-
-	def get_SecurityGroupId(self):
-		return self.get_query_params().get('SecurityGroupId')
-
-	def set_SecurityGroupId(self,SecurityGroupId):
-		self.add_query_param('SecurityGroupId',SecurityGroupId)
 
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')

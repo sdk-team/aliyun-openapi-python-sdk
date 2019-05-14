@@ -82,3 +82,9 @@ class CreateCommandRequest(RpcRequest):
 
 	def set_Name(self,Name):
 		self.add_query_param('Name',Name)
+
+	def get_EnableParameter(self):
+		return self.get_query_params().get('EnableParameter')
+
+	def set_EnableParameter(self,EnableParameter):
+		self.add_query_param('EnableParameter',EnableParameter)

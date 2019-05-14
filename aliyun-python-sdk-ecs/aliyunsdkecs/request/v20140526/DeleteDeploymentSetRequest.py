@@ -23,17 +23,17 @@ class DeleteDeploymentSetRequest(RpcRequest):
 	def __init__(self):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DeleteDeploymentSet','ecs')
 
-	def get_DeploymentSetId(self):
-		return self.get_query_params().get('DeploymentSetId')
-
-	def set_DeploymentSetId(self,DeploymentSetId):
-		self.add_query_param('DeploymentSetId',DeploymentSetId)
-
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_DeploymentSetId(self):
+		return self.get_query_params().get('DeploymentSetId')
+
+	def set_DeploymentSetId(self,DeploymentSetId):
+		self.add_query_param('DeploymentSetId',DeploymentSetId)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')

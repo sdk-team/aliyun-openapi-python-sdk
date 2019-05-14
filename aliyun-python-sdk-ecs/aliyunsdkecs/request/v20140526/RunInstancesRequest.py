@@ -210,6 +210,12 @@ class RunInstancesRequest(RpcRequest):
 	def set_InternetMaxBandwidthIn(self,InternetMaxBandwidthIn):
 		self.add_query_param('InternetMaxBandwidthIn',InternetMaxBandwidthIn)
 
+	def get_Affinity(self):
+		return self.get_query_params().get('Affinity')
+
+	def set_Affinity(self,Affinity):
+		self.add_query_param('Affinity',Affinity)
+
 	def get_ImageId(self):
 		return self.get_query_params().get('ImageId')
 
@@ -335,6 +341,12 @@ class RunInstancesRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
+	def get_Tenancy(self):
+		return self.get_query_params().get('Tenancy')
+
+	def set_Tenancy(self,Tenancy):
+		self.add_query_param('Tenancy',Tenancy)
+
 	def get_SystemDiskDiskName(self):
 		return self.get_query_params().get('SystemDisk.DiskName')
 
@@ -364,6 +376,14 @@ class RunInstancesRequest(RpcRequest):
 
 	def set_CreditSpecification(self,CreditSpecification):
 		self.add_query_param('CreditSpecification',CreditSpecification)
+
+	def get_SecurityGroupIdss(self):
+		return self.get_query_params().get('SecurityGroupIdss')
+
+	def set_SecurityGroupIdss(self,SecurityGroupIdss):
+		for i in range(len(SecurityGroupIdss)):	
+			if SecurityGroupIdss[i] is not None:
+				self.add_query_param('SecurityGroupIds.' + str(i + 1) , SecurityGroupIdss[i]);
 
 	def get_DataDisks(self):
 		return self.get_query_params().get('DataDisks')

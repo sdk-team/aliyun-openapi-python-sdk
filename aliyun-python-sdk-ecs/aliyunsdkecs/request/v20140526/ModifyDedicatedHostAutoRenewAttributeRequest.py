@@ -23,12 +23,6 @@ class ModifyDedicatedHostAutoRenewAttributeRequest(RpcRequest):
 	def __init__(self):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ModifyDedicatedHostAutoRenewAttribute','ecs')
 
-	def get_Duration(self):
-		return self.get_query_params().get('Duration')
-
-	def set_Duration(self,Duration):
-		self.add_query_param('Duration',Duration)
-
 	def get_DedicatedHostIds(self):
 		return self.get_query_params().get('DedicatedHostIds')
 
@@ -41,17 +35,17 @@ class ModifyDedicatedHostAutoRenewAttributeRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_PeriodUnit(self):
-		return self.get_query_params().get('PeriodUnit')
+	def get_Duration(self):
+		return self.get_query_params().get('Duration')
 
-	def set_PeriodUnit(self,PeriodUnit):
-		self.add_query_param('PeriodUnit',PeriodUnit)
+	def set_Duration(self,Duration):
+		self.add_query_param('Duration',Duration)
 
-	def get_AutoRenew(self):
-		return self.get_query_params().get('AutoRenew')
+	def get_RenewalStatus(self):
+		return self.get_query_params().get('RenewalStatus')
 
-	def set_AutoRenew(self,AutoRenew):
-		self.add_query_param('AutoRenew',AutoRenew)
+	def set_RenewalStatus(self,RenewalStatus):
+		self.add_query_param('RenewalStatus',RenewalStatus)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -65,14 +59,20 @@ class ModifyDedicatedHostAutoRenewAttributeRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
-	def get_RenewalStatus(self):
-		return self.get_query_params().get('RenewalStatus')
-
-	def set_RenewalStatus(self,RenewalStatus):
-		self.add_query_param('RenewalStatus',RenewalStatus)
-
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_PeriodUnit(self):
+		return self.get_query_params().get('PeriodUnit')
+
+	def set_PeriodUnit(self,PeriodUnit):
+		self.add_query_param('PeriodUnit',PeriodUnit)
+
+	def get_AutoRenew(self):
+		return self.get_query_params().get('AutoRenew')
+
+	def set_AutoRenew(self,AutoRenew):
+		self.add_query_param('AutoRenew',AutoRenew)
