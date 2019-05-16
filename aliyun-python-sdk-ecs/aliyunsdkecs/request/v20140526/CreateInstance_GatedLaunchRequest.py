@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class CreateInstance_GatedLaunchRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'CreateInstance_GatedLaunch','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'CreateInstance_GatedLaunch')
 
 	def get_DataDisk3Size(self):
 		return self.get_query_params().get('DataDisk.3.Size')

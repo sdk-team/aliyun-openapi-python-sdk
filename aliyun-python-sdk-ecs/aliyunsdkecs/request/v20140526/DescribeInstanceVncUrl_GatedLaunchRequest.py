@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeInstanceVncUrl_GatedLaunchRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeInstanceVncUrl_GatedLaunch','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeInstanceVncUrl_GatedLaunch')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')

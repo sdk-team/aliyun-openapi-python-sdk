@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeImagesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeImages','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeImages')
 
 	def get_ActionType(self):
 		return self.get_query_params().get('ActionType')
