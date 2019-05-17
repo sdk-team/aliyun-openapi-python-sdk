@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class SubscriptionCreateOrderApiRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Bss', '2014-07-14', 'SubscriptionCreateOrderApi','bss')
+		RpcRequest.__init__(self, 'Bss', '2014-07-14', 'SubscriptionCreateOrderApi')
 
 	def get_productCode(self):
 		return self.get_query_params().get('productCode')

@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class SetResourceBusinessStatusRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Bss', '2014-07-14', 'SetResourceBusinessStatus','bss')
+		RpcRequest.__init__(self, 'Bss', '2014-07-14', 'SetResourceBusinessStatus')
 
 	def get_BusinessStatus(self):
 		return self.get_query_params().get('BusinessStatus')

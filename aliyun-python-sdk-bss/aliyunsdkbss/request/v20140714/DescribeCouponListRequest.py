@@ -21,8 +21,8 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeCouponListRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Bss', '2014-07-14', 'DescribeCouponList','bss')
-		self.set_protocol_type('https');
+		RpcRequest.__init__(self, 'Bss', '2014-07-14', 'DescribeCouponList')
+		self.set_protocol_type('https')
 
 	def get_StartDeliveryTime(self):
 		return self.get_query_params().get('StartDeliveryTime')

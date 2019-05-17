@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class QueryForCssOrderRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Bss', '2014-07-14', 'QueryForCssOrder','bss')
+		RpcRequest.__init__(self, 'Bss', '2014-07-14', 'QueryForCssOrder')
 
 	def get_paramStr(self):
 		return self.get_query_params().get('paramStr')

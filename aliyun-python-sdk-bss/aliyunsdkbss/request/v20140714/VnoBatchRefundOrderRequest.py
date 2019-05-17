@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class VnoBatchRefundOrderRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Bss', '2014-07-14', 'VnoBatchRefundOrder','bss')
+		RpcRequest.__init__(self, 'Bss', '2014-07-14', 'VnoBatchRefundOrder')
 
 	def get_paramStr(self):
 		return self.get_query_params().get('paramStr')
