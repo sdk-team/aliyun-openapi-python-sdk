@@ -21,13 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeDBInstanceAttributeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeDBInstanceAttribute','rds')
-
-	def get_ResourceGroupId(self):
-		return self.get_query_params().get('ResourceGroupId')
-
-	def set_ResourceGroupId(self,ResourceGroupId):
-		self.add_query_param('ResourceGroupId',ResourceGroupId)
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeDBInstanceAttribute')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -35,11 +29,23 @@ class DescribeDBInstanceAttributeRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
+	def get_ResourceGroupId(self):
+		return self.get_query_params().get('ResourceGroupId')
+
+	def set_ResourceGroupId(self,ResourceGroupId):
+		self.add_query_param('ResourceGroupId',ResourceGroupId)
+
 	def get_Expired(self):
 		return self.get_query_params().get('Expired')
 
 	def set_Expired(self,Expired):
 		self.add_query_param('Expired',Expired)
+
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
+
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -52,12 +58,6 @@ class DescribeDBInstanceAttributeRequest(RpcRequest):
 
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
-
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
 
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')

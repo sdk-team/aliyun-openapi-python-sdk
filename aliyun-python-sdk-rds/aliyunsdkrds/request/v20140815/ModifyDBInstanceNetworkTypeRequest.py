@@ -21,13 +21,31 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyDBInstanceNetworkTypeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifyDBInstanceNetworkType','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifyDBInstanceNetworkType')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_ClassicExpiredDays(self):
+		return self.get_query_params().get('ClassicExpiredDays')
+
+	def set_ClassicExpiredDays(self,ClassicExpiredDays):
+		self.add_query_param('ClassicExpiredDays',ClassicExpiredDays)
+
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
+
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)
+
+	def get_ReadWriteSplittingPrivateIpAddress(self):
+		return self.get_query_params().get('ReadWriteSplittingPrivateIpAddress')
+
+	def set_ReadWriteSplittingPrivateIpAddress(self,ReadWriteSplittingPrivateIpAddress):
+		self.add_query_param('ReadWriteSplittingPrivateIpAddress',ReadWriteSplittingPrivateIpAddress)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -65,29 +83,11 @@ class ModifyDBInstanceNetworkTypeRequest(RpcRequest):
 	def set_RetainClassic(self,RetainClassic):
 		self.add_query_param('RetainClassic',RetainClassic)
 
-	def get_ClassicExpiredDays(self):
-		return self.get_query_params().get('ClassicExpiredDays')
-
-	def set_ClassicExpiredDays(self,ClassicExpiredDays):
-		self.add_query_param('ClassicExpiredDays',ClassicExpiredDays)
-
 	def get_VPCId(self):
 		return self.get_query_params().get('VPCId')
 
 	def set_VPCId(self,VPCId):
 		self.add_query_param('VPCId',VPCId)
-
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
-
-	def get_ReadWriteSplittingPrivateIpAddress(self):
-		return self.get_query_params().get('ReadWriteSplittingPrivateIpAddress')
-
-	def set_ReadWriteSplittingPrivateIpAddress(self,ReadWriteSplittingPrivateIpAddress):
-		self.add_query_param('ReadWriteSplittingPrivateIpAddress',ReadWriteSplittingPrivateIpAddress)
 
 	def get_InstanceNetworkType(self):
 		return self.get_query_params().get('InstanceNetworkType')

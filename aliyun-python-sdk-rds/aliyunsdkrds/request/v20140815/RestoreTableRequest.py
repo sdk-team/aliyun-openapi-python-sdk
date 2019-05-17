@@ -21,13 +21,31 @@ from aliyunsdkcore.request import RpcRequest
 class RestoreTableRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'RestoreTable','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'RestoreTable')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_ClientToken(self):
+		return self.get_query_params().get('ClientToken')
+
+	def set_ClientToken(self,ClientToken):
+		self.add_query_param('ClientToken',ClientToken)
+
+	def get_TableMeta(self):
+		return self.get_query_params().get('TableMeta')
+
+	def set_TableMeta(self,TableMeta):
+		self.add_query_param('TableMeta',TableMeta)
+
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
+
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)
 
 	def get_RestoreTime(self):
 		return self.get_query_params().get('RestoreTime')
@@ -41,12 +59,6 @@ class RestoreTableRequest(RpcRequest):
 	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
 		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
 
-	def get_ClientToken(self):
-		return self.get_query_params().get('ClientToken')
-
-	def set_ClientToken(self,ClientToken):
-		self.add_query_param('ClientToken',ClientToken)
-
 	def get_BackupId(self):
 		return self.get_query_params().get('BackupId')
 
@@ -58,18 +70,6 @@ class RestoreTableRequest(RpcRequest):
 
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
-
-	def get_TableMeta(self):
-		return self.get_query_params().get('TableMeta')
-
-	def set_TableMeta(self,TableMeta):
-		self.add_query_param('TableMeta',TableMeta)
-
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
 
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')

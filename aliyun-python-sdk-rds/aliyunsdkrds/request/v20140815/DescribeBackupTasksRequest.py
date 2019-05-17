@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeBackupTasksRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeBackupTasks','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeBackupTasks')
 
 	def get_BackupJobId(self):
 		return self.get_query_params().get('BackupJobId')
@@ -41,23 +41,11 @@ class DescribeBackupTasksRequest(RpcRequest):
 	def set_Flag(self,Flag):
 		self.add_query_param('Flag',Flag)
 
-	def get_ResourceOwnerAccount(self):
-		return self.get_query_params().get('ResourceOwnerAccount')
-
-	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
-		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
-
 	def get_ClientToken(self):
 		return self.get_query_params().get('ClientToken')
 
 	def set_ClientToken(self,ClientToken):
 		self.add_query_param('ClientToken',ClientToken)
-
-	def get_OwnerAccount(self):
-		return self.get_query_params().get('OwnerAccount')
-
-	def set_OwnerAccount(self,OwnerAccount):
-		self.add_query_param('OwnerAccount',OwnerAccount)
 
 	def get_DBInstanceId(self):
 		return self.get_query_params().get('DBInstanceId')
@@ -65,11 +53,17 @@ class DescribeBackupTasksRequest(RpcRequest):
 	def set_DBInstanceId(self,DBInstanceId):
 		self.add_query_param('DBInstanceId',DBInstanceId)
 
-	def get_BackupMode(self):
-		return self.get_query_params().get('BackupMode')
+	def get_ResourceOwnerAccount(self):
+		return self.get_query_params().get('ResourceOwnerAccount')
 
-	def set_BackupMode(self,BackupMode):
-		self.add_query_param('BackupMode',BackupMode)
+	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
+		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
+
+	def get_OwnerAccount(self):
+		return self.get_query_params().get('OwnerAccount')
+
+	def set_OwnerAccount(self,OwnerAccount):
+		self.add_query_param('OwnerAccount',OwnerAccount)
 
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
@@ -82,3 +76,9 @@ class DescribeBackupTasksRequest(RpcRequest):
 
 	def set_BackupJobStatus(self,BackupJobStatus):
 		self.add_query_param('BackupJobStatus',BackupJobStatus)
+
+	def get_BackupMode(self):
+		return self.get_query_params().get('BackupMode')
+
+	def set_BackupMode(self,BackupMode):
+		self.add_query_param('BackupMode',BackupMode)

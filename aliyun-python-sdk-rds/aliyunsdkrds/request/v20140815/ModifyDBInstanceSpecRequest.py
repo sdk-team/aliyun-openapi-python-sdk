@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyDBInstanceSpecRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifyDBInstanceSpec','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifyDBInstanceSpec')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -35,41 +35,17 @@ class ModifyDBInstanceSpecRequest(RpcRequest):
 	def set_DBInstanceStorage(self,DBInstanceStorage):
 		self.add_query_param('DBInstanceStorage',DBInstanceStorage)
 
-	def get_ResourceOwnerAccount(self):
-		return self.get_query_params().get('ResourceOwnerAccount')
-
-	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
-		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
-
 	def get_ClientToken(self):
 		return self.get_query_params().get('ClientToken')
 
 	def set_ClientToken(self,ClientToken):
 		self.add_query_param('ClientToken',ClientToken)
 
-	def get_OwnerAccount(self):
-		return self.get_query_params().get('OwnerAccount')
-
-	def set_OwnerAccount(self,OwnerAccount):
-		self.add_query_param('OwnerAccount',OwnerAccount)
-
 	def get_EngineVersion(self):
 		return self.get_query_params().get('EngineVersion')
 
 	def set_EngineVersion(self,EngineVersion):
 		self.add_query_param('EngineVersion',EngineVersion)
-
-	def get_OwnerId(self):
-		return self.get_query_params().get('OwnerId')
-
-	def set_OwnerId(self,OwnerId):
-		self.add_query_param('OwnerId',OwnerId)
-
-	def get_DBInstanceClass(self):
-		return self.get_query_params().get('DBInstanceClass')
-
-	def set_DBInstanceClass(self,DBInstanceClass):
-		self.add_query_param('DBInstanceClass',DBInstanceClass)
 
 	def get_EffectiveTime(self):
 		return self.get_query_params().get('EffectiveTime')
@@ -82,6 +58,30 @@ class ModifyDBInstanceSpecRequest(RpcRequest):
 
 	def set_DBInstanceId(self,DBInstanceId):
 		self.add_query_param('DBInstanceId',DBInstanceId)
+
+	def get_ResourceOwnerAccount(self):
+		return self.get_query_params().get('ResourceOwnerAccount')
+
+	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
+		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
+
+	def get_OwnerAccount(self):
+		return self.get_query_params().get('OwnerAccount')
+
+	def set_OwnerAccount(self,OwnerAccount):
+		self.add_query_param('OwnerAccount',OwnerAccount)
+
+	def get_OwnerId(self):
+		return self.get_query_params().get('OwnerId')
+
+	def set_OwnerId(self,OwnerId):
+		self.add_query_param('OwnerId',OwnerId)
+
+	def get_DBInstanceClass(self):
+		return self.get_query_params().get('DBInstanceClass')
+
+	def set_DBInstanceClass(self,DBInstanceClass):
+		self.add_query_param('DBInstanceClass',DBInstanceClass)
 
 	def get_PayType(self):
 		return self.get_query_params().get('PayType')

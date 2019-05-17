@@ -21,13 +21,31 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeRenewalPriceRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeRenewalPrice','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeRenewalPrice')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_ClientToken(self):
+		return self.get_query_params().get('ClientToken')
+
+	def set_ClientToken(self,ClientToken):
+		self.add_query_param('ClientToken',ClientToken)
+
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
+
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)
+
+	def get_BusinessInfo(self):
+		return self.get_query_params().get('BusinessInfo')
+
+	def set_BusinessInfo(self,BusinessInfo):
+		self.add_query_param('BusinessInfo',BusinessInfo)
 
 	def get_Quantity(self):
 		return self.get_query_params().get('Quantity')
@@ -40,12 +58,6 @@ class DescribeRenewalPriceRequest(RpcRequest):
 
 	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
 		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
-
-	def get_ClientToken(self):
-		return self.get_query_params().get('ClientToken')
-
-	def set_ClientToken(self,ClientToken):
-		self.add_query_param('ClientToken',ClientToken)
 
 	def get_OwnerAccount(self):
 		return self.get_query_params().get('OwnerAccount')
@@ -83,12 +95,6 @@ class DescribeRenewalPriceRequest(RpcRequest):
 	def set_PromotionCode(self,PromotionCode):
 		self.add_query_param('PromotionCode',PromotionCode)
 
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
-
 	def get_TimeType(self):
 		return self.get_query_params().get('TimeType')
 
@@ -100,12 +106,6 @@ class DescribeRenewalPriceRequest(RpcRequest):
 
 	def set_PayType(self,PayType):
 		self.add_query_param('PayType',PayType)
-
-	def get_BusinessInfo(self):
-		return self.get_query_params().get('BusinessInfo')
-
-	def set_BusinessInfo(self,BusinessInfo):
-		self.add_query_param('BusinessInfo',BusinessInfo)
 
 	def get_OrderType(self):
 		return self.get_query_params().get('OrderType')

@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ReleaseInstancePublicConnectionRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ReleaseInstancePublicConnection','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ReleaseInstancePublicConnection')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -41,12 +41,6 @@ class ReleaseInstancePublicConnectionRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
-
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
@@ -58,3 +52,9 @@ class ReleaseInstancePublicConnectionRequest(RpcRequest):
 
 	def set_CurrentConnectionString(self,CurrentConnectionString):
 		self.add_query_param('CurrentConnectionString',CurrentConnectionString)
+
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
+
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)

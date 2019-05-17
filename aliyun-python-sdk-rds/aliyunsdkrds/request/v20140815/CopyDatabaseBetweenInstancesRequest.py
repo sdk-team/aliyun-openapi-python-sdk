@@ -21,13 +21,31 @@ from aliyunsdkcore.request import RpcRequest
 class CopyDatabaseBetweenInstancesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'CopyDatabaseBetweenInstances','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'CopyDatabaseBetweenInstances')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_ClientToken(self):
+		return self.get_query_params().get('ClientToken')
+
+	def set_ClientToken(self,ClientToken):
+		self.add_query_param('ClientToken',ClientToken)
+
+	def get_ResourceGroupId(self):
+		return self.get_query_params().get('ResourceGroupId')
+
+	def set_ResourceGroupId(self,ResourceGroupId):
+		self.add_query_param('ResourceGroupId',ResourceGroupId)
+
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
+
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)
 
 	def get_RestoreTime(self):
 		return self.get_query_params().get('RestoreTime')
@@ -40,12 +58,6 @@ class CopyDatabaseBetweenInstancesRequest(RpcRequest):
 
 	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
 		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
-
-	def get_ClientToken(self):
-		return self.get_query_params().get('ClientToken')
-
-	def set_ClientToken(self,ClientToken):
-		self.add_query_param('ClientToken',ClientToken)
 
 	def get_BackupId(self):
 		return self.get_query_params().get('BackupId')
@@ -77,23 +89,11 @@ class CopyDatabaseBetweenInstancesRequest(RpcRequest):
 	def set_DbNames(self,DbNames):
 		self.add_query_param('DbNames',DbNames)
 
-	def get_ResourceGroupId(self):
-		return self.get_query_params().get('ResourceGroupId')
-
-	def set_ResourceGroupId(self,ResourceGroupId):
-		self.add_query_param('ResourceGroupId',ResourceGroupId)
-
 	def get_TargetDBInstanceId(self):
 		return self.get_query_params().get('TargetDBInstanceId')
 
 	def set_TargetDBInstanceId(self,TargetDBInstanceId):
 		self.add_query_param('TargetDBInstanceId',TargetDBInstanceId)
-
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
 
 	def get_PayType(self):
 		return self.get_query_params().get('PayType')

@@ -21,13 +21,25 @@ from aliyunsdkcore.request import RpcRequest
 class CreateMigrateTaskRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'CreateMigrateTask','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'CreateMigrateTask')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_IsOnlineDB(self):
+		return self.get_query_params().get('IsOnlineDB')
+
+	def set_IsOnlineDB(self,IsOnlineDB):
+		self.add_query_param('IsOnlineDB',IsOnlineDB)
+
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
+
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)
 
 	def get_MigrateTaskId(self):
 		return self.get_query_params().get('MigrateTaskId')
@@ -40,12 +52,6 @@ class CreateMigrateTaskRequest(RpcRequest):
 
 	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
 		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
-
-	def get_IsOnlineDB(self):
-		return self.get_query_params().get('IsOnlineDB')
-
-	def set_IsOnlineDB(self,IsOnlineDB):
-		self.add_query_param('IsOnlineDB',IsOnlineDB)
 
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
@@ -70,12 +76,6 @@ class CreateMigrateTaskRequest(RpcRequest):
 
 	def set_DBName(self,DBName):
 		self.add_query_param('DBName',DBName)
-
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
 
 	def get_BackupMode(self):
 		return self.get_query_params().get('BackupMode')

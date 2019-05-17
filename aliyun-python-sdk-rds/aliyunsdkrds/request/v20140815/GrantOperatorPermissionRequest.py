@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class GrantOperatorPermissionRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'GrantOperatorPermission','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'GrantOperatorPermission')
 
 	def get_Privileges(self):
 		return self.get_query_params().get('Privileges')
@@ -35,6 +35,12 @@ class GrantOperatorPermissionRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
+
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)
+
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
 
@@ -47,20 +53,14 @@ class GrantOperatorPermissionRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
-	def get_ExpiredTime(self):
-		return self.get_query_params().get('ExpiredTime')
-
-	def set_ExpiredTime(self,ExpiredTime):
-		self.add_query_param('ExpiredTime',ExpiredTime)
-
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
-
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_ExpiredTime(self):
+		return self.get_query_params().get('ExpiredTime')
+
+	def set_ExpiredTime(self,ExpiredTime):
+		self.add_query_param('ExpiredTime',ExpiredTime)

@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class CreateDiagnosticReportRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'CreateDiagnosticReport','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'CreateDiagnosticReport')
 
 	def get_EndTime(self):
 		return self.get_query_params().get('EndTime')
@@ -29,14 +29,14 @@ class CreateDiagnosticReportRequest(RpcRequest):
 	def set_EndTime(self,EndTime):
 		self.add_query_param('EndTime',EndTime)
 
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
-
 	def get_StartTime(self):
 		return self.get_query_params().get('StartTime')
 
 	def set_StartTime(self,StartTime):
 		self.add_query_param('StartTime',StartTime)
+
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
+
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)

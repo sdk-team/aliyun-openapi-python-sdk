@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class UpgradeDBInstanceKernelVersionRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'UpgradeDBInstanceKernelVersion','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'UpgradeDBInstanceKernelVersion')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -34,6 +34,12 @@ class UpgradeDBInstanceKernelVersionRequest(RpcRequest):
 
 	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
 		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
+
+	def get_OwnerId(self):
+		return self.get_query_params().get('OwnerId')
+
+	def set_OwnerId(self,OwnerId):
+		self.add_query_param('OwnerId',OwnerId)
 
 	def get_UpgradeTime(self):
 		return self.get_query_params().get('UpgradeTime')
@@ -52,9 +58,3 @@ class UpgradeDBInstanceKernelVersionRequest(RpcRequest):
 
 	def set_SwitchTime(self,SwitchTime):
 		self.add_query_param('SwitchTime',SwitchTime)
-
-	def get_OwnerId(self):
-		return self.get_query_params().get('OwnerId')
-
-	def set_OwnerId(self,OwnerId):
-		self.add_query_param('OwnerId',OwnerId)

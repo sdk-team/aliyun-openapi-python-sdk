@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyDBInstanceTDERequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifyDBInstanceTDE','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifyDBInstanceTDE')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -29,11 +29,11 @@ class ModifyDBInstanceTDERequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_DBName(self):
-		return self.get_query_params().get('DBName')
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
 
-	def set_DBName(self,DBName):
-		self.add_query_param('DBName',DBName)
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -41,23 +41,11 @@ class ModifyDBInstanceTDERequest(RpcRequest):
 	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
 		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
 
-	def get_RoleArn(self):
-		return self.get_query_params().get('RoleArn')
-
-	def set_RoleArn(self,RoleArn):
-		self.add_query_param('RoleArn',RoleArn)
-
 	def get_OwnerAccount(self):
 		return self.get_query_params().get('OwnerAccount')
 
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
-
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
 
 	def get_EncryptionKey(self):
 		return self.get_query_params().get('EncryptionKey')
@@ -70,6 +58,18 @@ class ModifyDBInstanceTDERequest(RpcRequest):
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_DBName(self):
+		return self.get_query_params().get('DBName')
+
+	def set_DBName(self,DBName):
+		self.add_query_param('DBName',DBName)
+
+	def get_RoleArn(self):
+		return self.get_query_params().get('RoleArn')
+
+	def set_RoleArn(self,RoleArn):
+		self.add_query_param('RoleArn',RoleArn)
 
 	def get_TDEStatus(self):
 		return self.get_query_params().get('TDEStatus')

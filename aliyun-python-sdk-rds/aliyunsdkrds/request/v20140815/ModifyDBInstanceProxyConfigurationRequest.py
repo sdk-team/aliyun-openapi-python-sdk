@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyDBInstanceProxyConfigurationRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifyDBInstanceProxyConfiguration','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifyDBInstanceProxyConfiguration')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -35,26 +35,26 @@ class ModifyDBInstanceProxyConfigurationRequest(RpcRequest):
 	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
 		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
 
-	def get_ProxyConfigurationKey(self):
-		return self.get_query_params().get('ProxyConfigurationKey')
-
-	def set_ProxyConfigurationKey(self,ProxyConfigurationKey):
-		self.add_query_param('ProxyConfigurationKey',ProxyConfigurationKey)
-
 	def get_ProxyConfigurationValue(self):
 		return self.get_query_params().get('ProxyConfigurationValue')
 
 	def set_ProxyConfigurationValue(self,ProxyConfigurationValue):
 		self.add_query_param('ProxyConfigurationValue',ProxyConfigurationValue)
 
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
-
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_ProxyConfigurationKey(self):
+		return self.get_query_params().get('ProxyConfigurationKey')
+
+	def set_ProxyConfigurationKey(self,ProxyConfigurationKey):
+		self.add_query_param('ProxyConfigurationKey',ProxyConfigurationKey)
+
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
+
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)

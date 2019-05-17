@@ -21,7 +21,13 @@ from aliyunsdkcore.request import RpcRequest
 class RequestServiceOfCloudDBExpertRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'RequestServiceOfCloudDBExpert','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'RequestServiceOfCloudDBExpert')
+
+	def get_ServiceRequestType(self):
+		return self.get_query_params().get('ServiceRequestType')
+
+	def set_ServiceRequestType(self,ServiceRequestType):
+		self.add_query_param('ServiceRequestType',ServiceRequestType)
 
 	def get_ServiceRequestParam(self):
 		return self.get_query_params().get('ServiceRequestParam')
@@ -34,9 +40,3 @@ class RequestServiceOfCloudDBExpertRequest(RpcRequest):
 
 	def set_DBInstanceId(self,DBInstanceId):
 		self.add_query_param('DBInstanceId',DBInstanceId)
-
-	def get_ServiceRequestType(self):
-		return self.get_query_params().get('ServiceRequestType')
-
-	def set_ServiceRequestType(self,ServiceRequestType):
-		self.add_query_param('ServiceRequestType',ServiceRequestType)

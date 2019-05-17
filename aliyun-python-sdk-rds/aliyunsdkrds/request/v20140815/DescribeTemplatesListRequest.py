@@ -21,13 +21,61 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeTemplatesListRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeTemplatesList','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeTemplatesList')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_StartTime(self):
+		return self.get_query_params().get('StartTime')
+
+	def set_StartTime(self,StartTime):
+		self.add_query_param('StartTime',StartTime)
+
+	def get_SortKey(self):
+		return self.get_query_params().get('SortKey')
+
+	def set_SortKey(self,SortKey):
+		self.add_query_param('SortKey',SortKey)
+
+	def get_MinAvgScanRows(self):
+		return self.get_query_params().get('MinAvgScanRows')
+
+	def set_MinAvgScanRows(self,MinAvgScanRows):
+		self.add_query_param('MinAvgScanRows',MinAvgScanRows)
+
+	def get_SecurityToken(self):
+		return self.get_query_params().get('SecurityToken')
+
+	def set_SecurityToken(self,SecurityToken):
+		self.add_query_param('SecurityToken',SecurityToken)
+
+	def get_PageNumbers(self):
+		return self.get_query_params().get('PageNumbers')
+
+	def set_PageNumbers(self,PageNumbers):
+		self.add_query_param('PageNumbers',PageNumbers)
+
+	def get_PagingId(self):
+		return self.get_query_params().get('PagingId')
+
+	def set_PagingId(self,PagingId):
+		self.add_query_param('PagingId',PagingId)
+
+	def get_DBInstanceId(self):
+		return self.get_query_params().get('DBInstanceId')
+
+	def set_DBInstanceId(self,DBInstanceId):
+		self.add_query_param('DBInstanceId',DBInstanceId)
+
+	def get_MaxAvgScanRows(self):
+		return self.get_query_params().get('MaxAvgScanRows')
+
+	def set_MaxAvgScanRows(self,MaxAvgScanRows):
+		self.add_query_param('MaxAvgScanRows',MaxAvgScanRows)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -59,12 +107,6 @@ class DescribeTemplatesListRequest(RpcRequest):
 	def set_EndTime(self,EndTime):
 		self.add_query_param('EndTime',EndTime)
 
-	def get_StartTime(self):
-		return self.get_query_params().get('StartTime')
-
-	def set_StartTime(self,StartTime):
-		self.add_query_param('StartTime',StartTime)
-
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
@@ -77,56 +119,14 @@ class DescribeTemplatesListRequest(RpcRequest):
 	def set_MaxAvgConsume(self,MaxAvgConsume):
 		self.add_query_param('MaxAvgConsume',MaxAvgConsume)
 
-	def get_SortKey(self):
-		return self.get_query_params().get('SortKey')
-
-	def set_SortKey(self,SortKey):
-		self.add_query_param('SortKey',SortKey)
-
-	def get_MinAvgScanRows(self):
-		return self.get_query_params().get('MinAvgScanRows')
-
-	def set_MinAvgScanRows(self,MinAvgScanRows):
-		self.add_query_param('MinAvgScanRows',MinAvgScanRows)
-
 	def get_SqType(self):
 		return self.get_query_params().get('SqType')
 
 	def set_SqType(self,SqType):
 		self.add_query_param('SqType',SqType)
 
-	def get_SecurityToken(self):
-		return self.get_query_params().get('SecurityToken')
-
-	def set_SecurityToken(self,SecurityToken):
-		self.add_query_param('SecurityToken',SecurityToken)
-
 	def get_SortMethod(self):
 		return self.get_query_params().get('SortMethod')
 
 	def set_SortMethod(self,SortMethod):
 		self.add_query_param('SortMethod',SortMethod)
-
-	def get_PageNumbers(self):
-		return self.get_query_params().get('PageNumbers')
-
-	def set_PageNumbers(self,PageNumbers):
-		self.add_query_param('PageNumbers',PageNumbers)
-
-	def get_PagingId(self):
-		return self.get_query_params().get('PagingId')
-
-	def set_PagingId(self,PagingId):
-		self.add_query_param('PagingId',PagingId)
-
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
-
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
-
-	def get_MaxAvgScanRows(self):
-		return self.get_query_params().get('MaxAvgScanRows')
-
-	def set_MaxAvgScanRows(self,MaxAvgScanRows):
-		self.add_query_param('MaxAvgScanRows',MaxAvgScanRows)

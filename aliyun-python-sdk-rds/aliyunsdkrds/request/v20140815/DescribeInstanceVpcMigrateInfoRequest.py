@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeInstanceVpcMigrateInfoRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeInstanceVpcMigrateInfo','rds')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeInstanceVpcMigrateInfo')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -29,29 +29,11 @@ class DescribeInstanceVpcMigrateInfoRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_ResourceOwnerAccount(self):
-		return self.get_query_params().get('ResourceOwnerAccount')
-
-	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
-		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
-
 	def get_ClientToken(self):
 		return self.get_query_params().get('ClientToken')
 
 	def set_ClientToken(self,ClientToken):
 		self.add_query_param('ClientToken',ClientToken)
-
-	def get_OwnerAccount(self):
-		return self.get_query_params().get('OwnerAccount')
-
-	def set_OwnerAccount(self,OwnerAccount):
-		self.add_query_param('OwnerAccount',OwnerAccount)
-
-	def get_VpcId(self):
-		return self.get_query_params().get('VpcId')
-
-	def set_VpcId(self,VpcId):
-		self.add_query_param('VpcId',VpcId)
 
 	def get_DBInstanceId(self):
 		return self.get_query_params().get('DBInstanceId')
@@ -59,8 +41,26 @@ class DescribeInstanceVpcMigrateInfoRequest(RpcRequest):
 	def set_DBInstanceId(self,DBInstanceId):
 		self.add_query_param('DBInstanceId',DBInstanceId)
 
+	def get_ResourceOwnerAccount(self):
+		return self.get_query_params().get('ResourceOwnerAccount')
+
+	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
+		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
+
+	def get_OwnerAccount(self):
+		return self.get_query_params().get('OwnerAccount')
+
+	def set_OwnerAccount(self,OwnerAccount):
+		self.add_query_param('OwnerAccount',OwnerAccount)
+
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_VpcId(self):
+		return self.get_query_params().get('VpcId')
+
+	def set_VpcId(self,VpcId):
+		self.add_query_param('VpcId',VpcId)
