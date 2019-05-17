@@ -23,11 +23,11 @@ class UpdateAccessKeyStatusForAccountRequest(RpcRequest):
 	def __init__(self):
 		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'UpdateAccessKeyStatusForAccount')
 
-	def get_PK(self):
-		return self.get_query_params().get('PK')
+	def get_AKStatus(self):
+		return self.get_query_params().get('AKStatus')
 
-	def set_PK(self,PK):
-		self.add_query_param('PK',PK)
+	def set_AKStatus(self,AKStatus):
+		self.add_query_param('AKStatus',AKStatus)
 
 	def get_AKId(self):
 		return self.get_query_params().get('AKId')
@@ -35,8 +35,8 @@ class UpdateAccessKeyStatusForAccountRequest(RpcRequest):
 	def set_AKId(self,AKId):
 		self.add_query_param('AKId',AKId)
 
-	def get_AKStatus(self):
-		return self.get_query_params().get('AKStatus')
+	def get_PK(self):
+		return self.get_query_params().get('PK')
 
-	def set_AKStatus(self,AKStatus):
-		self.add_query_param('AKStatus',AKStatus)
+	def set_PK(self,PK):
+		self.add_query_param('PK',PK)

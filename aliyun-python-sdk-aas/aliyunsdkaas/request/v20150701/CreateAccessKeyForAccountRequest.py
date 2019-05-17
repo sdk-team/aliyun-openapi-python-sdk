@@ -23,14 +23,14 @@ class CreateAccessKeyForAccountRequest(RpcRequest):
 	def __init__(self):
 		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateAccessKeyForAccount')
 
-	def get_PK(self):
-		return self.get_query_params().get('PK')
-
-	def set_PK(self,PK):
-		self.add_query_param('PK',PK)
-
 	def get_AKSecret(self):
 		return self.get_query_params().get('AKSecret')
 
 	def set_AKSecret(self,AKSecret):
 		self.add_query_param('AKSecret',AKSecret)
+
+	def get_PK(self):
+		return self.get_query_params().get('PK')
+
+	def set_PK(self,PK):
+		self.add_query_param('PK',PK)

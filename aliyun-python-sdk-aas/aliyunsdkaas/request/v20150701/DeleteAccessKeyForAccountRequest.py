@@ -23,14 +23,14 @@ class DeleteAccessKeyForAccountRequest(RpcRequest):
 	def __init__(self):
 		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'DeleteAccessKeyForAccount')
 
-	def get_PK(self):
-		return self.get_query_params().get('PK')
-
-	def set_PK(self,PK):
-		self.add_query_param('PK',PK)
-
 	def get_AKId(self):
 		return self.get_query_params().get('AKId')
 
 	def set_AKId(self,AKId):
 		self.add_query_param('AKId',AKId)
+
+	def get_PK(self):
+		return self.get_query_params().get('PK')
+
+	def set_PK(self,PK):
+		self.add_query_param('PK',PK)

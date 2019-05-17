@@ -18,13 +18,13 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class CreateAliyunAccountRequest(RpcRequest):
+class IsBindMfaByPkRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateAliyunAccount')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'IsBindMfaByPk')
 
-	def get_AliyunId(self):
-		return self.get_query_params().get('AliyunId')
+	def get_PK(self):
+		return self.get_query_params().get('PK')
 
-	def set_AliyunId(self,AliyunId):
-		self.add_query_param('AliyunId',AliyunId)
+	def set_PK(self,PK):
+		self.add_query_param('PK',PK)

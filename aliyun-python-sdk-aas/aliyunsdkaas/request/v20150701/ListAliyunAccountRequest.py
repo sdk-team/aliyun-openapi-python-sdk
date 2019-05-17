@@ -18,13 +18,19 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class CreateAliyunAccountRequest(RpcRequest):
+class ListAliyunAccountRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateAliyunAccount')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'ListAliyunAccount')
 
-	def get_AliyunId(self):
-		return self.get_query_params().get('AliyunId')
+	def get_Marker(self):
+		return self.get_query_params().get('Marker')
 
-	def set_AliyunId(self,AliyunId):
-		self.add_query_param('AliyunId',AliyunId)
+	def set_Marker(self,Marker):
+		self.add_query_param('Marker',Marker)
+
+	def get_MaxItems(self):
+		return self.get_query_params().get('MaxItems')
+
+	def set_MaxItems(self,MaxItems):
+		self.add_query_param('MaxItems',MaxItems)

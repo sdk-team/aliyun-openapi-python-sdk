@@ -18,13 +18,13 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class CreateAliyunAccountRequest(RpcRequest):
+class CreateIntlAliyunAccountRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateAliyunAccount')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateIntlAliyunAccount')
 
-	def get_AliyunId(self):
-		return self.get_query_params().get('AliyunId')
+	def get_NationalityCode(self):
+		return self.get_query_params().get('NationalityCode')
 
-	def set_AliyunId(self,AliyunId):
-		self.add_query_param('AliyunId',AliyunId)
+	def set_NationalityCode(self,NationalityCode):
+		self.add_query_param('NationalityCode',NationalityCode)

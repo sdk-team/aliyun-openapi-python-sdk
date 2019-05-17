@@ -18,13 +18,13 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class CreateAliyunAccountRequest(RpcRequest):
+class VerifyAccountLoginTokenRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateAliyunAccount')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'VerifyAccountLoginToken')
 
-	def get_AliyunId(self):
-		return self.get_query_params().get('AliyunId')
+	def get_LoginToken(self):
+		return self.get_query_params().get('LoginToken')
 
-	def set_AliyunId(self,AliyunId):
-		self.add_query_param('AliyunId',AliyunId)
+	def set_LoginToken(self,LoginToken):
+		self.add_query_param('LoginToken',LoginToken)
