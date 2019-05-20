@@ -18,10 +18,10 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeUserEncryptionKeyListRequest(RpcRequest):
+class EvaluateSupportByokShowRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeUserEncryptionKeyList')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'EvaluateSupportByokShow')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -29,17 +29,35 @@ class DescribeUserEncryptionKeyListRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
+	def get_NodeType(self):
+		return self.get_query_params().get('NodeType')
+
+	def set_NodeType(self,NodeType):
+		self.add_query_param('NodeType',NodeType)
+
+	def get_EngineVersion(self):
+		return self.get_query_params().get('EngineVersion')
+
+	def set_EngineVersion(self,EngineVersion):
+		self.add_query_param('EngineVersion',EngineVersion)
+
 	def get_SecurityToken(self):
 		return self.get_query_params().get('SecurityToken')
 
 	def set_SecurityToken(self,SecurityToken):
 		self.add_query_param('SecurityToken',SecurityToken)
 
-	def get_DBInstanceId(self):
-		return self.get_query_params().get('DBInstanceId')
+	def get_Engine(self):
+		return self.get_query_params().get('Engine')
 
-	def set_DBInstanceId(self,DBInstanceId):
-		self.add_query_param('DBInstanceId',DBInstanceId)
+	def set_Engine(self,Engine):
+		self.add_query_param('Engine',Engine)
+
+	def get_DbInstanceStorageType(self):
+		return self.get_query_params().get('DbInstanceStorageType')
+
+	def set_DbInstanceStorageType(self,DbInstanceStorageType):
+		self.add_query_param('DbInstanceStorageType',DbInstanceStorageType)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')

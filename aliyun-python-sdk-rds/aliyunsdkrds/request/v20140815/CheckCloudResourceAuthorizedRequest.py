@@ -58,3 +58,9 @@ class CheckCloudResourceAuthorizedRequest(RpcRequest):
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_TargetRegionId(self):
+		return self.get_query_params().get('TargetRegionId')
+
+	def set_TargetRegionId(self,TargetRegionId):
+		self.add_query_param('TargetRegionId',TargetRegionId)

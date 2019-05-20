@@ -65,6 +65,12 @@ class CreateDBInstanceRequest(RpcRequest):
 	def set_ResourceGroupId(self,ResourceGroupId):
 		self.add_query_param('ResourceGroupId',ResourceGroupId)
 
+	def get_DdrInstance(self):
+		return self.get_query_params().get('DdrInstance')
+
+	def set_DdrInstance(self,DdrInstance):
+		self.add_query_param('DdrInstance',DdrInstance)
+
 	def get_Engine(self):
 		return self.get_query_params().get('Engine')
 
@@ -113,6 +119,12 @@ class CreateDBInstanceRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
+	def get_EncryptionKey(self):
+		return self.get_query_params().get('EncryptionKey')
+
+	def set_EncryptionKey(self,EncryptionKey):
+		self.add_query_param('EncryptionKey',EncryptionKey)
+
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
@@ -148,6 +160,12 @@ class CreateDBInstanceRequest(RpcRequest):
 
 	def set_PrivateIpAddress(self,PrivateIpAddress):
 		self.add_query_param('PrivateIpAddress',PrivateIpAddress)
+
+	def get_RoleARN(self):
+		return self.get_query_params().get('RoleARN')
+
+	def set_RoleARN(self,RoleARN):
+		self.add_query_param('RoleARN',RoleARN)
 
 	def get_VPCId(self):
 		return self.get_query_params().get('VPCId')

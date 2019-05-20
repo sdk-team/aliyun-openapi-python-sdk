@@ -53,8 +53,20 @@ class DescribeDBInstanceEncryptionKeyRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
+	def get_EncryptionKey(self):
+		return self.get_query_params().get('EncryptionKey')
+
+	def set_EncryptionKey(self,EncryptionKey):
+		self.add_query_param('EncryptionKey',EncryptionKey)
+
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_TargetRegionId(self):
+		return self.get_query_params().get('TargetRegionId')
+
+	def set_TargetRegionId(self,TargetRegionId):
+		self.add_query_param('TargetRegionId',TargetRegionId)

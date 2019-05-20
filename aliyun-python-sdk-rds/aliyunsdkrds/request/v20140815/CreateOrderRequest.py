@@ -101,6 +101,12 @@ class CreateOrderRequest(RpcRequest):
 	def set_CommodityCode(self,CommodityCode):
 		self.add_query_param('CommodityCode',CommodityCode)
 
+	def get_EncryptionKey(self):
+		return self.get_query_params().get('EncryptionKey')
+
+	def set_EncryptionKey(self,EncryptionKey):
+		self.add_query_param('EncryptionKey',EncryptionKey)
+
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
@@ -142,6 +148,12 @@ class CreateOrderRequest(RpcRequest):
 
 	def set_PromotionCode(self,PromotionCode):
 		self.add_query_param('PromotionCode',PromotionCode)
+
+	def get_RoleARN(self):
+		return self.get_query_params().get('RoleARN')
+
+	def set_RoleARN(self,RoleARN):
+		self.add_query_param('RoleARN',RoleARN)
 
 	def get_ZoneId(self):
 		return self.get_query_params().get('ZoneId')
