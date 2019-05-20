@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class GetInstanceConsoleOutputRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'GetInstanceConsoleOutput')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'GetInstanceConsoleOutput','ecs')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')

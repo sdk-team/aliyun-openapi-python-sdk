@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class RenewDedicatedHostsRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'RenewDedicatedHosts')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'RenewDedicatedHosts','ecs')
 
 	def get_DedicatedHostIds(self):
 		return self.get_query_params().get('DedicatedHostIds')

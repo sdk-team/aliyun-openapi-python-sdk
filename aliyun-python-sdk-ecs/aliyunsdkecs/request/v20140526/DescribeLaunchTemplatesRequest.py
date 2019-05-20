@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeLaunchTemplatesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeLaunchTemplates')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeLaunchTemplates','ecs')
 
 	def get_LaunchTemplateNames(self):
 		return self.get_query_params().get('LaunchTemplateNames')

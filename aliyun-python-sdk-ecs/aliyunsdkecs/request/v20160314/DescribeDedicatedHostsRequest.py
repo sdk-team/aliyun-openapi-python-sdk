@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeDedicatedHostsRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2016-03-14', 'DescribeDedicatedHosts')
+		RpcRequest.__init__(self, 'Ecs', '2016-03-14', 'DescribeDedicatedHosts','ecs')
 
 	def get_DedicatedHostIds(self):
 		return self.get_query_params().get('DedicatedHostIds')

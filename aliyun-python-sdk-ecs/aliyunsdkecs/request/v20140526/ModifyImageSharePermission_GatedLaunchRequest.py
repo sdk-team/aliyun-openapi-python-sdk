@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyImageSharePermission_GatedLaunchRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ModifyImageSharePermission_GatedLaunch')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ModifyImageSharePermission_GatedLaunch','ecs')
 
 	def get_AddAccount1(self):
 		return self.get_query_params().get('AddAccount.1')

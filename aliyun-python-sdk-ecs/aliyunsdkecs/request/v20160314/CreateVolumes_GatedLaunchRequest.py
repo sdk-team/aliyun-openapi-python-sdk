@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class CreateVolumes_GatedLaunchRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2016-03-14', 'CreateVolumes_GatedLaunch')
+		RpcRequest.__init__(self, 'Ecs', '2016-03-14', 'CreateVolumes_GatedLaunch','ecs')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')

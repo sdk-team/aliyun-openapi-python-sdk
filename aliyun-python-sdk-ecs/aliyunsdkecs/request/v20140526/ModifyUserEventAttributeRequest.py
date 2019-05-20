@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyUserEventAttributeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ModifyUserEventAttribute')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ModifyUserEventAttribute','ecs')
 
 	def get_EventId(self):
 		return self.get_query_params().get('EventId')
