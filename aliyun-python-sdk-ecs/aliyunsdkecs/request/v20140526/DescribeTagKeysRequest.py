@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeTagKeysRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeTagKeys','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeTagKeys')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -64,3 +64,9 @@ class DescribeTagKeysRequest(RpcRequest):
 
 	def set_ResourceType(self,ResourceType):
 		self.add_query_param('ResourceType',ResourceType)
+
+	def get_Category(self):
+		return self.get_query_params().get('Category')
+
+	def set_Category(self,Category):
+		self.add_query_param('Category',Category)

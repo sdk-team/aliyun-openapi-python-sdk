@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeInstanceAutoRebootTimeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2016-03-14', 'DescribeInstanceAutoRebootTime','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2016-03-14', 'DescribeInstanceAutoRebootTime')
 
 	def get_AutoRebootTimeTo(self):
 		return self.get_query_params().get('AutoRebootTimeTo')

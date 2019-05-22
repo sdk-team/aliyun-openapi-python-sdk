@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyPrepayInstanceSpecRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ModifyPrepayInstanceSpec','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ModifyPrepayInstanceSpec')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -46,6 +46,12 @@ class ModifyPrepayInstanceSpecRequest(RpcRequest):
 
 	def set_SystemDiskCategory(self,SystemDiskCategory):
 		self.add_query_param('SystemDisk.Category',SystemDiskCategory)
+
+	def get_RebootTime(self):
+		return self.get_query_params().get('RebootTime')
+
+	def set_RebootTime(self,RebootTime):
+		self.add_query_param('RebootTime',RebootTime)
 
 	def get_MigrateAcrossZone(self):
 		return self.get_query_params().get('MigrateAcrossZone')
@@ -76,6 +82,12 @@ class ModifyPrepayInstanceSpecRequest(RpcRequest):
 
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
+
+	def get_EndTime(self):
+		return self.get_query_params().get('EndTime')
+
+	def set_EndTime(self,EndTime):
+		self.add_query_param('EndTime',EndTime)
 
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')

@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeInstancesFullStatusRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeInstancesFullStatus','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeInstancesFullStatus')
 
 	def get_EventIds(self):
 		return self.get_query_params().get('EventIds')

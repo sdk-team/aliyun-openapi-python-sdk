@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class GetLaunchTemplateDataRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2016-03-14', 'GetLaunchTemplateData','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2016-03-14', 'GetLaunchTemplateData')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')

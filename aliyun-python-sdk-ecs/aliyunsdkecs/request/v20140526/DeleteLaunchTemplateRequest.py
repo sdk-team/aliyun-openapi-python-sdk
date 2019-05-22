@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DeleteLaunchTemplateRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DeleteLaunchTemplate','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DeleteLaunchTemplate')
 
 	def get_LaunchTemplateName(self):
 		return self.get_query_params().get('LaunchTemplateName')

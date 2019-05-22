@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class CreateOrderRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2016-03-14', 'CreateOrder','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2016-03-14', 'CreateOrder')
 
 	def get_Commodity(self):
 		return self.get_query_params().get('Commodity')

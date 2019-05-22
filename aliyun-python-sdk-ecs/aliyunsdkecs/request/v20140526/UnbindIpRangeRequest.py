@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class UnbindIpRangeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'UnbindIpRange','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'UnbindIpRange')
 
 	def get_IpAddress(self):
 		return self.get_query_params().get('IpAddress')
