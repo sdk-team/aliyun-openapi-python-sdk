@@ -31,7 +31,7 @@ Created on 7/3/2015
 """
 
 PACKAGE = "aliyunsdkaas"
-NAME = "aliyun-python-sdk-aas-test"
+NAME = "aliyun-python-sdk-aas"
 DESCRIPTION = "The aas module of Aliyun Python sdk."
 AUTHOR = "Aliyun"
 AUTHOR_EMAIL = "aliyun-developers-efficiency@list.alibaba-inc.com"
