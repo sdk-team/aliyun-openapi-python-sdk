@@ -1,3 +1,7 @@
+2019-05-22 Version: 1.0.0
+1. 测试发布 Arms 全部语言
+2. 查看发布是否成功
+
 2018-12-21 Version: 2.3.0
 1, ARMS SDK 2018-12-19 go sdk upload
 

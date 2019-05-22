@@ -31,7 +31,7 @@ Created on 7/3/2015
 """
 
 PACKAGE = "aliyunsdkarms"
-NAME = "aliyun-python-sdk-arms"
+NAME = "aliyun-python-sdk-arms-test"
 DESCRIPTION = "The arms module of Aliyun Python sdk."
 AUTHOR = "Aliyun"
 AUTHOR_EMAIL = "aliyun-developers-efficiency@list.alibaba-inc.com"
@@ -46,13 +46,6 @@ try:
 finally:
 	desc_file.close()
 
-requires = []
-
-if sys.version_info < (3, 3):
-    requires.append("aliyun-python-sdk-core>=2.0.2")
-else:
-    requires.append("aliyun-python-sdk-core-v3>=2.3.5")
-
 setup(
     name=NAME,
     version=VERSION,
@@ -66,7 +59,7 @@ setup(
     packages=find_packages(exclude=["tests*"]),
     include_package_data=True,
     platforms="any",
-    install_requires=requires,
+    install_requires=["aliyun-python-sdk-core>=2.11.5",],
     classifiers=(
                 "Development Status :: 4 - Beta",
                 "Intended Audience :: Developers",
