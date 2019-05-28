@@ -31,7 +31,7 @@ Created on 7/3/2015
 """
 
 PACKAGE = "aliyunsdkarms"
-NAME = "aliyun-python-sdk-arms-test"
+NAME = "aliyun-python-sdk-arms"
 DESCRIPTION = "The arms module of Aliyun Python sdk."
 AUTHOR = "Aliyun"
 AUTHOR_EMAIL = "aliyun-developers-efficiency@list.alibaba-inc.com"
