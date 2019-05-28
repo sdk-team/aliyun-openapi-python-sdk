@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class GrantAccountPrivilegeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'GrantAccountPrivilege','redisa')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'GrantAccountPrivilege','kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -29,11 +29,11 @@ class GrantAccountPrivilegeRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_InstanceId(self):
-		return self.get_query_params().get('InstanceId')
+	def get_AccountPrivilege(self):
+		return self.get_query_params().get('AccountPrivilege')
 
-	def set_InstanceId(self,InstanceId):
-		self.add_query_param('InstanceId',InstanceId)
+	def set_AccountPrivilege(self,AccountPrivilege):
+		self.add_query_param('AccountPrivilege',AccountPrivilege)
 
 	def get_AccountName(self):
 		return self.get_query_params().get('AccountName')
@@ -65,8 +65,8 @@ class GrantAccountPrivilegeRequest(RpcRequest):
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
-	def get_AccountPrivilege(self):
-		return self.get_query_params().get('AccountPrivilege')
+	def get_InstanceId(self):
+		return self.get_query_params().get('InstanceId')
 
-	def set_AccountPrivilege(self,AccountPrivilege):
-		self.add_query_param('AccountPrivilege',AccountPrivilege)
+	def set_InstanceId(self,InstanceId):
+		self.add_query_param('InstanceId',InstanceId)

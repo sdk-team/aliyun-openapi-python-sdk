@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyCertificationRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyCertification','redisa')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyCertification','kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -29,17 +29,17 @@ class ModifyCertificationRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_InstanceId(self):
-		return self.get_query_params().get('InstanceId')
-
-	def set_InstanceId(self,InstanceId):
-		self.add_query_param('InstanceId',InstanceId)
-
 	def get_SecurityToken(self):
 		return self.get_query_params().get('SecurityToken')
 
 	def set_SecurityToken(self,SecurityToken):
 		self.add_query_param('SecurityToken',SecurityToken)
+
+	def get_NoCertification(self):
+		return self.get_query_params().get('NoCertification')
+
+	def set_NoCertification(self,NoCertification):
+		self.add_query_param('NoCertification',NoCertification)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -59,8 +59,8 @@ class ModifyCertificationRequest(RpcRequest):
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
-	def get_NoCertification(self):
-		return self.get_query_params().get('NoCertification')
+	def get_InstanceId(self):
+		return self.get_query_params().get('InstanceId')
 
-	def set_NoCertification(self,NoCertification):
-		self.add_query_param('NoCertification',NoCertification)
+	def set_InstanceId(self,InstanceId):
+		self.add_query_param('InstanceId',InstanceId)

@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyInstanceNetExpireTimeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyInstanceNetExpireTime','redisa')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyInstanceNetExpireTime','kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -29,11 +29,11 @@ class ModifyInstanceNetExpireTimeRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_InstanceId(self):
-		return self.get_query_params().get('InstanceId')
+	def get_ConnectionString(self):
+		return self.get_query_params().get('ConnectionString')
 
-	def set_InstanceId(self,InstanceId):
-		self.add_query_param('InstanceId',InstanceId)
+	def set_ConnectionString(self,ConnectionString):
+		self.add_query_param('ConnectionString',ConnectionString)
 
 	def get_SecurityToken(self):
 		return self.get_query_params().get('SecurityToken')
@@ -41,23 +41,17 @@ class ModifyInstanceNetExpireTimeRequest(RpcRequest):
 	def set_SecurityToken(self,SecurityToken):
 		self.add_query_param('SecurityToken',SecurityToken)
 
-	def get_ResourceOwnerAccount(self):
-		return self.get_query_params().get('ResourceOwnerAccount')
-
-	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
-		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
-
-	def get_ConnectionString(self):
-		return self.get_query_params().get('ConnectionString')
-
-	def set_ConnectionString(self,ConnectionString):
-		self.add_query_param('ConnectionString',ConnectionString)
-
 	def get_ClassicExpiredDays(self):
 		return self.get_query_params().get('ClassicExpiredDays')
 
 	def set_ClassicExpiredDays(self,ClassicExpiredDays):
 		self.add_query_param('ClassicExpiredDays',ClassicExpiredDays)
+
+	def get_ResourceOwnerAccount(self):
+		return self.get_query_params().get('ResourceOwnerAccount')
+
+	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
+		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
 
 	def get_OwnerAccount(self):
 		return self.get_query_params().get('OwnerAccount')
@@ -70,3 +64,9 @@ class ModifyInstanceNetExpireTimeRequest(RpcRequest):
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_InstanceId(self):
+		return self.get_query_params().get('InstanceId')
+
+	def set_InstanceId(self,InstanceId):
+		self.add_query_param('InstanceId',InstanceId)

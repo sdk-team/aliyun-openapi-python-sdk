@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyGuardDomainModeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyGuardDomainMode','redisa')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyGuardDomainMode','kvstore')
 
 	def get_DomainMode(self):
 		return self.get_query_params().get('DomainMode')
@@ -41,6 +41,12 @@ class ModifyGuardDomainModeRequest(RpcRequest):
 	def set_SecurityToken(self,SecurityToken):
 		self.add_query_param('SecurityToken',SecurityToken)
 
+	def get_ReplicaId(self):
+		return self.get_query_params().get('ReplicaId')
+
+	def set_ReplicaId(self,ReplicaId):
+		self.add_query_param('ReplicaId',ReplicaId)
+
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
 
@@ -52,12 +58,6 @@ class ModifyGuardDomainModeRequest(RpcRequest):
 
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
-
-	def get_ReplicaId(self):
-		return self.get_query_params().get('ReplicaId')
-
-	def set_ReplicaId(self,ReplicaId):
-		self.add_query_param('ReplicaId',ReplicaId)
 
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')

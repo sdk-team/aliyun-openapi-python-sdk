@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class AllocateInstancePublicConnectionRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'AllocateInstancePublicConnection','redisa')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'AllocateInstancePublicConnection','kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -35,12 +35,6 @@ class AllocateInstancePublicConnectionRequest(RpcRequest):
 	def set_ConnectionStringPrefix(self,ConnectionStringPrefix):
 		self.add_query_param('ConnectionStringPrefix',ConnectionStringPrefix)
 
-	def get_InstanceId(self):
-		return self.get_query_params().get('InstanceId')
-
-	def set_InstanceId(self,InstanceId):
-		self.add_query_param('InstanceId',InstanceId)
-
 	def get_SecurityToken(self):
 		return self.get_query_params().get('SecurityToken')
 
@@ -53,12 +47,6 @@ class AllocateInstancePublicConnectionRequest(RpcRequest):
 	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
 		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
 
-	def get_Port(self):
-		return self.get_query_params().get('Port')
-
-	def set_Port(self,Port):
-		self.add_query_param('Port',Port)
-
 	def get_OwnerAccount(self):
 		return self.get_query_params().get('OwnerAccount')
 
@@ -70,3 +58,15 @@ class AllocateInstancePublicConnectionRequest(RpcRequest):
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_InstanceId(self):
+		return self.get_query_params().get('InstanceId')
+
+	def set_InstanceId(self,InstanceId):
+		self.add_query_param('InstanceId',InstanceId)
+
+	def get_Port(self):
+		return self.get_query_params().get('Port')
+
+	def set_Port(self,Port):
+		self.add_query_param('Port',Port)

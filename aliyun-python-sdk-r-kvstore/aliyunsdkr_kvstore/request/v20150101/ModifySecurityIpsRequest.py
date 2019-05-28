@@ -21,13 +21,31 @@ from aliyunsdkcore.request import RpcRequest
 class ModifySecurityIpsRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifySecurityIps','redisa')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifySecurityIps','kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_SecurityIps(self):
+		return self.get_query_params().get('SecurityIps')
+
+	def set_SecurityIps(self,SecurityIps):
+		self.add_query_param('SecurityIps',SecurityIps)
+
+	def get_SecurityIpGroupName(self):
+		return self.get_query_params().get('SecurityIpGroupName')
+
+	def set_SecurityIpGroupName(self,SecurityIpGroupName):
+		self.add_query_param('SecurityIpGroupName',SecurityIpGroupName)
+
+	def get_SecurityToken(self):
+		return self.get_query_params().get('SecurityToken')
+
+	def set_SecurityToken(self,SecurityToken):
+		self.add_query_param('SecurityToken',SecurityToken)
 
 	def get_ModifyMode(self):
 		return self.get_query_params().get('ModifyMode')
@@ -47,35 +65,17 @@ class ModifySecurityIpsRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
-	def get_SecurityIps(self):
-		return self.get_query_params().get('SecurityIps')
-
-	def set_SecurityIps(self,SecurityIps):
-		self.add_query_param('SecurityIps',SecurityIps)
-
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
-	def get_SecurityIpGroupName(self):
-		return self.get_query_params().get('SecurityIpGroupName')
-
-	def set_SecurityIpGroupName(self,SecurityIpGroupName):
-		self.add_query_param('SecurityIpGroupName',SecurityIpGroupName)
-
 	def get_InstanceId(self):
 		return self.get_query_params().get('InstanceId')
 
 	def set_InstanceId(self,InstanceId):
 		self.add_query_param('InstanceId',InstanceId)
-
-	def get_SecurityToken(self):
-		return self.get_query_params().get('SecurityToken')
-
-	def set_SecurityToken(self,SecurityToken):
-		self.add_query_param('SecurityToken',SecurityToken)
 
 	def get_SecurityIpGroupAttribute(self):
 		return self.get_query_params().get('SecurityIpGroupAttribute')

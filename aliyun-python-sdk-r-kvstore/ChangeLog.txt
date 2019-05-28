@@ -1,3 +1,6 @@
+2019-05-28 Version: 3.0.0
+- Generated 2015-01-01 for `R-kvstore`
+
 2019-04-18 Version: 2.0.7
 1, CreateCacheAnalysisTask prop modify
 

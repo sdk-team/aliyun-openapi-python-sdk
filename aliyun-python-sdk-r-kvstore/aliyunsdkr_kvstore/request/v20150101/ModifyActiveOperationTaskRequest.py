@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyActiveOperationTaskRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyActiveOperationTask','redisa')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyActiveOperationTask','kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -35,6 +35,12 @@ class ModifyActiveOperationTaskRequest(RpcRequest):
 	def set_SecurityToken(self,SecurityToken):
 		self.add_query_param('SecurityToken',SecurityToken)
 
+	def get_SwitchTime(self):
+		return self.get_query_params().get('SwitchTime')
+
+	def set_SwitchTime(self,SwitchTime):
+		self.add_query_param('SwitchTime',SwitchTime)
+
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
 
@@ -47,20 +53,14 @@ class ModifyActiveOperationTaskRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
-	def get_Ids(self):
-		return self.get_query_params().get('Ids')
-
-	def set_Ids(self,Ids):
-		self.add_query_param('Ids',Ids)
-
-	def get_SwitchTime(self):
-		return self.get_query_params().get('SwitchTime')
-
-	def set_SwitchTime(self,SwitchTime):
-		self.add_query_param('SwitchTime',SwitchTime)
-
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_Ids(self):
+		return self.get_query_params().get('Ids')
+
+	def set_Ids(self,Ids):
+		self.add_query_param('Ids',Ids)

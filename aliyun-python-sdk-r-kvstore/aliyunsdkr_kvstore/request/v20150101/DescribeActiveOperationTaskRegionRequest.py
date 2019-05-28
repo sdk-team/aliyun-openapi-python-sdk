@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeActiveOperationTaskRegionRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'DescribeActiveOperationTaskRegion','redisa')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'DescribeActiveOperationTaskRegion','kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -35,17 +35,17 @@ class DescribeActiveOperationTaskRegionRequest(RpcRequest):
 	def set_IsHistory(self,IsHistory):
 		self.add_query_param('IsHistory',IsHistory)
 
-	def get_TaskType(self):
-		return self.get_query_params().get('TaskType')
-
-	def set_TaskType(self,TaskType):
-		self.add_query_param('TaskType',TaskType)
-
 	def get_SecurityToken(self):
 		return self.get_query_params().get('SecurityToken')
 
 	def set_SecurityToken(self,SecurityToken):
 		self.add_query_param('SecurityToken',SecurityToken)
+
+	def get_TaskType(self):
+		return self.get_query_params().get('TaskType')
+
+	def set_TaskType(self,TaskType):
+		self.add_query_param('TaskType',TaskType)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')

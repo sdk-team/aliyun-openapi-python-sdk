@@ -21,13 +21,25 @@ from aliyunsdkcore.request import RpcRequest
 class SwitchNetworkRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'SwitchNetwork','redisa')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'SwitchNetwork','kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_SecurityToken(self):
+		return self.get_query_params().get('SecurityToken')
+
+	def set_SecurityToken(self,SecurityToken):
+		self.add_query_param('SecurityToken',SecurityToken)
+
+	def get_ClassicExpiredDays(self):
+		return self.get_query_params().get('ClassicExpiredDays')
+
+	def set_ClassicExpiredDays(self,ClassicExpiredDays):
+		self.add_query_param('ClassicExpiredDays',ClassicExpiredDays)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -59,12 +71,6 @@ class SwitchNetworkRequest(RpcRequest):
 	def set_InstanceId(self,InstanceId):
 		self.add_query_param('InstanceId',InstanceId)
 
-	def get_SecurityToken(self):
-		return self.get_query_params().get('SecurityToken')
-
-	def set_SecurityToken(self,SecurityToken):
-		self.add_query_param('SecurityToken',SecurityToken)
-
 	def get_TargetNetworkType(self):
 		return self.get_query_params().get('TargetNetworkType')
 
@@ -76,12 +82,6 @@ class SwitchNetworkRequest(RpcRequest):
 
 	def set_RetainClassic(self,RetainClassic):
 		self.add_query_param('RetainClassic',RetainClassic)
-
-	def get_ClassicExpiredDays(self):
-		return self.get_query_params().get('ClassicExpiredDays')
-
-	def set_ClassicExpiredDays(self,ClassicExpiredDays):
-		self.add_query_param('ClassicExpiredDays',ClassicExpiredDays)
 
 	def get_VpcId(self):
 		return self.get_query_params().get('VpcId')

@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyAuditLogConfigRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyAuditLogConfig','redisa')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyAuditLogConfig','kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -29,29 +29,29 @@ class ModifyAuditLogConfigRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_InstanceId(self):
-		return self.get_query_params().get('InstanceId')
-
-	def set_InstanceId(self,InstanceId):
-		self.add_query_param('InstanceId',InstanceId)
-
 	def get_SecurityToken(self):
 		return self.get_query_params().get('SecurityToken')
 
 	def set_SecurityToken(self,SecurityToken):
 		self.add_query_param('SecurityToken',SecurityToken)
 
-	def get_ResourceOwnerAccount(self):
-		return self.get_query_params().get('ResourceOwnerAccount')
-
-	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
-		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
-
 	def get_AuditCommand(self):
 		return self.get_query_params().get('AuditCommand')
 
 	def set_AuditCommand(self,AuditCommand):
 		self.add_query_param('AuditCommand',AuditCommand)
+
+	def get_Retention(self):
+		return self.get_query_params().get('Retention')
+
+	def set_Retention(self,Retention):
+		self.add_query_param('Retention',Retention)
+
+	def get_ResourceOwnerAccount(self):
+		return self.get_query_params().get('ResourceOwnerAccount')
+
+	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
+		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
 
 	def get_OwnerAccount(self):
 		return self.get_query_params().get('OwnerAccount')
@@ -65,8 +65,8 @@ class ModifyAuditLogConfigRequest(RpcRequest):
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
-	def get_Retention(self):
-		return self.get_query_params().get('Retention')
+	def get_InstanceId(self):
+		return self.get_query_params().get('InstanceId')
 
-	def set_Retention(self,Retention):
-		self.add_query_param('Retention',Retention)
+	def set_InstanceId(self,InstanceId):
+		self.add_query_param('InstanceId',InstanceId)

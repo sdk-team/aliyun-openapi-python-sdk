@@ -21,19 +21,13 @@ from aliyunsdkcore.request import RpcRequest
 class ReleaseInstancePublicConnectionRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ReleaseInstancePublicConnection','redisa')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ReleaseInstancePublicConnection','kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
-
-	def get_InstanceId(self):
-		return self.get_query_params().get('InstanceId')
-
-	def set_InstanceId(self,InstanceId):
-		self.add_query_param('InstanceId',InstanceId)
 
 	def get_SecurityToken(self):
 		return self.get_query_params().get('SecurityToken')
@@ -64,3 +58,9 @@ class ReleaseInstancePublicConnectionRequest(RpcRequest):
 
 	def set_CurrentConnectionString(self,CurrentConnectionString):
 		self.add_query_param('CurrentConnectionString',CurrentConnectionString)
+
+	def get_InstanceId(self):
+		return self.get_query_params().get('InstanceId')
+
+	def set_InstanceId(self,InstanceId):
+		self.add_query_param('InstanceId',InstanceId)
