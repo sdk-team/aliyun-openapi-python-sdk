@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class CreateDBInstanceforFirstPayRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'CreateDBInstanceforFirstPay')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'CreateDBInstanceforFirstPay','rds')
 
 	def get_DBInstanceStorage(self):
 		return self.get_query_params().get('DBInstanceStorage')

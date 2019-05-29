@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeServiceOfCloudDBARequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeServiceOfCloudDBA')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeServiceOfCloudDBA','rds')
 
 	def get_ServiceRequestType(self):
 		return self.get_query_params().get('ServiceRequestType')

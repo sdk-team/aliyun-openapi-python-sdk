@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class CreateChildDBInstanceRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2013-05-28', 'CreateChildDBInstance')
+		RpcRequest.__init__(self, 'Rds', '2013-05-28', 'CreateChildDBInstance','rds')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')

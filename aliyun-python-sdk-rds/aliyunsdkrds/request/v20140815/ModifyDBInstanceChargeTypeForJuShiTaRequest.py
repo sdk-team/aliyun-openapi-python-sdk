@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyDBInstanceChargeTypeForJuShiTaRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifyDBInstanceChargeTypeForJuShiTa')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifyDBInstanceChargeTypeForJuShiTa','rds')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')

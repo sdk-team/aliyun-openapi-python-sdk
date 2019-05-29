@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifySecurityIpsForChannelRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifySecurityIpsForChannel')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'ModifySecurityIpsForChannel','rds')
 
 	def get_DBInstanceIPArrayName(self):
 		return self.get_query_params().get('DBInstanceIPArrayName')

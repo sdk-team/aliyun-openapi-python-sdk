@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class GrantAccountPrivilegeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2013-05-28', 'GrantAccountPrivilege')
+		RpcRequest.__init__(self, 'Rds', '2013-05-28', 'GrantAccountPrivilege','rds')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')

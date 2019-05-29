@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeDBInstanceNetworkDetailRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeDBInstanceNetworkDetail')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeDBInstanceNetworkDetail','rds')
 
 	def get_StartPoint(self):
 		return self.get_query_params().get('StartPoint')

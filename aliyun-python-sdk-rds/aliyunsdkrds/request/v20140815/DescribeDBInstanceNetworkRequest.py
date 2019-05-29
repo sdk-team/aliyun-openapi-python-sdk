@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeDBInstanceNetworkRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeDBInstanceNetwork')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeDBInstanceNetwork','rds')
 
 	def get_EndTime(self):
 		return self.get_query_params().get('EndTime')

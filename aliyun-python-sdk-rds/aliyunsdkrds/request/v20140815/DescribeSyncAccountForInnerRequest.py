@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeSyncAccountForInnerRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeSyncAccountForInner')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'DescribeSyncAccountForInner','rds')
 
 	def get_DBInstanceName(self):
 		return self.get_query_params().get('DBInstanceName')

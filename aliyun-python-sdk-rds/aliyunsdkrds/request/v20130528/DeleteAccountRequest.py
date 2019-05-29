@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DeleteAccountRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2013-05-28', 'DeleteAccount')
+		RpcRequest.__init__(self, 'Rds', '2013-05-28', 'DeleteAccount','rds')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')

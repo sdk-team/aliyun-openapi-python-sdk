@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class CreateOrderRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'CreateOrder')
+		RpcRequest.__init__(self, 'Rds', '2014-08-15', 'CreateOrder','rds')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
