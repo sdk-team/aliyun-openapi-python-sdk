@@ -18,10 +18,10 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
+class SetAccessControlListAttributeImplRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DescribeMasterSlaveServerGroups','asdfdsf')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'SetAccessControlListAttributeImpl','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')
@@ -29,17 +29,23 @@ class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
 	def set_access_key_id(self,access_key_id):
 		self.add_query_param('access_key_id',access_key_id)
 
+	def get_AclId(self):
+		return self.get_query_params().get('AclId')
+
+	def set_AclId(self,AclId):
+		self.add_query_param('AclId',AclId)
+
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_LoadBalancerId(self):
-		return self.get_query_params().get('LoadBalancerId')
+	def get_AclName(self):
+		return self.get_query_params().get('AclName')
 
-	def set_LoadBalancerId(self,LoadBalancerId):
-		self.add_query_param('LoadBalancerId',LoadBalancerId)
+	def set_AclName(self,AclName):
+		self.add_query_param('AclName',AclName)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')

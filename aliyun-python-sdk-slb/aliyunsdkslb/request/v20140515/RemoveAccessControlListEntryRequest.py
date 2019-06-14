@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class RemoveAccessControlListEntryRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'RemoveAccessControlListEntry','slb')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'RemoveAccessControlListEntry','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')

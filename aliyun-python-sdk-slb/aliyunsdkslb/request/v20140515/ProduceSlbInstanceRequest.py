@@ -18,10 +18,10 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
+class ProduceSlbInstanceRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DescribeMasterSlaveServerGroups','asdfdsf')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'ProduceSlbInstance','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')
@@ -35,11 +35,11 @@ class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_LoadBalancerId(self):
-		return self.get_query_params().get('LoadBalancerId')
+	def get_data(self):
+		return self.get_query_params().get('data')
 
-	def set_LoadBalancerId(self,LoadBalancerId):
-		self.add_query_param('LoadBalancerId',LoadBalancerId)
+	def set_data(self,data):
+		self.add_query_param('data',data)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -58,9 +58,3 @@ class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
-
-	def get_Tags(self):
-		return self.get_query_params().get('Tags')
-
-	def set_Tags(self,Tags):
-		self.add_query_param('Tags',Tags)

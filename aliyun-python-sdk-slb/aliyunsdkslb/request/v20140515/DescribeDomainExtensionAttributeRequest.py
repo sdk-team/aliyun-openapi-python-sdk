@@ -18,10 +18,10 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
+class DescribeDomainExtensionAttributeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DescribeMasterSlaveServerGroups','asdfdsf')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DescribeDomainExtensionAttribute','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')
@@ -34,12 +34,6 @@ class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
-
-	def get_LoadBalancerId(self):
-		return self.get_query_params().get('LoadBalancerId')
-
-	def set_LoadBalancerId(self,LoadBalancerId):
-		self.add_query_param('LoadBalancerId',LoadBalancerId)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -64,3 +58,9 @@ class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
 
 	def set_Tags(self,Tags):
 		self.add_query_param('Tags',Tags)
+
+	def get_DomainExtensionId(self):
+		return self.get_query_params().get('DomainExtensionId')
+
+	def set_DomainExtensionId(self,DomainExtensionId):
+		self.add_query_param('DomainExtensionId',DomainExtensionId)

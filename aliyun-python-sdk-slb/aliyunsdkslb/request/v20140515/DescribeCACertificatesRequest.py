@@ -21,19 +21,13 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeCACertificatesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DescribeCACertificates','slb')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DescribeCACertificates','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')
 
 	def set_access_key_id(self,access_key_id):
 		self.add_query_param('access_key_id',access_key_id)
-
-	def get_ResourceGroupId(self):
-		return self.get_query_params().get('ResourceGroupId')
-
-	def set_ResourceGroupId(self,ResourceGroupId):
-		self.add_query_param('ResourceGroupId',ResourceGroupId)
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')

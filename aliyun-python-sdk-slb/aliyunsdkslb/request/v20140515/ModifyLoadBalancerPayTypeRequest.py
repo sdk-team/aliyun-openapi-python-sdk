@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ModifyLoadBalancerPayTypeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'ModifyLoadBalancerPayType','slb')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'ModifyLoadBalancerPayType','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')
@@ -34,12 +34,6 @@ class ModifyLoadBalancerPayTypeRequest(RpcRequest):
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
-
-	def get_AutoPay(self):
-		return self.get_query_params().get('AutoPay')
-
-	def set_AutoPay(self,AutoPay):
-		self.add_query_param('AutoPay',AutoPay)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')

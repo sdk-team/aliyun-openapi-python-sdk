@@ -18,10 +18,10 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
+class AddBackendServersAsynRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DescribeMasterSlaveServerGroups','asdfdsf')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'AddBackendServersAsyn','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')
@@ -58,6 +58,12 @@ class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_BackendServers(self):
+		return self.get_query_params().get('BackendServers')
+
+	def set_BackendServers(self,BackendServers):
+		self.add_query_param('BackendServers',BackendServers)
 
 	def get_Tags(self):
 		return self.get_query_params().get('Tags')

@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class CreateAccessControlListRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'CreateAccessControlList','slb')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'CreateAccessControlList','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')
@@ -58,12 +58,6 @@ class CreateAccessControlListRequest(RpcRequest):
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
-
-	def get_AddressIPVersion(self):
-		return self.get_query_params().get('AddressIPVersion')
-
-	def set_AddressIPVersion(self,AddressIPVersion):
-		self.add_query_param('AddressIPVersion',AddressIPVersion)
 
 	def get_Tags(self):
 		return self.get_query_params().get('Tags')

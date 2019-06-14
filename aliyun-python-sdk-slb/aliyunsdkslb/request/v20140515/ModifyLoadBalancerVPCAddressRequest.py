@@ -18,16 +18,22 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
+class ModifyLoadBalancerVPCAddressRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DescribeMasterSlaveServerGroups','asdfdsf')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'ModifyLoadBalancerVPCAddress','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')
 
 	def set_access_key_id(self,access_key_id):
 		self.add_query_param('access_key_id',access_key_id)
+
+	def get_VSwitchId(self):
+		return self.get_query_params().get('VSwitchId')
+
+	def set_VSwitchId(self,VSwitchId):
+		self.add_query_param('VSwitchId',VSwitchId)
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -40,6 +46,12 @@ class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
 
 	def set_LoadBalancerId(self,LoadBalancerId):
 		self.add_query_param('LoadBalancerId',LoadBalancerId)
+
+	def get_Address(self):
+		return self.get_query_params().get('Address')
+
+	def set_Address(self,Address):
+		self.add_query_param('Address',Address)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')

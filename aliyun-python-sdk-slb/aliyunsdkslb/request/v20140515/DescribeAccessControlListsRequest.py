@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DescribeAccessControlListsRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DescribeAccessControlLists','slb')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DescribeAccessControlLists','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')
@@ -53,17 +53,17 @@ class DescribeAccessControlListsRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
+	def get_PageSize(self):
+		return self.get_query_params().get('PageSize')
+
+	def set_PageSize(self,PageSize):
+		self.add_query_param('PageSize',PageSize)
+
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
-
-	def get_AddressIPVersion(self):
-		return self.get_query_params().get('AddressIPVersion')
-
-	def set_AddressIPVersion(self,AddressIPVersion):
-		self.add_query_param('AddressIPVersion',AddressIPVersion)
 
 	def get_PageNumber(self):
 		return self.get_query_params().get('PageNumber')
@@ -76,9 +76,3 @@ class DescribeAccessControlListsRequest(RpcRequest):
 
 	def set_Tags(self,Tags):
 		self.add_query_param('Tags',Tags)
-
-	def get_PageSize(self):
-		return self.get_query_params().get('PageSize')
-
-	def set_PageSize(self,PageSize):
-		self.add_query_param('PageSize',PageSize)

@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DeleteDomainExtensionRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DeleteDomainExtension','slb')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DeleteDomainExtension','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')

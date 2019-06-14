@@ -18,10 +18,10 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
+class DeleteAccessLogsDownloadAttributeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DescribeMasterSlaveServerGroups','asdfdsf')
+		RpcRequest.__init__(self, 'Slb', '2014-05-15', 'DeleteAccessLogsDownloadAttribute','asdfdsf')
 
 	def get_access_key_id(self):
 		return self.get_query_params().get('access_key_id')
@@ -64,3 +64,9 @@ class DescribeMasterSlaveServerGroupsRequest(RpcRequest):
 
 	def set_Tags(self,Tags):
 		self.add_query_param('Tags',Tags)
+
+	def get_LogsDownloadAttributes(self):
+		return self.get_query_params().get('LogsDownloadAttributes')
+
+	def set_LogsDownloadAttributes(self,LogsDownloadAttributes):
+		self.add_query_param('LogsDownloadAttributes',LogsDownloadAttributes)
