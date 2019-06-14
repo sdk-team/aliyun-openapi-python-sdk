@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RoaRequest
 class DeleteApiInDailyRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'DeleteApiInDaily','sfdsadfs')
+		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'DeleteApiInDaily','dsafsd')
 		self.set_uri_pattern('/deleteApiInDaily')
 		self.set_method('POST|GET')
 

@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RoaRequest
 class ResumePurchasedApiRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'ResumePurchasedApi','sfdsadfs')
+		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'ResumePurchasedApi','dsafsd')
 		self.set_uri_pattern('/Api/ResumePurchasedApi')
 		self.set_method('POST|GET')
 
