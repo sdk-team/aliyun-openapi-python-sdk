@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RoaRequest
 class ModifyApiNameInDailyRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'ModifyApiNameInDaily','dsfasdf')
+		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'ModifyApiNameInDaily','sfdsadfs')
 		self.set_uri_pattern('/modifyApiNameInDaily')
 		self.set_method('POST|GET')
 
