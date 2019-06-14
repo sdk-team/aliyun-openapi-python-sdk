@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RoaRequest
 class PutFlowControlRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'PutFlowControl')
+		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'PutFlowControl','dsfasdf')
 		self.set_uri_pattern('/FlowControl/[ProductName]/[VersionName]/[ApiName]')
 		self.set_method('PUT')
 

@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RoaRequest
 class PurchaseApiRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'PurchaseApi')
+		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'PurchaseApi','dsfasdf')
 		self.set_uri_pattern('/Api/PurchaseApi')
 		self.set_method('POST|GET')
 

@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RoaRequest
 class DeleteApiOnlineRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'DeleteApiOnline')
+		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'DeleteApiOnline','dsfasdf')
 		self.set_uri_pattern('/deleteApiOnline')
 		self.set_method('POST|GET')
 
