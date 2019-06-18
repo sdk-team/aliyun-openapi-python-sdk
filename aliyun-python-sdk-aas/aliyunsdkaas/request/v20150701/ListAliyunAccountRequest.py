@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ListAliyunAccountRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'ListAliyunAccount')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'ListAliyunAccount','aas')
 
 	def get_Marker(self):
 		return self.get_query_params().get('Marker')

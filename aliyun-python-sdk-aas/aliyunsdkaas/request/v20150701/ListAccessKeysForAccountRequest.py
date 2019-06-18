@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class ListAccessKeysForAccountRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'ListAccessKeysForAccount')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'ListAccessKeysForAccount','aas')
 
 	def get_AKType(self):
 		return self.get_query_params().get('AKType')

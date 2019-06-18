@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class UpdatePasswordForAccountRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'UpdatePasswordForAccount')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'UpdatePasswordForAccount','aas')
 
 	def get_PK(self):
 		return self.get_query_params().get('PK')

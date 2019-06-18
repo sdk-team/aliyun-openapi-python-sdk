@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class GetSessionInfoByMiniTicketRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'GetSessionInfoByMiniTicket')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'GetSessionInfoByMiniTicket','aas')
 
 	def get_Ticket(self):
 		return self.get_query_params().get('Ticket')

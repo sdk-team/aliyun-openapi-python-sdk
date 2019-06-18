@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class GetBasicAccountInfoByHavanaIdRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'GetBasicAccountInfoByHavanaId')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'GetBasicAccountInfoByHavanaId','aas')
 
 	def get_HavanaId(self):
 		return self.get_query_params().get('HavanaId')

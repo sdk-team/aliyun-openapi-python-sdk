@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class VerifyAccountLoginTokenRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'VerifyAccountLoginToken')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'VerifyAccountLoginToken','aas')
 
 	def get_LoginToken(self):
 		return self.get_query_params().get('LoginToken')

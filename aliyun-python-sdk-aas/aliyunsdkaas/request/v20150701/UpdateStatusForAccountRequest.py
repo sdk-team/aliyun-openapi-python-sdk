@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class UpdateStatusForAccountRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'UpdateStatusForAccount')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'UpdateStatusForAccount','aas')
 
 	def get_AccountStatus(self):
 		return self.get_query_params().get('AccountStatus')

@@ -18,10 +18,10 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class GetAccountKinshipInfoByPKRequest(RpcRequest):
+class GetAccountKinShipInfoByPKRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'GetAccountKinshipInfoByPK')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'GetAccountKinShipInfoByPK','aas')
 
 	def get_PK(self):
 		return self.get_query_params().get('PK')

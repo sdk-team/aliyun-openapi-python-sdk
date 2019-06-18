@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class CreateAliyunAccountWithBindHidRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateAliyunAccountWithBindHid')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateAliyunAccountWithBindHid','aas')
 
 	def get_InnerAccountHid(self):
 		return self.get_query_params().get('InnerAccountHid')

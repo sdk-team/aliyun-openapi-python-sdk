@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class GenerateAccountLoginTokenRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'GenerateAccountLoginToken')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'GenerateAccountLoginToken','aas')
 
 	def get_TargetPk(self):
 		return self.get_query_params().get('TargetPk')

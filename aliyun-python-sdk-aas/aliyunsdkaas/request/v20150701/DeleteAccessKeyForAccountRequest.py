@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class DeleteAccessKeyForAccountRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'DeleteAccessKeyForAccount')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'DeleteAccessKeyForAccount','aas')
 
 	def get_AKId(self):
 		return self.get_query_params().get('AKId')

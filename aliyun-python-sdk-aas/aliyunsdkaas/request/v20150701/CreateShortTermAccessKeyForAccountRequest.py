@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class CreateShortTermAccessKeyForAccountRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateShortTermAccessKeyForAccount')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateShortTermAccessKeyForAccount','aas')
 
 	def get_ExpireTime(self):
 		return self.get_query_params().get('ExpireTime')

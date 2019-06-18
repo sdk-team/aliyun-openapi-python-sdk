@@ -21,7 +21,7 @@ from aliyunsdkcore.request import RpcRequest
 class CreateAliyunAccountRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateAliyunAccount')
+		RpcRequest.__init__(self, 'Aas', '2015-07-01', 'CreateAliyunAccount','aas')
 
 	def get_AliyunId(self):
 		return self.get_query_params().get('AliyunId')
