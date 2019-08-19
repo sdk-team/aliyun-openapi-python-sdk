@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,16 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class ModifyDrdsIpWhiteListRequest(RpcRequest):
+
+class SetupBroadcastTablesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'ModifyDrdsIpWhiteList')
-
-	def get_Mode(self):
-		return self.get_query_params().get('Mode')
-
-	def set_Mode(self,Mode):
-		self.add_query_param('Mode',Mode)
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'SetupBroadcastTables','drds')
 
 	def get_DbName(self):
 		return self.get_query_params().get('DbName')
@@ -35,26 +30,22 @@ class ModifyDrdsIpWhiteListRequest(RpcRequest):
 	def set_DbName(self,DbName):
 		self.add_query_param('DbName',DbName)
 
-	def get_GroupAttribute(self):
-		return self.get_query_params().get('GroupAttribute')
+	def get_Active(self):
+		return self.get_query_params().get('Active')
 
-	def set_GroupAttribute(self,GroupAttribute):
-		self.add_query_param('GroupAttribute',GroupAttribute)
+	def set_Active(self,Active):
+		self.add_query_param('Active',Active)
 
-	def get_IpWhiteList(self):
-		return self.get_query_params().get('IpWhiteList')
+	def get_TableNames(self):
+		return self.get_query_params().get('TableNames')
 
-	def set_IpWhiteList(self,IpWhiteList):
-		self.add_query_param('IpWhiteList',IpWhiteList)
+	def set_TableNames(self,TableNames):
+		for i in range(len(TableNames)):	
+			if TableNames[i] is not None:
+				self.add_query_param('TableName.' + str(i + 1) , TableNames[i]);
 
 	def get_DrdsInstanceId(self):
 		return self.get_query_params().get('DrdsInstanceId')
 
 	def set_DrdsInstanceId(self,DrdsInstanceId):
 		self.add_query_param('DrdsInstanceId',DrdsInstanceId)
-
-	def get_GroupName(self):
-		return self.get_query_params().get('GroupName')
-
-	def set_GroupName(self,GroupName):
-		self.add_query_param('GroupName',GroupName)

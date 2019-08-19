@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,25 +18,14 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeShardDbConnectionInfoRequest(RpcRequest):
+
+class DescribeDrdsInstancesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'DescribeShardDbConnectionInfo')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'DescribeDrdsInstances','drds')
 
-	def get_DbName(self):
-		return self.get_query_params().get('DbName')
+	def get_Type(self):
+		return self.get_query_params().get('Type')
 
-	def set_DbName(self,DbName):
-		self.add_query_param('DbName',DbName)
-
-	def get_DrdsInstanceId(self):
-		return self.get_query_params().get('DrdsInstanceId')
-
-	def set_DrdsInstanceId(self,DrdsInstanceId):
-		self.add_query_param('DrdsInstanceId',DrdsInstanceId)
-
-	def get_SubDbName(self):
-		return self.get_query_params().get('SubDbName')
-
-	def set_SubDbName(self,SubDbName):
-		self.add_query_param('SubDbName',SubDbName)
+	def set_Type(self,Type):
+		self.add_query_param('Type',Type)

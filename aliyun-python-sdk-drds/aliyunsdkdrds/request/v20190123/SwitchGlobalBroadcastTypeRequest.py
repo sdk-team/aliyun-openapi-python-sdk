@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,22 +18,17 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class RemoveReadOnlyAccountRequest(RpcRequest):
+
+class SwitchGlobalBroadcastTypeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'RemoveReadOnlyAccount')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'SwitchGlobalBroadcastType','drds')
 
 	def get_DbName(self):
 		return self.get_query_params().get('DbName')
 
 	def set_DbName(self,DbName):
 		self.add_query_param('DbName',DbName)
-
-	def get_AccountName(self):
-		return self.get_query_params().get('AccountName')
-
-	def set_AccountName(self,AccountName):
-		self.add_query_param('AccountName',AccountName)
 
 	def get_DrdsInstanceId(self):
 		return self.get_query_params().get('DrdsInstanceId')

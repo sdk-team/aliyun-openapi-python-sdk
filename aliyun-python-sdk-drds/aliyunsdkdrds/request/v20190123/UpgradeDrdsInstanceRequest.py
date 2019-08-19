@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,25 +18,26 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class QueryInstanceInfoByConnRequest(RpcRequest):
+
+class UpgradeDrdsInstanceRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'QueryInstanceInfoByConn')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'UpgradeDrdsInstance','drds')
 
-	def get_Port(self):
-		return self.get_query_params().get('Port')
+	def get_ClientToken(self):
+		return self.get_query_params().get('ClientToken')
 
-	def set_Port(self,Port):
-		self.add_query_param('Port',Port)
+	def set_ClientToken(self,ClientToken):
+		self.add_query_param('ClientToken',ClientToken)
 
-	def get_Host(self):
-		return self.get_query_params().get('Host')
+	def get_Orders(self):
+		return self.get_query_params().get('Orders')
 
-	def set_Host(self,Host):
-		self.add_query_param('Host',Host)
+	def set_Orders(self,Orders):
+		self.add_query_param('Orders',Orders)
 
-	def get_UserName(self):
-		return self.get_query_params().get('UserName')
+	def get_DrdsInstanceId(self):
+		return self.get_query_params().get('DrdsInstanceId')
 
-	def set_UserName(self,UserName):
-		self.add_query_param('UserName',UserName)
+	def set_DrdsInstanceId(self,DrdsInstanceId):
+		self.add_query_param('DrdsInstanceId',DrdsInstanceId)

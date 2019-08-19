@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,13 +18,38 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeDrdsDBsRequest(RpcRequest):
+
+class DescribeDbInstancesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'DescribeDrdsDBs')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'DescribeDbInstances','drds')
+
+	def get_Search(self):
+		return self.get_query_params().get('Search')
+
+	def set_Search(self,Search):
+		self.add_query_param('Search',Search)
+
+	def get_PageSize(self):
+		return self.get_query_params().get('PageSize')
+
+	def set_PageSize(self,PageSize):
+		self.add_query_param('PageSize',PageSize)
+
+	def get_DbInstType(self):
+		return self.get_query_params().get('DbInstType')
+
+	def set_DbInstType(self,DbInstType):
+		self.add_query_param('DbInstType',DbInstType)
 
 	def get_DrdsInstanceId(self):
 		return self.get_query_params().get('DrdsInstanceId')
 
 	def set_DrdsInstanceId(self,DrdsInstanceId):
 		self.add_query_param('DrdsInstanceId',DrdsInstanceId)
+
+	def get_PageNumber(self):
+		return self.get_query_params().get('PageNumber')
+
+	def set_PageNumber(self,PageNumber):
+		self.add_query_param('PageNumber',PageNumber)

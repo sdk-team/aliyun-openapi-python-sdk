@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,22 +18,29 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class CreateReadOnlyAccountRequest(RpcRequest):
+
+class UpdateInstanceNetworkRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'CreateReadOnlyAccount')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'UpdateInstanceNetwork','drds')
 
-	def get_password(self):
-		return self.get_query_params().get('password')
+	def get_RetainClassic(self):
+		return self.get_query_params().get('RetainClassic')
 
-	def set_password(self,password):
-		self.add_query_param('password',password)
+	def set_RetainClassic(self,RetainClassic):
+		self.add_query_param('RetainClassic',RetainClassic)
 
-	def get_DbName(self):
-		return self.get_query_params().get('DbName')
+	def get_ClassicExpiredDays(self):
+		return self.get_query_params().get('ClassicExpiredDays')
 
-	def set_DbName(self,DbName):
-		self.add_query_param('DbName',DbName)
+	def set_ClassicExpiredDays(self,ClassicExpiredDays):
+		self.add_query_param('ClassicExpiredDays',ClassicExpiredDays)
+
+	def get_SrcInstanceNetworkType(self):
+		return self.get_query_params().get('SrcInstanceNetworkType')
+
+	def set_SrcInstanceNetworkType(self,SrcInstanceNetworkType):
+		self.add_query_param('SrcInstanceNetworkType',SrcInstanceNetworkType)
 
 	def get_DrdsInstanceId(self):
 		return self.get_query_params().get('DrdsInstanceId')

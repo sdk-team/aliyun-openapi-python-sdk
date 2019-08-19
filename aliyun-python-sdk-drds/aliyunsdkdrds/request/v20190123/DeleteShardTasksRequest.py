@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,16 +18,28 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeReadOnlyAccountRequest(RpcRequest):
+
+class DeleteShardTasksRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'DescribeReadOnlyAccount')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'DeleteShardTasks','drds')
 
 	def get_DbName(self):
 		return self.get_query_params().get('DbName')
 
 	def set_DbName(self,DbName):
 		self.add_query_param('DbName',DbName)
+
+	def get_TableNames(self):
+		return self.get_query_params().get('TableNames')
+
+	def set_TableNames(self,TableNames):
+		for i in range(len(TableNames)):	
+			if TableNames[i].get('SourceTableName') is not None:
+				self.add_query_param('TableName.' + str(i + 1) + '.SourceTableName' , TableNames[i].get('SourceTableName'))
+			if TableNames[i].get('TargetTableName') is not None:
+				self.add_query_param('TableName.' + str(i + 1) + '.TargetTableName' , TableNames[i].get('TargetTableName'))
+
 
 	def get_DrdsInstanceId(self):
 		return self.get_query_params().get('DrdsInstanceId')

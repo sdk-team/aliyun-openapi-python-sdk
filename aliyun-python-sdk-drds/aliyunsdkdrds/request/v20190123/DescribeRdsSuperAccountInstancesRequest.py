@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,34 +18,25 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class CreateDrdsDBRequest(RpcRequest):
+
+class DescribeRdsSuperAccountInstancesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'CreateDrdsDB')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'DescribeRdsSuperAccountInstances','drds')
 
-	def get_Encode(self):
-		return self.get_query_params().get('Encode')
+	def get_RdsInstancess(self):
+		return self.get_query_params().get('RdsInstancess')
 
-	def set_Encode(self,Encode):
-		self.add_query_param('Encode',Encode)
+	def set_RdsInstancess(self,RdsInstancess):
+		for i in range(len(RdsInstancess)):	
+			if RdsInstancess[i] is not None:
+				self.add_query_param('RdsInstances.' + str(i + 1) , RdsInstancess[i]);
 
-	def get_Password(self):
-		return self.get_query_params().get('Password')
+	def get_DbInstType(self):
+		return self.get_query_params().get('DbInstType')
 
-	def set_Password(self,Password):
-		self.add_query_param('Password',Password)
-
-	def get_DbName(self):
-		return self.get_query_params().get('DbName')
-
-	def set_DbName(self,DbName):
-		self.add_query_param('DbName',DbName)
-
-	def get_RdsInstances(self):
-		return self.get_query_params().get('RdsInstances')
-
-	def set_RdsInstances(self,RdsInstances):
-		self.add_query_param('RdsInstances',RdsInstances)
+	def set_DbInstType(self,DbInstType):
+		self.add_query_param('DbInstType',DbInstType)
 
 	def get_DrdsInstanceId(self):
 		return self.get_query_params().get('DrdsInstanceId')

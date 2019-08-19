@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,13 +18,20 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeDrdsInstancesRequest(RpcRequest):
+
+class EnableInstanceIpv6AddressRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'DescribeDrdsInstances')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'EnableInstanceIpv6Address','drds')
 
-	def get_Type(self):
-		return self.get_query_params().get('Type')
+	def get_DrdsPassword(self):
+		return self.get_query_params().get('DrdsPassword')
 
-	def set_Type(self,Type):
-		self.add_query_param('Type',Type)
+	def set_DrdsPassword(self,DrdsPassword):
+		self.add_query_param('DrdsPassword',DrdsPassword)
+
+	def get_DrdsInstanceId(self):
+		return self.get_query_params().get('DrdsInstanceId')
+
+	def set_DrdsInstanceId(self,DrdsInstanceId):
+		self.add_query_param('DrdsInstanceId',DrdsInstanceId)

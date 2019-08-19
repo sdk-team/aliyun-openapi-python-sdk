@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,25 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class ModifyFullTableScanRequest(RpcRequest):
+
+class RearrangeDbToInstanceRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'ModifyFullTableScan')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'RearrangeDbToInstance','drds')
+
+	def get_ChooseSubDb(self):
+		return self.get_query_params().get('ChooseSubDb')
+
+	def set_ChooseSubDb(self,ChooseSubDb):
+		self.add_query_param('ChooseSubDb',ChooseSubDb)
+
+	def get_InstanceLists(self):
+		return self.get_query_params().get('InstanceLists')
+
+	def set_InstanceLists(self,InstanceLists):
+		for i in range(len(InstanceLists)):	
+			if InstanceLists[i] is not None:
+				self.add_query_param('InstanceList.' + str(i + 1) , InstanceLists[i]);
 
 	def get_DbName(self):
 		return self.get_query_params().get('DbName')
@@ -29,20 +44,20 @@ class ModifyFullTableScanRequest(RpcRequest):
 	def set_DbName(self,DbName):
 		self.add_query_param('DbName',DbName)
 
-	def get_TableNames(self):
-		return self.get_query_params().get('TableNames')
+	def get_OrderId(self):
+		return self.get_query_params().get('OrderId')
 
-	def set_TableNames(self,TableNames):
-		self.add_query_param('TableNames',TableNames)
+	def set_OrderId(self,OrderId):
+		self.add_query_param('OrderId',OrderId)
+
+	def get_ChooseRds(self):
+		return self.get_query_params().get('ChooseRds')
+
+	def set_ChooseRds(self,ChooseRds):
+		self.add_query_param('ChooseRds',ChooseRds)
 
 	def get_DrdsInstanceId(self):
 		return self.get_query_params().get('DrdsInstanceId')
 
 	def set_DrdsInstanceId(self,DrdsInstanceId):
 		self.add_query_param('DrdsInstanceId',DrdsInstanceId)
-
-	def get_FullTableScan(self):
-		return self.get_query_params().get('FullTableScan')
-
-	def set_FullTableScan(self,FullTableScan):
-		self.add_query_param('FullTableScan',FullTableScan)

@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,16 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class CreateDrdsAccountRequest(RpcRequest):
+
+class DescribeDrdsInstanceDbMonitorRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'CreateDrdsAccount')
-
-	def get_Password(self):
-		return self.get_query_params().get('Password')
-
-	def set_Password(self,Password):
-		self.add_query_param('Password',Password)
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'DescribeDrdsInstanceDbMonitor','drds')
 
 	def get_DbName(self):
 		return self.get_query_params().get('DbName')
@@ -35,14 +30,26 @@ class CreateDrdsAccountRequest(RpcRequest):
 	def set_DbName(self,DbName):
 		self.add_query_param('DbName',DbName)
 
+	def get_EndTime(self):
+		return self.get_query_params().get('EndTime')
+
+	def set_EndTime(self,EndTime):
+		self.add_query_param('EndTime',EndTime)
+
+	def get_StartTime(self):
+		return self.get_query_params().get('StartTime')
+
+	def set_StartTime(self,StartTime):
+		self.add_query_param('StartTime',StartTime)
+
 	def get_DrdsInstanceId(self):
 		return self.get_query_params().get('DrdsInstanceId')
 
 	def set_DrdsInstanceId(self,DrdsInstanceId):
 		self.add_query_param('DrdsInstanceId',DrdsInstanceId)
 
-	def get_UserName(self):
-		return self.get_query_params().get('UserName')
+	def get_Key(self):
+		return self.get_query_params().get('Key')
 
-	def set_UserName(self,UserName):
-		self.add_query_param('UserName',UserName)
+	def set_Key(self,Key):
+		self.add_query_param('Key',Key)

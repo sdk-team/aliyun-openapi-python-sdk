@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,34 +18,41 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class ModifyReadOnlyAccountPasswordRequest(RpcRequest):
+
+class DescribeRDSPerformanceRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'ModifyReadOnlyAccountPassword')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'DescribeRDSPerformance','drds')
 
-	def get_NewPasswd(self):
-		return self.get_query_params().get('NewPasswd')
+	def get_Keys(self):
+		return self.get_query_params().get('Keys')
 
-	def set_NewPasswd(self,NewPasswd):
-		self.add_query_param('NewPasswd',NewPasswd)
+	def set_Keys(self,Keys):
+		self.add_query_param('Keys',Keys)
 
-	def get_DbName(self):
-		return self.get_query_params().get('DbName')
+	def get_EndTime(self):
+		return self.get_query_params().get('EndTime')
 
-	def set_DbName(self,DbName):
-		self.add_query_param('DbName',DbName)
+	def set_EndTime(self,EndTime):
+		self.add_query_param('EndTime',EndTime)
 
-	def get_AccountName(self):
-		return self.get_query_params().get('AccountName')
+	def get_StartTime(self):
+		return self.get_query_params().get('StartTime')
 
-	def set_AccountName(self,AccountName):
-		self.add_query_param('AccountName',AccountName)
+	def set_StartTime(self,StartTime):
+		self.add_query_param('StartTime',StartTime)
 
-	def get_OriginPassword(self):
-		return self.get_query_params().get('OriginPassword')
+	def get_RdsInstanceId(self):
+		return self.get_query_params().get('RdsInstanceId')
 
-	def set_OriginPassword(self,OriginPassword):
-		self.add_query_param('OriginPassword',OriginPassword)
+	def set_RdsInstanceId(self,RdsInstanceId):
+		self.add_query_param('RdsInstanceId',RdsInstanceId)
+
+	def get_DbInstType(self):
+		return self.get_query_params().get('DbInstType')
+
+	def set_DbInstType(self,DbInstType):
+		self.add_query_param('DbInstType',DbInstType)
 
 	def get_DrdsInstanceId(self):
 		return self.get_query_params().get('DrdsInstanceId')

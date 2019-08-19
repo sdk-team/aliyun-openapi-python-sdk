@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,16 +18,35 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class ModifyDrdsInstanceDescriptionRequest(RpcRequest):
+
+class DescribeDbInstanceDbsRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'ModifyDrdsInstanceDescription')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'DescribeDbInstanceDbs','drds')
 
-	def get_Description(self):
-		return self.get_query_params().get('Description')
+	def get_Password(self):
+		return self.get_query_params().get('Password')
 
-	def set_Description(self,Description):
-		self.add_query_param('Description',Description)
+	def set_Password(self,Password):
+		self.add_query_param('Password',Password)
+
+	def get_AccountName(self):
+		return self.get_query_params().get('AccountName')
+
+	def set_AccountName(self,AccountName):
+		self.add_query_param('AccountName',AccountName)
+
+	def get_DbInstanceId(self):
+		return self.get_query_params().get('DbInstanceId')
+
+	def set_DbInstanceId(self,DbInstanceId):
+		self.add_query_param('DbInstanceId',DbInstanceId)
+
+	def get_DbInstType(self):
+		return self.get_query_params().get('DbInstType')
+
+	def set_DbInstType(self,DbInstType):
+		self.add_query_param('DbInstType',DbInstType)
 
 	def get_DrdsInstanceId(self):
 		return self.get_query_params().get('DrdsInstanceId')

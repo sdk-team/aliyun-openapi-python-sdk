@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,16 +18,29 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeDrdsDBRequest(RpcRequest):
+
+class DescribeShardTaskInfoRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Drds', '2017-10-16', 'DescribeDrdsDB')
+		RpcRequest.__init__(self, 'Drds', '2019-01-23', 'DescribeShardTaskInfo','drds')
 
 	def get_DbName(self):
 		return self.get_query_params().get('DbName')
 
 	def set_DbName(self,DbName):
 		self.add_query_param('DbName',DbName)
+
+	def get_SourceTableName(self):
+		return self.get_query_params().get('SourceTableName')
+
+	def set_SourceTableName(self,SourceTableName):
+		self.add_query_param('SourceTableName',SourceTableName)
+
+	def get_TargetTableName(self):
+		return self.get_query_params().get('TargetTableName')
+
+	def set_TargetTableName(self,TargetTableName):
+		self.add_query_param('TargetTableName',TargetTableName)
 
 	def get_DrdsInstanceId(self):
 		return self.get_query_params().get('DrdsInstanceId')
