@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class ListTagResourcesRequest(RpcRequest):
+
+class DescribeCommodityRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ListTagResources','kvstore')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'DescribeCommodity','r-kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -29,30 +30,17 @@ class ListTagResourcesRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_NextToken(self):
-		return self.get_query_params().get('NextToken')
+	def get_InstanceId(self):
+		return self.get_query_params().get('InstanceId')
 
-	def set_NextToken(self,NextToken):
-		self.add_query_param('NextToken',NextToken)
+	def set_InstanceId(self,InstanceId):
+		self.add_query_param('InstanceId',InstanceId)
 
-	def get_Tags(self):
-		return self.get_query_params().get('Tags')
+	def get_SecurityToken(self):
+		return self.get_query_params().get('SecurityToken')
 
-	def set_Tags(self,Tags):
-		for i in range(len(Tags)):	
-			if Tags[i].get('Value') is not None:
-				self.add_query_param('Tag.' + str(i + 1) + '.Value' , Tags[i].get('Value'))
-			if Tags[i].get('Key') is not None:
-				self.add_query_param('Tag.' + str(i + 1) + '.Key' , Tags[i].get('Key'))
-
-
-	def get_ResourceIds(self):
-		return self.get_query_params().get('ResourceIds')
-
-	def set_ResourceIds(self,ResourceIds):
-		for i in range(len(ResourceIds)):	
-			if ResourceIds[i] is not None:
-				self.add_query_param('ResourceId.' + str(i + 1) , ResourceIds[i]);
+	def set_SecurityToken(self,SecurityToken):
+		self.add_query_param('SecurityToken',SecurityToken)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -66,14 +54,26 @@ class ListTagResourcesRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
+	def get_InstanceType(self):
+		return self.get_query_params().get('InstanceType')
+
+	def set_InstanceType(self,InstanceType):
+		self.add_query_param('InstanceType',InstanceType)
+
+	def get_CommodityCode(self):
+		return self.get_query_params().get('CommodityCode')
+
+	def set_CommodityCode(self,CommodityCode):
+		self.add_query_param('CommodityCode',CommodityCode)
+
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
-	def get_ResourceType(self):
-		return self.get_query_params().get('ResourceType')
+	def get_OrderType(self):
+		return self.get_query_params().get('OrderType')
 
-	def set_ResourceType(self,ResourceType):
-		self.add_query_param('ResourceType',ResourceType)
+	def set_OrderType(self,OrderType):
+		self.add_query_param('OrderType',OrderType)

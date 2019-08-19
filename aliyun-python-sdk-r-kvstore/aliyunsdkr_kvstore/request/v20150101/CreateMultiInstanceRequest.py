@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class UnlinkReplicaInstanceRequest(RpcRequest):
+
+class CreateMultiInstanceRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'UnlinkReplicaInstance','kvstore')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'CreateMultiInstance','r-kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -29,17 +30,11 @@ class UnlinkReplicaInstanceRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_SecurityToken(self):
-		return self.get_query_params().get('SecurityToken')
+	def get_AutoPay(self):
+		return self.get_query_params().get('AutoPay')
 
-	def set_SecurityToken(self,SecurityToken):
-		self.add_query_param('SecurityToken',SecurityToken)
-
-	def get_ReplicaId(self):
-		return self.get_query_params().get('ReplicaId')
-
-	def set_ReplicaId(self,ReplicaId):
-		self.add_query_param('ReplicaId',ReplicaId)
+	def set_AutoPay(self,AutoPay):
+		self.add_query_param('AutoPay',AutoPay)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -53,14 +48,20 @@ class UnlinkReplicaInstanceRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
+	def get_KVStoreInstances(self):
+		return self.get_query_params().get('KVStoreInstances')
+
+	def set_KVStoreInstances(self,KVStoreInstances):
+		self.add_query_param('KVStoreInstances',KVStoreInstances)
+
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
-	def get_InstanceId(self):
-		return self.get_query_params().get('InstanceId')
+	def get_Token(self):
+		return self.get_query_params().get('Token')
 
-	def set_InstanceId(self,InstanceId):
-		self.add_query_param('InstanceId',InstanceId)
+	def set_Token(self,Token):
+		self.add_query_param('Token',Token)

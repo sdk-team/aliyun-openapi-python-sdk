@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeErrorLogRecordsRequest(RpcRequest):
+
+class ModifyInstanceCapacityRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'DescribeErrorLogRecords','kvstore')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyInstanceCapacity','r-kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -29,47 +30,11 @@ class DescribeErrorLogRecordsRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_StartTime(self):
-		return self.get_query_params().get('StartTime')
+	def get_FromApp(self):
+		return self.get_query_params().get('FromApp')
 
-	def set_StartTime(self,StartTime):
-		self.add_query_param('StartTime',StartTime)
-
-	def get_PageNumber(self):
-		return self.get_query_params().get('PageNumber')
-
-	def set_PageNumber(self,PageNumber):
-		self.add_query_param('PageNumber',PageNumber)
-
-	def get_SecurityToken(self):
-		return self.get_query_params().get('SecurityToken')
-
-	def set_SecurityToken(self,SecurityToken):
-		self.add_query_param('SecurityToken',SecurityToken)
-
-	def get_PageSize(self):
-		return self.get_query_params().get('PageSize')
-
-	def set_PageSize(self,PageSize):
-		self.add_query_param('PageSize',PageSize)
-
-	def get_RoleType(self):
-		return self.get_query_params().get('RoleType')
-
-	def set_RoleType(self,RoleType):
-		self.add_query_param('RoleType',RoleType)
-
-	def get_NodeId(self):
-		return self.get_query_params().get('NodeId')
-
-	def set_NodeId(self,NodeId):
-		self.add_query_param('NodeId',NodeId)
-
-	def get_SQLId(self):
-		return self.get_query_params().get('SQLId')
-
-	def set_SQLId(self,SQLId):
-		self.add_query_param('SQLId',SQLId)
+	def set_FromApp(self,FromApp):
+		self.add_query_param('FromApp',FromApp)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -83,17 +48,23 @@ class DescribeErrorLogRecordsRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
-	def get_EndTime(self):
-		return self.get_query_params().get('EndTime')
-
-	def set_EndTime(self,EndTime):
-		self.add_query_param('EndTime',EndTime)
-
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_InstanceClass(self):
+		return self.get_query_params().get('InstanceClass')
+
+	def set_InstanceClass(self,InstanceClass):
+		self.add_query_param('InstanceClass',InstanceClass)
+
+	def get_Capacity(self):
+		return self.get_query_params().get('Capacity')
+
+	def set_Capacity(self,Capacity):
+		self.add_query_param('Capacity',Capacity)
 
 	def get_InstanceId(self):
 		return self.get_query_params().get('InstanceId')
@@ -101,8 +72,14 @@ class DescribeErrorLogRecordsRequest(RpcRequest):
 	def set_InstanceId(self,InstanceId):
 		self.add_query_param('InstanceId',InstanceId)
 
-	def get_DBName(self):
-		return self.get_query_params().get('DBName')
+	def get_SecurityToken(self):
+		return self.get_query_params().get('SecurityToken')
 
-	def set_DBName(self,DBName):
-		self.add_query_param('DBName',DBName)
+	def set_SecurityToken(self,SecurityToken):
+		self.add_query_param('SecurityToken',SecurityToken)
+
+	def get_BusinessInfo(self):
+		return self.get_query_params().get('BusinessInfo')
+
+	def set_BusinessInfo(self,BusinessInfo):
+		self.add_query_param('BusinessInfo',BusinessInfo)

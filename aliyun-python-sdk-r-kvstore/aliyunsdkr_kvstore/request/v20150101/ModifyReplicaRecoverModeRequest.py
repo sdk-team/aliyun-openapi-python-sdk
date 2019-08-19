@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-class DescribeActiveOperationTaskRegionRequest(RpcRequest):
+
+class ModifyReplicaRecoverModeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'DescribeActiveOperationTaskRegion','kvstore')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'ModifyReplicaRecoverMode','r-kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -29,23 +30,11 @@ class DescribeActiveOperationTaskRegionRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_IsHistory(self):
-		return self.get_query_params().get('IsHistory')
-
-	def set_IsHistory(self,IsHistory):
-		self.add_query_param('IsHistory',IsHistory)
-
 	def get_SecurityToken(self):
 		return self.get_query_params().get('SecurityToken')
 
 	def set_SecurityToken(self,SecurityToken):
 		self.add_query_param('SecurityToken',SecurityToken)
-
-	def get_TaskType(self):
-		return self.get_query_params().get('TaskType')
-
-	def set_TaskType(self,TaskType):
-		self.add_query_param('TaskType',TaskType)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -58,6 +47,18 @@ class DescribeActiveOperationTaskRegionRequest(RpcRequest):
 
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
+
+	def get_ReplicaId(self):
+		return self.get_query_params().get('ReplicaId')
+
+	def set_ReplicaId(self,ReplicaId):
+		self.add_query_param('ReplicaId',ReplicaId)
+
+	def get_RecoverMode(self):
+		return self.get_query_params().get('RecoverMode')
+
+	def set_RecoverMode(self,RecoverMode):
+		self.add_query_param('RecoverMode',RecoverMode)
 
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')

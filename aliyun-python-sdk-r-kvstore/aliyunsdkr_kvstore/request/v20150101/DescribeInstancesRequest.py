@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,81 +18,17 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+
 class DescribeInstancesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'DescribeInstances','kvstore')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'DescribeInstances','r-kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
-
-	def get_SearchKey(self):
-		return self.get_query_params().get('SearchKey')
-
-	def set_SearchKey(self,SearchKey):
-		self.add_query_param('SearchKey',SearchKey)
-
-	def get_NetworkType(self):
-		return self.get_query_params().get('NetworkType')
-
-	def set_NetworkType(self,NetworkType):
-		self.add_query_param('NetworkType',NetworkType)
-
-	def get_EngineVersion(self):
-		return self.get_query_params().get('EngineVersion')
-
-	def set_EngineVersion(self,EngineVersion):
-		self.add_query_param('EngineVersion',EngineVersion)
-
-	def get_InstanceClass(self):
-		return self.get_query_params().get('InstanceClass')
-
-	def set_InstanceClass(self,InstanceClass):
-		self.add_query_param('InstanceClass',InstanceClass)
-
-	def get_PageNumber(self):
-		return self.get_query_params().get('PageNumber')
-
-	def set_PageNumber(self,PageNumber):
-		self.add_query_param('PageNumber',PageNumber)
-
-	def get_Expired(self):
-		return self.get_query_params().get('Expired')
-
-	def set_Expired(self,Expired):
-		self.add_query_param('Expired',Expired)
-
-	def get_SecurityToken(self):
-		return self.get_query_params().get('SecurityToken')
-
-	def set_SecurityToken(self,SecurityToken):
-		self.add_query_param('SecurityToken',SecurityToken)
-
-	def get_PageSize(self):
-		return self.get_query_params().get('PageSize')
-
-	def set_PageSize(self,PageSize):
-		self.add_query_param('PageSize',PageSize)
-
-	def get_InstanceType(self):
-		return self.get_query_params().get('InstanceType')
-
-	def set_InstanceType(self,InstanceType):
-		self.add_query_param('InstanceType',InstanceType)
-
-	def get_Tags(self):
-		return self.get_query_params().get('Tags')
-
-	def set_Tags(self,Tags):
-		for i in range(len(Tags)):	
-			if Tags[i].get('Value') is not None:
-				self.add_query_param('Tag.' + str(i + 1) + '.Value' , Tags[i].get('Value'))
-			if Tags[i].get('Key') is not None:
-				self.add_query_param('Tag.' + str(i + 1) + '.Key' , Tags[i].get('Key'))
-
 
 	def get_InstanceStatus(self):
 		return self.get_query_params().get('InstanceStatus')
@@ -112,17 +48,59 @@ class DescribeInstancesRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
+	def get_SearchKey(self):
+		return self.get_query_params().get('SearchKey')
+
+	def set_SearchKey(self,SearchKey):
+		self.add_query_param('SearchKey',SearchKey)
+
+	def get_NetworkType(self):
+		return self.get_query_params().get('NetworkType')
+
+	def set_NetworkType(self,NetworkType):
+		self.add_query_param('NetworkType',NetworkType)
+
+	def get_EngineVersion(self):
+		return self.get_query_params().get('EngineVersion')
+
+	def set_EngineVersion(self,EngineVersion):
+		self.add_query_param('EngineVersion',EngineVersion)
+
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
+	def get_InstanceClass(self):
+		return self.get_query_params().get('InstanceClass')
+
+	def set_InstanceClass(self,InstanceClass):
+		self.add_query_param('InstanceClass',InstanceClass)
+
+	def get_PageNumber(self):
+		return self.get_query_params().get('PageNumber')
+
+	def set_PageNumber(self,PageNumber):
+		self.add_query_param('PageNumber',PageNumber)
+
 	def get_VSwitchId(self):
 		return self.get_query_params().get('VSwitchId')
 
 	def set_VSwitchId(self,VSwitchId):
 		self.add_query_param('VSwitchId',VSwitchId)
+
+	def get_Expired(self):
+		return self.get_query_params().get('Expired')
+
+	def set_Expired(self,Expired):
+		self.add_query_param('Expired',Expired)
+
+	def get_SecurityToken(self):
+		return self.get_query_params().get('SecurityToken')
+
+	def set_SecurityToken(self,SecurityToken):
+		self.add_query_param('SecurityToken',SecurityToken)
 
 	def get_InstanceIds(self):
 		return self.get_query_params().get('InstanceIds')
@@ -142,6 +120,18 @@ class DescribeInstancesRequest(RpcRequest):
 	def set_VpcId(self,VpcId):
 		self.add_query_param('VpcId',VpcId)
 
+	def get_PageSize(self):
+		return self.get_query_params().get('PageSize')
+
+	def set_PageSize(self,PageSize):
+		self.add_query_param('PageSize',PageSize)
+
+	def get_InstanceType(self):
+		return self.get_query_params().get('InstanceType')
+
+	def set_InstanceType(self,InstanceType):
+		self.add_query_param('InstanceType',InstanceType)
+
 	def get_ZoneId(self):
 		return self.get_query_params().get('ZoneId')
 
@@ -153,3 +143,13 @@ class DescribeInstancesRequest(RpcRequest):
 
 	def set_ChargeType(self,ChargeType):
 		self.add_query_param('ChargeType',ChargeType)
+
+	def get_Tags(self):
+		return self.get_query_params().get('Tags')
+
+	def set_Tags(self,Tags):
+		for i in range(len(Tags)):	
+			if Tags[i].get('Value') is not None:
+				self.add_query_param('Tag.' + str(i + 1) + '.Value' , Tags[i].get('Value'))
+			if Tags[i].get('Key') is not None:
+				self.add_query_param('Tag.' + str(i + 1) + '.Key' , Tags[i].get('Key'))

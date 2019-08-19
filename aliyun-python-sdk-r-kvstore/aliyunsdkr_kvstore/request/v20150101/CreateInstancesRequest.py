@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,52 +18,17 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+
 class CreateInstancesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'CreateInstances','kvstore')
+		RpcRequest.__init__(self, 'R-kvstore', '2015-01-01', 'CreateInstances','r-kvstore')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
-
-	def get_Instances(self):
-		return self.get_query_params().get('Instances')
-
-	def set_Instances(self,Instances):
-		self.add_query_param('Instances',Instances)
-
-	def get_CouponNo(self):
-		return self.get_query_params().get('CouponNo')
-
-	def set_CouponNo(self,CouponNo):
-		self.add_query_param('CouponNo',CouponNo)
-
-	def get_EngineVersion(self):
-		return self.get_query_params().get('EngineVersion')
-
-	def set_EngineVersion(self,EngineVersion):
-		self.add_query_param('EngineVersion',EngineVersion)
-
-	def get_SecurityToken(self):
-		return self.get_query_params().get('SecurityToken')
-
-	def set_SecurityToken(self,SecurityToken):
-		self.add_query_param('SecurityToken',SecurityToken)
-
-	def get_RebuildInstance(self):
-		return self.get_query_params().get('RebuildInstance')
-
-	def set_RebuildInstance(self,RebuildInstance):
-		self.add_query_param('RebuildInstance',RebuildInstance)
-
-	def get_BusinessInfo(self):
-		return self.get_query_params().get('BusinessInfo')
-
-	def set_BusinessInfo(self,BusinessInfo):
-		self.add_query_param('BusinessInfo',BusinessInfo)
 
 	def get_AgentId(self):
 		return self.get_query_params().get('AgentId')
@@ -83,6 +48,12 @@ class CreateInstancesRequest(RpcRequest):
 	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
 		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
 
+	def get_Instances(self):
+		return self.get_query_params().get('Instances')
+
+	def set_Instances(self,Instances):
+		self.add_query_param('Instances',Instances)
+
 	def get_OwnerAccount(self):
 		return self.get_query_params().get('OwnerAccount')
 
@@ -101,14 +72,14 @@ class CreateInstancesRequest(RpcRequest):
 	def set_Token(self,Token):
 		self.add_query_param('Token',Token)
 
-	def get_PrivateIpAddress(self):
-		return self.get_query_params().get('PrivateIpAddress')
+	def get_SecurityToken(self):
+		return self.get_query_params().get('SecurityToken')
 
-	def set_PrivateIpAddress(self,PrivateIpAddress):
-		self.add_query_param('PrivateIpAddress',PrivateIpAddress)
+	def set_SecurityToken(self,SecurityToken):
+		self.add_query_param('SecurityToken',SecurityToken)
 
-	def get_AutoRenew(self):
-		return self.get_query_params().get('AutoRenew')
+	def get_BusinessInfo(self):
+		return self.get_query_params().get('BusinessInfo')
 
-	def set_AutoRenew(self,AutoRenew):
-		self.add_query_param('AutoRenew',AutoRenew)
+	def set_BusinessInfo(self,BusinessInfo):
+		self.add_query_param('BusinessInfo',BusinessInfo)
