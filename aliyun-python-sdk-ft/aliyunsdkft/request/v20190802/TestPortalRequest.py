@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -17,11 +17,14 @@
 # specific language governing permissions and limitations
 # under the License.
 
-from aliyunsdkcore.request import RpcRequest
-class FtEagleEyeRequest(RpcRequest):
+from aliyunsdkcore.request import RoaRequest
+
+class TestPortalRequest(RoaRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtEagleEye','ft')
+		RoaRequest.__init__(self, 'Ft', '2019-08-02', 'TestPortal','ft')
+		self.set_uri_pattern('/portal')
+		self.set_method('POST|GET')
 
 	def get_Name(self):
 		return self.get_query_params().get('Name')

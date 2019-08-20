@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -17,14 +17,17 @@
 # specific language governing permissions and limitations
 # under the License.
 
-from aliyunsdkcore.request import RpcRequest
-class FtFlowSpecialRequest(RpcRequest):
+from aliyunsdkcore.request import RoaRequest
+
+class RoaHttpStringResponseTestRequest(RoaRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtFlowSpecial','ft')
+		RoaRequest.__init__(self, 'Ft', '2019-08-02', 'RoaHttpStringResponseTest','ft')
+		self.set_uri_pattern('/web/getData')
+		self.set_method('POST|GET')
 
-	def get_Name(self):
-		return self.get_query_params().get('Name')
+	def get_QueryParam(self):
+		return self.get_query_params().get('QueryParam')
 
-	def set_Name(self,Name):
-		self.add_query_param('Name',Name)
+	def set_QueryParam(self,QueryParam):
+		self.add_query_param('QueryParam',QueryParam)
