@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,17 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+from aliyunsdkecs.endpoint import endpoint_data
+
 class CreateInstanceRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'CreateInstance')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'CreateInstance','ecs')
+		if hasattr(self, "endpoint_map"):
+			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+		if hasattr(self, "endpoint_regional"):
+			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -76,6 +83,12 @@ class CreateInstanceRequest(RpcRequest):
 
 	def set_Password(self,Password):
 		self.add_query_param('Password',Password)
+
+	def get_StorageSetPartitionNumber(self):
+		return self.get_query_params().get('StorageSetPartitionNumber')
+
+	def set_StorageSetPartitionNumber(self,StorageSetPartitionNumber):
+		self.add_query_param('StorageSetPartitionNumber',StorageSetPartitionNumber)
 
 	def get_Tags(self):
 		return self.get_query_params().get('Tags')
@@ -250,6 +263,12 @@ class CreateInstanceRequest(RpcRequest):
 	def set_CapacityReservationId(self,CapacityReservationId):
 		self.add_query_param('CapacityReservationId',CapacityReservationId)
 
+	def get_SystemDiskPerformanceLevel(self):
+		return self.get_query_params().get('SystemDisk.PerformanceLevel')
+
+	def set_SystemDiskPerformanceLevel(self,SystemDiskPerformanceLevel):
+		self.add_query_param('SystemDisk.PerformanceLevel',SystemDiskPerformanceLevel)
+
 	def get_UserData(self):
 		return self.get_query_params().get('UserData')
 
@@ -347,6 +366,12 @@ class CreateInstanceRequest(RpcRequest):
 	def set_CreditSpecification(self,CreditSpecification):
 		self.add_query_param('CreditSpecification',CreditSpecification)
 
+	def get_SpotDuration(self):
+		return self.get_query_params().get('SpotDuration')
+
+	def set_SpotDuration(self,SpotDuration):
+		self.add_query_param('SpotDuration',SpotDuration)
+
 	def get_DataDisks(self):
 		return self.get_query_params().get('DataDisks')
 
@@ -360,6 +385,8 @@ class CreateInstanceRequest(RpcRequest):
 				self.add_query_param('DataDisk.' + str(i + 1) + '.Size' , DataDisks[i].get('Size'))
 			if DataDisks[i].get('Encrypted') is not None:
 				self.add_query_param('DataDisk.' + str(i + 1) + '.Encrypted' , DataDisks[i].get('Encrypted'))
+			if DataDisks[i].get('PerformanceLevel') is not None:
+				self.add_query_param('DataDisk.' + str(i + 1) + '.PerformanceLevel' , DataDisks[i].get('PerformanceLevel'))
 			if DataDisks[i].get('Description') is not None:
 				self.add_query_param('DataDisk.' + str(i + 1) + '.Description' , DataDisks[i].get('Description'))
 			if DataDisks[i].get('Category') is not None:
@@ -371,6 +398,12 @@ class CreateInstanceRequest(RpcRequest):
 			if DataDisks[i].get('DeleteWithInstance') is not None:
 				self.add_query_param('DataDisk.' + str(i + 1) + '.DeleteWithInstance' , DataDisks[i].get('DeleteWithInstance'))
 
+
+	def get_StorageSetId(self):
+		return self.get_query_params().get('StorageSetId')
+
+	def set_StorageSetId(self,StorageSetId):
+		self.add_query_param('StorageSetId',StorageSetId)
 
 	def get_SystemDiskSize(self):
 		return self.get_query_params().get('SystemDisk.Size')
