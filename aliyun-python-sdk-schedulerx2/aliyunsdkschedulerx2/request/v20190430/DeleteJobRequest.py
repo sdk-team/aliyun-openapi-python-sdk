@@ -23,7 +23,6 @@ class DeleteJobRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'schedulerx2', '2019-04-30', 'DeleteJob')
-		self.set_protocol_type('https')
 
 	def get_NamespaceSource(self):
 		return self.get_query_params().get('NamespaceSource')

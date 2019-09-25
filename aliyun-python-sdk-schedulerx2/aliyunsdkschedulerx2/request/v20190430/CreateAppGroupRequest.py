@@ -23,7 +23,6 @@ class CreateAppGroupRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'schedulerx2', '2019-04-30', 'CreateAppGroup')
-		self.set_protocol_type('https')
 
 	def get_MaxJobs(self):
 		return self.get_query_params().get('MaxJobs')
