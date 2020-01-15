@@ -18,6 +18,7 @@
 # under the License.
 
 from aliyunsdkcore.request import RoaRequest
+
 class DeleteApiOnlineRequest(RoaRequest):
 
 	def __init__(self):

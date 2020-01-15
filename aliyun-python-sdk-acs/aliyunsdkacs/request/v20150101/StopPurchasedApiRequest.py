@@ -18,6 +18,7 @@
 # under the License.
 
 from aliyunsdkcore.request import RoaRequest
+
 class StopPurchasedApiRequest(RoaRequest):
 
 	def __init__(self):

@@ -18,24 +18,13 @@
 # under the License.
 
 from aliyunsdkcore.request import RoaRequest
+
 class PurchaseApiRequest(RoaRequest):
 
 	def __init__(self):
 		RoaRequest.__init__(self, 'Acs', '2015-01-01', 'PurchaseApi','12334')
 		self.set_uri_pattern('/Api/PurchaseApi')
 		self.set_method('POST|GET')
-
-	def get_ServiceDate(self):
-		return self.get_query_params().get('ServiceDate')
-
-	def set_ServiceDate(self,ServiceDate):
-		self.add_query_param('ServiceDate',ServiceDate)
-
-	def get_Quota(self):
-		return self.get_query_params().get('Quota')
-
-	def set_Quota(self,Quota):
-		self.add_query_param('Quota',Quota)
 
 	def get_OrgCode(self):
 		return self.get_query_params().get('OrgCode')
@@ -55,17 +44,29 @@ class PurchaseApiRequest(RoaRequest):
 	def set_Channel(self,Channel):
 		self.add_query_param('Channel',Channel)
 
-	def get_PurchaseVersion(self):
-		return self.get_query_params().get('PurchaseVersion')
-
-	def set_PurchaseVersion(self,PurchaseVersion):
-		self.add_query_param('PurchaseVersion',PurchaseVersion)
-
 	def get_PurchaseApiName(self):
 		return self.get_query_params().get('PurchaseApiName')
 
 	def set_PurchaseApiName(self,PurchaseApiName):
 		self.add_query_param('PurchaseApiName',PurchaseApiName)
+
+	def get_ServiceDate(self):
+		return self.get_query_params().get('ServiceDate')
+
+	def set_ServiceDate(self,ServiceDate):
+		self.add_query_param('ServiceDate',ServiceDate)
+
+	def get_Quota(self):
+		return self.get_query_params().get('Quota')
+
+	def set_Quota(self,Quota):
+		self.add_query_param('Quota',Quota)
+
+	def get_PurchaseVersion(self):
+		return self.get_query_params().get('PurchaseVersion')
+
+	def set_PurchaseVersion(self,PurchaseVersion):
+		self.add_query_param('PurchaseVersion',PurchaseVersion)
 
 	def get_BillingType(self):
 		return self.get_query_params().get('BillingType')
