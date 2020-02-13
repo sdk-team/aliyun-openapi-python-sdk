@@ -18,17 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-from aliyunsdkecs.endpoint import endpoint_data
 
-class DescribeFleetsRequest(RpcRequest):
+class DescribeInstanceMaintenanceAttributesRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeFleets','ecs')
-		if hasattr(self, "endpoint_map"):
-			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
-		if hasattr(self, "endpoint_regional"):
-			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
-
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeInstanceMaintenanceAttributes','ecs')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -41,20 +35,6 @@ class DescribeFleetsRequest(RpcRequest):
 
 	def set_PageNumber(self,PageNumber):
 		self.add_query_param('PageNumber',PageNumber)
-
-	def get_FleetName(self):
-		return self.get_query_params().get('FleetName')
-
-	def set_FleetName(self,FleetName):
-		self.add_query_param('FleetName',FleetName)
-
-	def get_FleetStatuss(self):
-		return self.get_query_params().get('FleetStatuss')
-
-	def set_FleetStatuss(self,FleetStatuss):
-		for i in range(len(FleetStatuss)):	
-			if FleetStatuss[i] is not None:
-				self.add_query_param('FleetStatus.' + str(i + 1) , FleetStatuss[i]);
 
 	def get_PageSize(self):
 		return self.get_query_params().get('PageSize')
@@ -80,10 +60,10 @@ class DescribeFleetsRequest(RpcRequest):
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
-	def get_FleetIds(self):
-		return self.get_query_params().get('FleetIds')
+	def get_InstanceIds(self):
+		return self.get_query_params().get('InstanceIds')
 
-	def set_FleetIds(self,FleetIds):
-		for i in range(len(FleetIds)):	
-			if FleetIds[i] is not None:
-				self.add_query_param('FleetId.' + str(i + 1) , FleetIds[i]);
+	def set_InstanceIds(self,InstanceIds):
+		for i in range(len(InstanceIds)):	
+			if InstanceIds[i] is not None:
+				self.add_query_param('InstanceId.' + str(i + 1) , InstanceIds[i]);

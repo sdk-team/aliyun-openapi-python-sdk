@@ -18,17 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-from aliyunsdkecs.endpoint import endpoint_data
 
 class DescribeReservedInstancesRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeReservedInstances','ecs')
-		if hasattr(self, "endpoint_map"):
-			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
-		if hasattr(self, "endpoint_regional"):
-			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
-
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -123,3 +117,9 @@ class DescribeReservedInstancesRequest(RpcRequest):
 		for i in range(len(Statuss)):	
 			if Statuss[i] is not None:
 				self.add_query_param('Status.' + str(i + 1) , Statuss[i]);
+
+	def get_AllocationType(self):
+		return self.get_query_params().get('AllocationType')
+
+	def set_AllocationType(self,AllocationType):
+		self.add_query_param('AllocationType',AllocationType)

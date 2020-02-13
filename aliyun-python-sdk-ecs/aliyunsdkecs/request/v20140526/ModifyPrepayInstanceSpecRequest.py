@@ -18,17 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-from aliyunsdkecs.endpoint import endpoint_data
 
 class ModifyPrepayInstanceSpecRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ModifyPrepayInstanceSpec','ecs')
-		if hasattr(self, "endpoint_map"):
-			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
-		if hasattr(self, "endpoint_regional"):
-			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
-
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -77,6 +71,12 @@ class ModifyPrepayInstanceSpecRequest(RpcRequest):
 
 	def set_AutoPay(self,AutoPay):
 		self.add_query_param('AutoPay',AutoPay)
+
+	def get_RebootWhenFinished(self):
+		return self.get_query_params().get('RebootWhenFinished')
+
+	def set_RebootWhenFinished(self,RebootWhenFinished):
+		self.add_query_param('RebootWhenFinished',RebootWhenFinished)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')

@@ -18,17 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-from aliyunsdkecs.endpoint import endpoint_data
 
 class DescribeRecommendInstanceTypeRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeRecommendInstanceType','ecs')
-		if hasattr(self, "endpoint_map"):
-			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
-		if hasattr(self, "endpoint_regional"):
-			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
-
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -36,23 +30,11 @@ class DescribeRecommendInstanceTypeRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_InstancePpsRx(self):
-		return self.get_query_params().get('InstancePpsRx')
-
-	def set_InstancePpsRx(self,InstancePpsRx):
-		self.add_query_param('InstancePpsRx',InstancePpsRx)
-
 	def get_Memory(self):
 		return self.get_query_params().get('Memory')
 
 	def set_Memory(self,Memory):
 		self.add_query_param('Memory',Memory)
-
-	def get_InstancePpsTx(self):
-		return self.get_query_params().get('InstancePpsTx')
-
-	def set_InstancePpsTx(self,InstancePpsTx):
-		self.add_query_param('InstancePpsTx',InstancePpsTx)
 
 	def get_IoOptimized(self):
 		return self.get_query_params().get('IoOptimized')
@@ -72,23 +54,11 @@ class DescribeRecommendInstanceTypeRequest(RpcRequest):
 	def set_Scene(self,Scene):
 		self.add_query_param('Scene',Scene)
 
-	def get_InstanceBandwidthTx(self):
-		return self.get_query_params().get('InstanceBandwidthTx')
-
-	def set_InstanceBandwidthTx(self,InstanceBandwidthTx):
-		self.add_query_param('InstanceBandwidthTx',InstanceBandwidthTx)
-
 	def get_Cores(self):
 		return self.get_query_params().get('Cores')
 
 	def set_Cores(self,Cores):
 		self.add_query_param('Cores',Cores)
-
-	def get_InstanceBandwidthRx(self):
-		return self.get_query_params().get('InstanceBandwidthRx')
-
-	def set_InstanceBandwidthRx(self,InstanceBandwidthRx):
-		self.add_query_param('InstanceBandwidthRx',InstanceBandwidthRx)
 
 	def get_SystemDiskCategory(self):
 		return self.get_query_params().get('SystemDiskCategory')
@@ -151,6 +121,12 @@ class DescribeRecommendInstanceTypeRequest(RpcRequest):
 
 	def set_PriorityStrategy(self,PriorityStrategy):
 		self.add_query_param('PriorityStrategy',PriorityStrategy)
+
+	def get_InstanceFamilyLevel(self):
+		return self.get_query_params().get('InstanceFamilyLevel')
+
+	def set_InstanceFamilyLevel(self,InstanceFamilyLevel):
+		self.add_query_param('InstanceFamilyLevel',InstanceFamilyLevel)
 
 	def get_ZoneId(self):
 		return self.get_query_params().get('ZoneId')

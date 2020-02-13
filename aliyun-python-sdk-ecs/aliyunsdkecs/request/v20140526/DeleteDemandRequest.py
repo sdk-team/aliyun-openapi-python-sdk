@@ -18,17 +18,17 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-from aliyunsdkecs.endpoint import endpoint_data
 
-class DescribeFleetInstancesRequest(RpcRequest):
+class DeleteDemandRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeFleetInstances','ecs')
-		if hasattr(self, "endpoint_map"):
-			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
-		if hasattr(self, "endpoint_regional"):
-			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DeleteDemand','ecs')
 
+	def get_Reason(self):
+		return self.get_query_params().get('Reason')
+
+	def set_Reason(self,Reason):
+		self.add_query_param('Reason',Reason)
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -36,17 +36,11 @@ class DescribeFleetInstancesRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_PageNumber(self):
-		return self.get_query_params().get('PageNumber')
+	def get_ClientToken(self):
+		return self.get_query_params().get('ClientToken')
 
-	def set_PageNumber(self,PageNumber):
-		self.add_query_param('PageNumber',PageNumber)
-
-	def get_PageSize(self):
-		return self.get_query_params().get('PageSize')
-
-	def set_PageSize(self,PageSize):
-		self.add_query_param('PageSize',PageSize)
+	def set_ClientToken(self,ClientToken):
+		self.add_query_param('ClientToken',ClientToken)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -66,8 +60,8 @@ class DescribeFleetInstancesRequest(RpcRequest):
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
-	def get_FleetId(self):
-		return self.get_query_params().get('FleetId')
+	def get_DemandId(self):
+		return self.get_query_params().get('DemandId')
 
-	def set_FleetId(self,FleetId):
-		self.add_query_param('FleetId',FleetId)
+	def set_DemandId(self,DemandId):
+		self.add_query_param('DemandId',DemandId)

@@ -18,17 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-from aliyunsdkecs.endpoint import endpoint_data
 
 class DescribeDemandsRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeDemands','ecs')
-		if hasattr(self, "endpoint_map"):
-			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
-		if hasattr(self, "endpoint_regional"):
-			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
-
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -109,8 +103,20 @@ class DescribeDemandsRequest(RpcRequest):
 			if DemandStatuss[i] is not None:
 				self.add_query_param('DemandStatus.' + str(i + 1) , DemandStatuss[i]);
 
+	def get_DemandId(self):
+		return self.get_query_params().get('DemandId')
+
+	def set_DemandId(self,DemandId):
+		self.add_query_param('DemandId',DemandId)
+
 	def get_ZoneId(self):
 		return self.get_query_params().get('ZoneId')
 
 	def set_ZoneId(self,ZoneId):
 		self.add_query_param('ZoneId',ZoneId)
+
+	def get_DemandType(self):
+		return self.get_query_params().get('DemandType')
+
+	def set_DemandType(self,DemandType):
+		self.add_query_param('DemandType',DemandType)

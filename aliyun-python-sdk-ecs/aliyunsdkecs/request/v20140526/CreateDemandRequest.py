@@ -19,10 +19,10 @@
 
 from aliyunsdkcore.request import RpcRequest
 
-class ModifyDiskChargeTypeRequest(RpcRequest):
+class CreateDemandRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ModifyDiskChargeType','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'CreateDemand','ecs')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -36,23 +36,47 @@ class ModifyDiskChargeTypeRequest(RpcRequest):
 	def set_ClientToken(self,ClientToken):
 		self.add_query_param('ClientToken',ClientToken)
 
-	def get_DiskChargeType(self):
-		return self.get_query_params().get('DiskChargeType')
+	def get_StartTime(self):
+		return self.get_query_params().get('StartTime')
 
-	def set_DiskChargeType(self,DiskChargeType):
-		self.add_query_param('DiskChargeType',DiskChargeType)
+	def set_StartTime(self,StartTime):
+		self.add_query_param('StartTime',StartTime)
 
-	def get_DiskIds(self):
-		return self.get_query_params().get('DiskIds')
+	def get_DemandDescription(self):
+		return self.get_query_params().get('DemandDescription')
 
-	def set_DiskIds(self,DiskIds):
-		self.add_query_param('DiskIds',DiskIds)
+	def set_DemandDescription(self,DemandDescription):
+		self.add_query_param('DemandDescription',DemandDescription)
 
-	def get_AutoPay(self):
-		return self.get_query_params().get('AutoPay')
+	def get_InstanceType(self):
+		return self.get_query_params().get('InstanceType')
 
-	def set_AutoPay(self,AutoPay):
-		self.add_query_param('AutoPay',AutoPay)
+	def set_InstanceType(self,InstanceType):
+		self.add_query_param('InstanceType',InstanceType)
+
+	def get_InstanceChargeType(self):
+		return self.get_query_params().get('InstanceChargeType')
+
+	def set_InstanceChargeType(self,InstanceChargeType):
+		self.add_query_param('InstanceChargeType',InstanceChargeType)
+
+	def get_DemandName(self):
+		return self.get_query_params().get('DemandName')
+
+	def set_DemandName(self,DemandName):
+		self.add_query_param('DemandName',DemandName)
+
+	def get_Amount(self):
+		return self.get_query_params().get('Amount')
+
+	def set_Amount(self,Amount):
+		self.add_query_param('Amount',Amount)
+
+	def get_Period(self):
+		return self.get_query_params().get('Period')
+
+	def set_Period(self,Period):
+		self.add_query_param('Period',Period)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
@@ -66,14 +90,26 @@ class ModifyDiskChargeTypeRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
+	def get_EndTime(self):
+		return self.get_query_params().get('EndTime')
+
+	def set_EndTime(self,EndTime):
+		self.add_query_param('EndTime',EndTime)
+
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
-	def get_InstanceId(self):
-		return self.get_query_params().get('InstanceId')
+	def get_PeriodUnit(self):
+		return self.get_query_params().get('PeriodUnit')
 
-	def set_InstanceId(self,InstanceId):
-		self.add_query_param('InstanceId',InstanceId)
+	def set_PeriodUnit(self,PeriodUnit):
+		self.add_query_param('PeriodUnit',PeriodUnit)
+
+	def get_ZoneId(self):
+		return self.get_query_params().get('ZoneId')
+
+	def set_ZoneId(self,ZoneId):
+		self.add_query_param('ZoneId',ZoneId)

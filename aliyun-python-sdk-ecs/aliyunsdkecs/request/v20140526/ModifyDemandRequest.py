@@ -19,10 +19,10 @@
 
 from aliyunsdkcore.request import RpcRequest
 
-class DescribeNewProjectEipMonitorDataRequest(RpcRequest):
+class ModifyDemandRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeNewProjectEipMonitorData','ecs')
+		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ModifyDemand','ecs')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -30,17 +30,47 @@ class DescribeNewProjectEipMonitorDataRequest(RpcRequest):
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
 
-	def get_AllocationId(self):
-		return self.get_query_params().get('AllocationId')
+	def get_ClientToken(self):
+		return self.get_query_params().get('ClientToken')
 
-	def set_AllocationId(self,AllocationId):
-		self.add_query_param('AllocationId',AllocationId)
+	def set_ClientToken(self,ClientToken):
+		self.add_query_param('ClientToken',ClientToken)
 
 	def get_StartTime(self):
 		return self.get_query_params().get('StartTime')
 
 	def set_StartTime(self,StartTime):
 		self.add_query_param('StartTime',StartTime)
+
+	def get_DemandDescription(self):
+		return self.get_query_params().get('DemandDescription')
+
+	def set_DemandDescription(self,DemandDescription):
+		self.add_query_param('DemandDescription',DemandDescription)
+
+	def get_InstanceType(self):
+		return self.get_query_params().get('InstanceType')
+
+	def set_InstanceType(self,InstanceType):
+		self.add_query_param('InstanceType',InstanceType)
+
+	def get_InstanceChargeType(self):
+		return self.get_query_params().get('InstanceChargeType')
+
+	def set_InstanceChargeType(self,InstanceChargeType):
+		self.add_query_param('InstanceChargeType',InstanceChargeType)
+
+	def get_DemandName(self):
+		return self.get_query_params().get('DemandName')
+
+	def set_DemandName(self,DemandName):
+		self.add_query_param('DemandName',DemandName)
+
+	def get_Amount(self):
+		return self.get_query_params().get('Amount')
+
+	def set_Amount(self,Amount):
+		self.add_query_param('Amount',Amount)
 
 	def get_Period(self):
 		return self.get_query_params().get('Period')
@@ -71,3 +101,21 @@ class DescribeNewProjectEipMonitorDataRequest(RpcRequest):
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_PeriodUnit(self):
+		return self.get_query_params().get('PeriodUnit')
+
+	def set_PeriodUnit(self,PeriodUnit):
+		self.add_query_param('PeriodUnit',PeriodUnit)
+
+	def get_DemandId(self):
+		return self.get_query_params().get('DemandId')
+
+	def set_DemandId(self,DemandId):
+		self.add_query_param('DemandId',DemandId)
+
+	def get_ZoneId(self):
+		return self.get_query_params().get('ZoneId')
+
+	def set_ZoneId(self,ZoneId):
+		self.add_query_param('ZoneId',ZoneId)

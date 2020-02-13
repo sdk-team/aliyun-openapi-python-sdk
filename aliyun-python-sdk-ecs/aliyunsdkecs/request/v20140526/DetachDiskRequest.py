@@ -18,17 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-from aliyunsdkecs.endpoint import endpoint_data
 
 class DetachDiskRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DetachDisk','ecs')
-		if hasattr(self, "endpoint_map"):
-			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
-		if hasattr(self, "endpoint_regional"):
-			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
-
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -41,6 +35,12 @@ class DetachDiskRequest(RpcRequest):
 
 	def set_DiskId(self,DiskId):
 		self.add_query_param('DiskId',DiskId)
+
+	def get_DeleteWithInstance(self):
+		return self.get_query_params().get('DeleteWithInstance')
+
+	def set_DeleteWithInstance(self,DeleteWithInstance):
+		self.add_query_param('DeleteWithInstance',DeleteWithInstance)
 
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')

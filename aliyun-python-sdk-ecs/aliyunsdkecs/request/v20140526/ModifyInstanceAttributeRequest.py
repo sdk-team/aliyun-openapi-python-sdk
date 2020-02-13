@@ -18,17 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-from aliyunsdkecs.endpoint import endpoint_data
 
 class ModifyInstanceAttributeRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ModifyInstanceAttribute','ecs')
-		if hasattr(self, "endpoint_map"):
-			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
-		if hasattr(self, "endpoint_regional"):
-			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
-
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -95,6 +89,14 @@ class ModifyInstanceAttributeRequest(RpcRequest):
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_SecurityGroupIdss(self):
+		return self.get_query_params().get('SecurityGroupIdss')
+
+	def set_SecurityGroupIdss(self,SecurityGroupIdss):
+		for i in range(len(SecurityGroupIdss)):	
+			if SecurityGroupIdss[i] is not None:
+				self.add_query_param('SecurityGroupIds.' + str(i + 1) , SecurityGroupIdss[i]);
 
 	def get_InstanceId(self):
 		return self.get_query_params().get('InstanceId')

@@ -18,17 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
-from aliyunsdkecs.endpoint import endpoint_data
 
 class RunInstancesRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'RunInstances','ecs')
-		if hasattr(self, "endpoint_map"):
-			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
-		if hasattr(self, "endpoint_regional"):
-			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
-
 
 	def get_LaunchTemplateName(self):
 		return self.get_query_params().get('LaunchTemplateName')
@@ -119,11 +113,23 @@ class RunInstancesRequest(RpcRequest):
 				self.add_query_param('Tag.' + str(i + 1) + '.Value' , Tags[i].get('Value'))
 
 
+	def get_SystemDiskAutoSnapshotPolicyId(self):
+		return self.get_query_params().get('SystemDisk.AutoSnapshotPolicyId')
+
+	def set_SystemDiskAutoSnapshotPolicyId(self,SystemDiskAutoSnapshotPolicyId):
+		self.add_query_param('SystemDisk.AutoSnapshotPolicyId',SystemDiskAutoSnapshotPolicyId)
+
 	def get_AutoRenewPeriod(self):
 		return self.get_query_params().get('AutoRenewPeriod')
 
 	def set_AutoRenewPeriod(self,AutoRenewPeriod):
 		self.add_query_param('AutoRenewPeriod',AutoRenewPeriod)
+
+	def get_CpuOptionsCore(self):
+		return self.get_query_params().get('CpuOptions.Core')
+
+	def set_CpuOptionsCore(self,CpuOptionsCore):
+		self.add_query_param('CpuOptions.Core',CpuOptionsCore)
 
 	def get_Period(self):
 		return self.get_query_params().get('Period')
@@ -149,17 +155,17 @@ class RunInstancesRequest(RpcRequest):
 	def set_Ipv6AddressCount(self,Ipv6AddressCount):
 		self.add_query_param('Ipv6AddressCount',Ipv6AddressCount)
 
+	def get_CpuOptionsNuma(self):
+		return self.get_query_params().get('CpuOptions.Numa')
+
+	def set_CpuOptionsNuma(self,CpuOptionsNuma):
+		self.add_query_param('CpuOptions.Numa',CpuOptionsNuma)
+
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
-
-	def get_CapacityReservationPreference(self):
-		return self.get_query_params().get('CapacityReservationPreference')
-
-	def set_CapacityReservationPreference(self,CapacityReservationPreference):
-		self.add_query_param('CapacityReservationPreference',CapacityReservationPreference)
 
 	def get_VSwitchId(self):
 		return self.get_query_params().get('VSwitchId')
@@ -271,17 +277,17 @@ class RunInstancesRequest(RpcRequest):
 	def set_Description(self,Description):
 		self.add_query_param('Description',Description)
 
+	def get_CpuOptionsThreadsPerCore(self):
+		return self.get_query_params().get('CpuOptions.ThreadsPerCore')
+
+	def set_CpuOptionsThreadsPerCore(self,CpuOptionsThreadsPerCore):
+		self.add_query_param('CpuOptions.ThreadsPerCore',CpuOptionsThreadsPerCore)
+
 	def get_SystemDiskCategory(self):
 		return self.get_query_params().get('SystemDisk.Category')
 
 	def set_SystemDiskCategory(self,SystemDiskCategory):
 		self.add_query_param('SystemDisk.Category',SystemDiskCategory)
-
-	def get_CapacityReservationId(self):
-		return self.get_query_params().get('CapacityReservationId')
-
-	def set_CapacityReservationId(self,CapacityReservationId):
-		self.add_query_param('CapacityReservationId',CapacityReservationId)
 
 	def get_SystemDiskPerformanceLevel(self):
 		return self.get_query_params().get('SystemDisk.PerformanceLevel')
@@ -307,12 +313,6 @@ class RunInstancesRequest(RpcRequest):
 	def set_InstanceType(self,InstanceType):
 		self.add_query_param('InstanceType',InstanceType)
 
-	def get_HibernationConfigured(self):
-		return self.get_query_params().get('HibernationConfigured')
-
-	def set_HibernationConfigured(self,HibernationConfigured):
-		self.add_query_param('HibernationConfigured',HibernationConfigured)
-
 	def get_InstanceChargeType(self):
 		return self.get_query_params().get('InstanceChargeType')
 
@@ -330,6 +330,9 @@ class RunInstancesRequest(RpcRequest):
 				self.add_query_param('NetworkInterface.' + str(i + 1) + '.VSwitchId' , NetworkInterfaces[i].get('VSwitchId'))
 			if NetworkInterfaces[i].get('SecurityGroupId') is not None:
 				self.add_query_param('NetworkInterface.' + str(i + 1) + '.SecurityGroupId' , NetworkInterfaces[i].get('SecurityGroupId'))
+			for j in range(len(NetworkInterfaces[i].get('SecurityGroupIdss'))):
+				if NetworkInterfaces[i].get('SecurityGroupIdss')[j] is not None:
+					self.add_query_param('NetworkInterface.' + str(i + 1) + '.SecurityGroupIds.'+str(j + 1), NetworkInterfaces[i].get('SecurityGroupIdss')[j])
 			if NetworkInterfaces[i].get('NetworkInterfaceName') is not None:
 				self.add_query_param('NetworkInterface.' + str(i + 1) + '.NetworkInterfaceName' , NetworkInterfaces[i].get('NetworkInterfaceName'))
 			if NetworkInterfaces[i].get('Description') is not None:
@@ -435,6 +438,8 @@ class RunInstancesRequest(RpcRequest):
 				self.add_query_param('DataDisk.' + str(i + 1) + '.DeleteWithInstance' , DataDisks[i].get('DeleteWithInstance'))
 			if DataDisks[i].get('PerformanceLevel') is not None:
 				self.add_query_param('DataDisk.' + str(i + 1) + '.PerformanceLevel' , DataDisks[i].get('PerformanceLevel'))
+			if DataDisks[i].get('AutoSnapshotPolicyId') is not None:
+				self.add_query_param('DataDisk.' + str(i + 1) + '.AutoSnapshotPolicyId' , DataDisks[i].get('AutoSnapshotPolicyId'))
 
 
 	def get_LaunchTemplateVersion(self):
