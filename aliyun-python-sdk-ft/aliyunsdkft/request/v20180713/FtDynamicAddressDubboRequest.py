@@ -17,17 +17,21 @@
 # specific language governing permissions and limitations
 # under the License.
 
-from aliyunsdkcore.request import RoaRequest
+from aliyunsdkcore.request import RpcRequest
 
-class RoaHttpStringResponseTestRequest(RoaRequest):
+class FtDynamicAddressDubboRequest(RpcRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Ft', '2019-08-02', 'RoaHttpStringResponseTest','ft')
-		self.set_uri_pattern('/web/getData')
-		self.set_method('POST|GET')
+		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtDynamicAddressDubbo')
 
-	def get_QueryParam(self):
-		return self.get_query_params().get('QueryParam')
+	def get_IntValue(self):
+		return self.get_query_params().get('IntValue')
 
-	def set_QueryParam(self,QueryParam):
-		self.add_query_param('QueryParam',QueryParam)
+	def set_IntValue(self,IntValue):
+		self.add_query_param('IntValue',IntValue)
+
+	def get_StringValue(self):
+		return self.get_query_params().get('StringValue')
+
+	def set_StringValue(self,StringValue):
+		self.add_query_param('StringValue',StringValue)
