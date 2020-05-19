@@ -31,7 +31,7 @@ Created on 7/3/2015
 """
 
 PACKAGE = "aliyunsdkbss"
-NAME = "aliyun-python-sdk-bss-test"
+NAME = "aliyun-python-sdk-bss"
 DESCRIPTION = "The bss module of Aliyun Python sdk."
 AUTHOR = "Aliyun"
 AUTHOR_EMAIL = "aliyun-developers-efficiency@list.alibaba-inc.com"
