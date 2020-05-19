@@ -1,3 +1,6 @@
+2020-05-19 Version: 2.15.9
+- Generated 2017-03-21 for `vod`.
+
 2019-04-11 Version: 2.15.2
 1, Add some new apis to manage VoD's App, such as CreateAppInfo, GetAppInfos, ListAppInfos, UpdateAppInfo, DeleteAppInfo, AttachAppPolicyToIdentity, DetachAppPolicyFromIdentity, ListAppPoliciesForIdentity and MoveAppResource.
 2, Add new apis SetMessageCallback, GetMessageCallback and DeleteMessageCallback to manage message callback configuration.

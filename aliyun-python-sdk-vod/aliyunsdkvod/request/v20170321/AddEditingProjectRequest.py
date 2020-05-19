@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,30 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+
 class AddEditingProjectRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'vod', '2017-03-21', 'AddEditingProject','vod')
+		self.set_method('POST')
+
+	def get_ResourceOwnerId(self):
+		return self.get_query_params().get('ResourceOwnerId')
+
+	def set_ResourceOwnerId(self,ResourceOwnerId):
+		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_Description(self):
+		return self.get_query_params().get('Description')
+
+	def set_Description(self,Description):
+		self.add_query_param('Description',Description)
+
+	def get_Title(self):
+		return self.get_query_params().get('Title')
+
+	def set_Title(self,Title):
+		self.add_query_param('Title',Title)
 
 	def get_CoverURL(self):
 		return self.get_query_params().get('CoverURL')
@@ -35,12 +55,6 @@ class AddEditingProjectRequest(RpcRequest):
 	def set_Division(self,Division):
 		self.add_query_param('Division',Division)
 
-	def get_ResourceOwnerId(self):
-		return self.get_query_params().get('ResourceOwnerId')
-
-	def set_ResourceOwnerId(self,ResourceOwnerId):
-		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
-
 	def get_ResourceOwnerAccount(self):
 		return self.get_query_params().get('ResourceOwnerAccount')
 
@@ -53,26 +67,14 @@ class AddEditingProjectRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
-	def get_Description(self):
-		return self.get_query_params().get('Description')
-
-	def set_Description(self,Description):
-		self.add_query_param('Description',Description)
-
-	def get_Timeline(self):
-		return self.get_query_params().get('Timeline')
-
-	def set_Timeline(self,Timeline):
-		self.add_query_param('Timeline',Timeline)
-
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
 
-	def get_Title(self):
-		return self.get_query_params().get('Title')
+	def get_Timeline(self):
+		return self.get_query_params().get('Timeline')
 
-	def set_Title(self,Title):
-		self.add_query_param('Title',Title)
+	def set_Timeline(self,Timeline):
+		self.add_query_param('Timeline',Timeline)

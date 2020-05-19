@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,16 +18,24 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+
 class DeleteImageRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'vod', '2017-03-21', 'DeleteImage','vod')
+		self.set_method('POST')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
 
 	def set_ResourceOwnerId(self,ResourceOwnerId):
 		self.add_query_param('ResourceOwnerId',ResourceOwnerId)
+
+	def get_ImageURLs(self):
+		return self.get_query_params().get('ImageURLs')
+
+	def set_ImageURLs(self,ImageURLs):
+		self.add_query_param('ImageURLs',ImageURLs)
 
 	def get_ImageType(self):
 		return self.get_query_params().get('ImageType')
@@ -40,12 +48,6 @@ class DeleteImageRequest(RpcRequest):
 
 	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
 		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
-
-	def get_ImageURLs(self):
-		return self.get_query_params().get('ImageURLs')
-
-	def set_ImageURLs(self,ImageURLs):
-		self.add_query_param('ImageURLs',ImageURLs)
 
 	def get_VideoId(self):
 		return self.get_query_params().get('VideoId')

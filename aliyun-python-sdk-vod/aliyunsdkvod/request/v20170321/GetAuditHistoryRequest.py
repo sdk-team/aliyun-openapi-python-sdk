@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,16 +18,12 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+
 class GetAuditHistoryRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'vod', '2017-03-21', 'GetAuditHistory','vod')
-
-	def get_PageNo(self):
-		return self.get_query_params().get('PageNo')
-
-	def set_PageNo(self,PageNo):
-		self.add_query_param('PageNo',PageNo)
+		self.set_method('POST')
 
 	def get_PageSize(self):
 		return self.get_query_params().get('PageSize')
@@ -40,6 +36,12 @@ class GetAuditHistoryRequest(RpcRequest):
 
 	def set_VideoId(self,VideoId):
 		self.add_query_param('VideoId',VideoId)
+
+	def get_PageNo(self):
+		return self.get_query_params().get('PageNo')
+
+	def set_PageNo(self,PageNo):
+		self.add_query_param('PageNo',PageNo)
 
 	def get_SortBy(self):
 		return self.get_query_params().get('SortBy')

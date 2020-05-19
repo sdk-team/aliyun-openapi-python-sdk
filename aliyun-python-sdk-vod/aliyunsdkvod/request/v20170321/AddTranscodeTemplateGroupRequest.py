@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,12 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+
 class AddTranscodeTemplateGroupRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'vod', '2017-03-21', 'AddTranscodeTemplateGroup','vod')
+		self.set_method('POST')
 
 	def get_TranscodeTemplateList(self):
 		return self.get_query_params().get('TranscodeTemplateList')
@@ -41,12 +43,6 @@ class AddTranscodeTemplateGroupRequest(RpcRequest):
 	def set_ResourceOwnerAccount(self,ResourceOwnerAccount):
 		self.add_query_param('ResourceOwnerAccount',ResourceOwnerAccount)
 
-	def get_Name(self):
-		return self.get_query_params().get('Name')
-
-	def set_Name(self,Name):
-		self.add_query_param('Name',Name)
-
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
@@ -58,3 +54,15 @@ class AddTranscodeTemplateGroupRequest(RpcRequest):
 
 	def set_TranscodeTemplateGroupId(self,TranscodeTemplateGroupId):
 		self.add_query_param('TranscodeTemplateGroupId',TranscodeTemplateGroupId)
+
+	def get_AppId(self):
+		return self.get_query_params().get('AppId')
+
+	def set_AppId(self,AppId):
+		self.add_query_param('AppId',AppId)
+
+	def get_Name(self):
+		return self.get_query_params().get('Name')
+
+	def set_Name(self,Name):
+		self.add_query_param('Name',Name)

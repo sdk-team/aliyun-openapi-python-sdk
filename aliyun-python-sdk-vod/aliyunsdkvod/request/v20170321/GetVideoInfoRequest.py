@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,12 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+
 class GetVideoInfoRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'vod', '2017-03-21', 'GetVideoInfo','vod')
+		self.set_method('POST')
 
 	def get_ResourceOwnerId(self):
 		return self.get_query_params().get('ResourceOwnerId')
@@ -41,20 +43,14 @@ class GetVideoInfoRequest(RpcRequest):
 	def set_VideoId(self,VideoId):
 		self.add_query_param('VideoId',VideoId)
 
-	def get_AdditionType(self):
-		return self.get_query_params().get('AdditionType')
-
-	def set_AdditionType(self,AdditionType):
-		self.add_query_param('AdditionType',AdditionType)
-
-	def get_ResultTypes(self):
-		return self.get_query_params().get('ResultTypes')
-
-	def set_ResultTypes(self,ResultTypes):
-		self.add_query_param('ResultTypes',ResultTypes)
-
 	def get_OwnerId(self):
 		return self.get_query_params().get('OwnerId')
 
 	def set_OwnerId(self,OwnerId):
 		self.add_query_param('OwnerId',OwnerId)
+
+	def get_AdditionType(self):
+		return self.get_query_params().get('AdditionType')
+
+	def set_AdditionType(self,AdditionType):
+		self.add_query_param('AdditionType',AdditionType)
