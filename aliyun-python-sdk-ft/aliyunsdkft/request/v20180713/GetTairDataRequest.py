@@ -20,10 +20,10 @@
 from aliyunsdkcore.request import RpcRequest
 from aliyunsdkft.endpoint import endpoint_data
 
-class FtFlowSpecialRequest(RpcRequest):
+class GetTairDataRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtFlowSpecial')
+		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'GetTairData')
 		self.set_method('POST')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
@@ -31,8 +31,16 @@ class FtFlowSpecialRequest(RpcRequest):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
 
-	def get_Name(self):
-		return self.get_query_params().get('Name')
+	def get_Keyss(self):
+		return self.get_query_params().get('Keyss')
 
-	def set_Name(self,Name):
-		self.add_query_param('Name',Name)
+	def set_Keyss(self, Keyss):
+		for depth1 in range(len(Keyss)):
+			if Keyss[depth1] is not None:
+				self.add_query_param('Keys.' + str(depth1 + 1) , Keyss[depth1])
+
+	def get_CacheName(self):
+		return self.get_query_params().get('CacheName')
+
+	def set_CacheName(self,CacheName):
+		self.add_query_param('CacheName',CacheName)

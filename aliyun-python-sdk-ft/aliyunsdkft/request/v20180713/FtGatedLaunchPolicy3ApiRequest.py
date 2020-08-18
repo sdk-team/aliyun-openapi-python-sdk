@@ -18,11 +18,18 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+from aliyunsdkft.endpoint import endpoint_data
 
 class FtGatedLaunchPolicy3ApiRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtGatedLaunchPolicy3Api')
+		self.set_method('POST')
+		if hasattr(self, "endpoint_map"):
+			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+		if hasattr(self, "endpoint_regional"):
+			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+
 
 	def get_Name(self):
 		return self.get_query_params().get('Name')

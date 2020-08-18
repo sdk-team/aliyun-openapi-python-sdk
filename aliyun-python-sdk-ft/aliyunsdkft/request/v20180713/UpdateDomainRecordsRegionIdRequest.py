@@ -20,10 +20,10 @@
 from aliyunsdkcore.request import RpcRequest
 from aliyunsdkft.endpoint import endpoint_data
 
-class FtFlowSpecialRequest(RpcRequest):
+class UpdateDomainRecordsRegionIdRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtFlowSpecial')
+		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'UpdateDomainRecordsRegionId')
 		self.set_method('POST')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
@@ -31,8 +31,26 @@ class FtFlowSpecialRequest(RpcRequest):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
 
-	def get_Name(self):
-		return self.get_query_params().get('Name')
+	def get_Domain(self):
+		return self.get_query_params().get('Domain')
 
-	def set_Name(self,Name):
-		self.add_query_param('Name',Name)
+	def set_Domain(self,Domain):
+		self.add_query_param('Domain',Domain)
+
+	def get_BucUid(self):
+		return self.get_query_params().get('BucUid')
+
+	def set_BucUid(self,BucUid):
+		self.add_query_param('BucUid',BucUid)
+
+	def get_BucName(self):
+		return self.get_query_params().get('BucName')
+
+	def set_BucName(self,BucName):
+		self.add_query_param('BucName',BucName)
+
+	def get_BucEmpId(self):
+		return self.get_query_params().get('BucEmpId')
+
+	def set_BucEmpId(self,BucEmpId):
+		self.add_query_param('BucEmpId',BucEmpId)

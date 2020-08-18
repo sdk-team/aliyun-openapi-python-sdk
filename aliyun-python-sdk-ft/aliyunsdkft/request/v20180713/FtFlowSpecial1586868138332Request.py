@@ -20,10 +20,10 @@
 from aliyunsdkcore.request import RpcRequest
 from aliyunsdkft.endpoint import endpoint_data
 
-class FtFlowSpecialRequest(RpcRequest):
+class FtFlowSpecial1586868138332Request(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtFlowSpecial')
+		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtFlowSpecial1586868138332')
 		self.set_method('POST')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())

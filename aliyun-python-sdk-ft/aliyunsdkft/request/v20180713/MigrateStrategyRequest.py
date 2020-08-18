@@ -20,28 +20,40 @@
 from aliyunsdkcore.request import RpcRequest
 from aliyunsdkft.endpoint import endpoint_data
 
-class DescribeResourceTypeRequest(RpcRequest):
+class MigrateStrategyRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'DescribeResourceType')
-		self.set_method('GET')
+		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'MigrateStrategy')
+		self.set_method('POST')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
 
-	def get_Product(self):
-		return self.get_query_params().get('Product')
+	def get_apiName(self):
+		return self.get_query_params().get('apiName')
 
-	def set_Product(self,Product):
-		self.add_query_param('Product',Product)
+	def set_apiName(self,apiName):
+		self.add_query_param('apiName',apiName)
 
-	def get_AcceptLanguage(self):
-		return self.get_query_params().get('AcceptLanguage')
+	def get_ProductName(self):
+		return self.get_query_params().get('ProductName')
 
-	def set_AcceptLanguage(self,AcceptLanguage):
-		self.add_query_param('AcceptLanguage',AcceptLanguage)
+	def set_ProductName(self,ProductName):
+		self.add_query_param('ProductName',ProductName)
+
+	def get_BucUid(self):
+		return self.get_query_params().get('BucUid')
+
+	def set_BucUid(self,BucUid):
+		self.add_query_param('BucUid',BucUid)
+
+	def get_BucName(self):
+		return self.get_query_params().get('BucName')
+
+	def set_BucName(self,BucName):
+		self.add_query_param('BucName',BucName)
 
 	def get_Env(self):
 		return self.get_query_params().get('Env')
@@ -49,8 +61,14 @@ class DescribeResourceTypeRequest(RpcRequest):
 	def set_Env(self,Env):
 		self.add_query_param('Env',Env)
 
-	def get_ResourceType(self):
-		return self.get_query_params().get('ResourceType')
+	def get_BucEmpId(self):
+		return self.get_query_params().get('BucEmpId')
 
-	def set_ResourceType(self,ResourceType):
-		self.add_query_param('ResourceType',ResourceType)
+	def set_BucEmpId(self,BucEmpId):
+		self.add_query_param('BucEmpId',BucEmpId)
+
+	def get_VersionName(self):
+		return self.get_query_params().get('VersionName')
+
+	def set_VersionName(self,VersionName):
+		self.add_query_param('VersionName',VersionName)

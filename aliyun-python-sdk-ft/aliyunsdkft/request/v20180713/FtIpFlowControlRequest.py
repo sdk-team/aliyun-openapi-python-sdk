@@ -18,14 +18,21 @@
 # under the License.
 
 from aliyunsdkcore.request import RpcRequest
+from aliyunsdkft.endpoint import endpoint_data
 
 class FtIpFlowControlRequest(RpcRequest):
 
 	def __init__(self):
 		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtIpFlowControl')
+		self.set_method('POST')
+		if hasattr(self, "endpoint_map"):
+			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+		if hasattr(self, "endpoint_regional"):
+			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
-	def get_Name(self):
-		return self.get_query_params().get('Name')
 
-	def set_Name(self,Name):
-		self.add_query_param('Name',Name)
+	def get_StringList(self):
+		return self.get_query_params().get('StringList')
+
+	def set_StringList(self,StringList):
+		self.add_query_param('StringList',StringList)
