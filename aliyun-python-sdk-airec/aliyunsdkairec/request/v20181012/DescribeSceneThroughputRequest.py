@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,11 +18,12 @@
 # under the License.
 
 from aliyunsdkcore.request import RoaRequest
-class DescribeSchemaRequest(RoaRequest):
+
+class DescribeSceneThroughputRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'DescribeSchema','airec')
-		self.set_uri_pattern('/openapi/instances/[InstanceId]/schema')
+		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'DescribeSceneThroughput')
+		self.set_uri_pattern('/openapi/instances/[InstanceId]/scenes/[SceneId]/throughput')
 		self.set_method('GET')
 
 	def get_InstanceId(self):
@@ -30,3 +31,9 @@ class DescribeSchemaRequest(RoaRequest):
 
 	def set_InstanceId(self,InstanceId):
 		self.add_path_param('InstanceId',InstanceId)
+
+	def get_SceneId(self):
+		return self.get_path_params().get('SceneId')
+
+	def set_SceneId(self,SceneId):
+		self.add_path_param('SceneId',SceneId)

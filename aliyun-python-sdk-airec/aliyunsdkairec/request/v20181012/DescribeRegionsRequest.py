@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,27 +18,16 @@
 # under the License.
 
 from aliyunsdkcore.request import RoaRequest
-class DescribeDashboardRequest(RoaRequest):
+
+class DescribeRegionsRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'DescribeDashboard','airec')
-		self.set_uri_pattern('/openapi/instances/[InstanceId]/dashboard')
+		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'DescribeRegions')
+		self.set_uri_pattern('/openapi/configurations/regions')
 		self.set_method('GET')
 
-	def get_InstanceId(self):
-		return self.get_path_params().get('InstanceId')
+	def get_AcceptLanguage(self):
+		return self.get_query_params().get('AcceptLanguage')
 
-	def set_InstanceId(self,InstanceId):
-		self.add_path_param('InstanceId',InstanceId)
-
-	def get_EndDate(self):
-		return self.get_query_params().get('EndDate')
-
-	def set_EndDate(self,EndDate):
-		self.add_query_param('EndDate',EndDate)
-
-	def get_StartDate(self):
-		return self.get_query_params().get('StartDate')
-
-	def set_StartDate(self,StartDate):
-		self.add_query_param('StartDate',StartDate)
+	def set_AcceptLanguage(self,AcceptLanguage):
+		self.add_query_param('AcceptLanguage',AcceptLanguage)

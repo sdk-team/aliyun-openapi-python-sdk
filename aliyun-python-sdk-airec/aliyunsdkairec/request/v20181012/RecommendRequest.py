@@ -6,8 +6,8 @@
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 #
 # Unless required by applicable law or agreed to in writing,
@@ -18,10 +18,11 @@
 # under the License.
 
 from aliyunsdkcore.request import RoaRequest
+
 class RecommendRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'Recommend','airec')
+		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'Recommend')
 		self.set_uri_pattern('/openapi/instances/[InstanceId]/actions/recommend')
 		self.set_method('GET')
 
@@ -60,3 +61,9 @@ class RecommendRequest(RoaRequest):
 
 	def set_UserId(self,UserId):
 		self.add_query_param('UserId',UserId)
+
+	def get_Items(self):
+		return self.get_query_params().get('Items')
+
+	def set_Items(self,Items):
+		self.add_query_param('Items',Items)
