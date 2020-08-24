@@ -19,27 +19,33 @@
 
 from aliyunsdkcore.request import RoaRequest
 
-class DescribeUserMetricsRequest(RoaRequest):
+class ModifyRuleStateRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'DescribeUserMetrics')
-		self.set_uri_pattern('/openapi/instances/[InstanceId]/metrics')
-		self.set_method('GET')
+		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'ModifyRuleState')
+		self.set_uri_pattern('/innerapi/instances/[InstanceId]/rules/actions/changestate')
+		self.set_method('PUT')
 
-	def get_MetricType(self):
-		return self.get_query_params().get('MetricType')
+	def get_InstanceId(self):
+		return self.get_path_params().get('InstanceId')
 
-	def set_MetricType(self,MetricType):
-		self.add_query_param('MetricType',MetricType)
+	def set_InstanceId(self,InstanceId):
+		self.add_path_param('InstanceId',InstanceId)
 
-	def get_EndTime(self):
-		return self.get_query_params().get('EndTime')
+	def get_RuleType(self):
+		return self.get_query_params().get('RuleType')
 
-	def set_EndTime(self,EndTime):
-		self.add_query_param('EndTime',EndTime)
+	def set_RuleType(self,RuleType):
+		self.add_query_param('RuleType',RuleType)
 
-	def get_StartTime(self):
-		return self.get_query_params().get('StartTime')
+	def get_SceneId(self):
+		return self.get_query_params().get('SceneId')
 
-	def set_StartTime(self,StartTime):
-		self.add_query_param('StartTime',StartTime)
+	def set_SceneId(self,SceneId):
+		self.add_query_param('SceneId',SceneId)
+
+	def get_Status(self):
+		return self.get_query_params().get('Status')
+
+	def set_Status(self,Status):
+		self.add_query_param('Status',Status)

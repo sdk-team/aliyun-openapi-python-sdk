@@ -1,6 +1,9 @@
 2020-08-24 Version: 1.0.0
 - Generated 2018-10-12 for `Airec`.
 
+2020-08-24 Version: 1.0.0
+- Generated 2018-10-12 for `Airec`.
+
 2019-01-03 Version: 1.0.0
 1, Airec SDK Release Version 1.0.0.
 

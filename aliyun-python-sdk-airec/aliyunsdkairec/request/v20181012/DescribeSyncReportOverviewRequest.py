@@ -19,27 +19,21 @@
 
 from aliyunsdkcore.request import RoaRequest
 
-class DescribeUserMetricsRequest(RoaRequest):
+class DescribeSyncReportOverviewRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'DescribeUserMetrics')
-		self.set_uri_pattern('/openapi/instances/[InstanceId]/metrics')
+		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'DescribeSyncReportOverview')
+		self.set_uri_pattern('/openapi/instances/[InstanceId]/sync-reports')
 		self.set_method('GET')
 
-	def get_MetricType(self):
-		return self.get_query_params().get('MetricType')
+	def get_InstanceId(self):
+		return self.get_path_params().get('InstanceId')
 
-	def set_MetricType(self,MetricType):
-		self.add_query_param('MetricType',MetricType)
+	def set_InstanceId(self,InstanceId):
+		self.add_path_param('InstanceId',InstanceId)
 
-	def get_EndTime(self):
-		return self.get_query_params().get('EndTime')
+	def get_QueryTime(self):
+		return self.get_query_params().get('QueryTime')
 
-	def set_EndTime(self,EndTime):
-		self.add_query_param('EndTime',EndTime)
-
-	def get_StartTime(self):
-		return self.get_query_params().get('StartTime')
-
-	def set_StartTime(self,StartTime):
-		self.add_query_param('StartTime',StartTime)
+	def set_QueryTime(self,QueryTime):
+		self.add_query_param('QueryTime',QueryTime)

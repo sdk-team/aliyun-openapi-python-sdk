@@ -19,27 +19,15 @@
 
 from aliyunsdkcore.request import RoaRequest
 
-class DescribeUserMetricsRequest(RoaRequest):
+class DeleteInstanceRequest(RoaRequest):
 
 	def __init__(self):
-		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'DescribeUserMetrics')
-		self.set_uri_pattern('/openapi/instances/[InstanceId]/metrics')
-		self.set_method('GET')
+		RoaRequest.__init__(self, 'Airec', '2018-10-12', 'DeleteInstance')
+		self.set_uri_pattern('/openapi/instances/[InstanceId]')
+		self.set_method('DELETE')
 
-	def get_MetricType(self):
-		return self.get_query_params().get('MetricType')
+	def get_InstanceId(self):
+		return self.get_path_params().get('InstanceId')
 
-	def set_MetricType(self,MetricType):
-		self.add_query_param('MetricType',MetricType)
-
-	def get_EndTime(self):
-		return self.get_query_params().get('EndTime')
-
-	def set_EndTime(self,EndTime):
-		self.add_query_param('EndTime',EndTime)
-
-	def get_StartTime(self):
-		return self.get_query_params().get('StartTime')
-
-	def set_StartTime(self,StartTime):
-		self.add_query_param('StartTime',StartTime)
+	def set_InstanceId(self,InstanceId):
+		self.add_path_param('InstanceId',InstanceId)
