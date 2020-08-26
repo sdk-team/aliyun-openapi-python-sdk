@@ -31,8 +31,8 @@ class FtIpFlowControlRequest(RpcRequest):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
 
-	def get_StringList(self):
-		return self.get_query_params().get('StringList')
+	def get_Name(self):
+		return self.get_query_params().get('Name')
 
-	def set_StringList(self,StringList):
-		self.add_query_param('StringList',StringList)
+	def set_Name(self,Name):
+		self.add_query_param('Name',Name)

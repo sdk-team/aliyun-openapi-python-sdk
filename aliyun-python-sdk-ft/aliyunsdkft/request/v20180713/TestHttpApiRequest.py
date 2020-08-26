@@ -31,23 +31,17 @@ class TestHttpApiRequest(RpcRequest):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
 
-	def get_IspSignatureSecretKey(self):
-		return self.get_query_params().get('IspSignatureSecretKey')
-
-	def set_IspSignatureSecretKey(self,IspSignatureSecretKey):
-		self.add_query_param('IspSignatureSecretKey',IspSignatureSecretKey)
-
 	def get_StringValue(self):
-		return self.get_body_params().get('StringValue')
+		return self.get_query_params().get('StringValue')
 
 	def set_StringValue(self,StringValue):
-		self.add_body_params('StringValue', StringValue)
+		self.add_query_param('StringValue',StringValue)
 
 	def get_OtherParam(self):
-		return self.get_body_params().get('OtherParam')
+		return self.get_query_params().get('OtherParam')
 
 	def set_OtherParam(self,OtherParam):
-		self.add_body_params('OtherParam', OtherParam)
+		self.add_query_param('OtherParam',OtherParam)
 
 	def get_BooleanParam(self):
 		return self.get_query_params().get('BooleanParam')
@@ -56,13 +50,7 @@ class TestHttpApiRequest(RpcRequest):
 		self.add_query_param('BooleanParam',BooleanParam)
 
 	def get_DefaultValue(self):
-		return self.get_body_params().get('DefaultValue')
+		return self.get_query_params().get('DefaultValue')
 
 	def set_DefaultValue(self,DefaultValue):
-		self.add_body_params('DefaultValue', DefaultValue)
-
-	def get_IspSignature(self):
-		return self.get_query_params().get('IspSignature')
-
-	def set_IspSignature(self,IspSignature):
-		self.add_query_param('IspSignature',IspSignature)
+		self.add_query_param('DefaultValue',DefaultValue)
