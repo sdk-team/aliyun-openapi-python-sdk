@@ -20,19 +20,37 @@
 from aliyunsdkcore.request import RpcRequest
 from aliyunsdkft.endpoint import endpoint_data
 
-class FtIpFlowControlRequest(RpcRequest):
+class DescribeResourceTypeRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtIpFlowControl')
-		self.set_method('POST')
+		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'DescribeResourceType')
+		self.set_method('GET')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
 
-	def get_StringList(self):
-		return self.get_query_params().get('StringList')
+	def get_Product(self):
+		return self.get_query_params().get('Product')
 
-	def set_StringList(self,StringList):
-		self.add_query_param('StringList',StringList)
+	def set_Product(self,Product):
+		self.add_query_param('Product',Product)
+
+	def get_AcceptLanguage(self):
+		return self.get_query_params().get('AcceptLanguage')
+
+	def set_AcceptLanguage(self,AcceptLanguage):
+		self.add_query_param('AcceptLanguage',AcceptLanguage)
+
+	def get_Env(self):
+		return self.get_query_params().get('Env')
+
+	def set_Env(self,Env):
+		self.add_query_param('Env',Env)
+
+	def get_ResourceType(self):
+		return self.get_query_params().get('ResourceType')
+
+	def set_ResourceType(self,ResourceType):
+		self.add_query_param('ResourceType',ResourceType)

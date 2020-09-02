@@ -20,19 +20,37 @@
 from aliyunsdkcore.request import RpcRequest
 from aliyunsdkft.endpoint import endpoint_data
 
-class FtIpFlowControlRequest(RpcRequest):
+class TestErrorCodeForGateWayRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtIpFlowControl')
-		self.set_method('POST')
+		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'TestErrorCodeForGateWay')
+		self.set_method('GET')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
 		if hasattr(self, "endpoint_regional"):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
 
-	def get_StringList(self):
-		return self.get_query_params().get('StringList')
+	def get_HttpStatusCode(self):
+		return self.get_query_params().get('HttpStatusCode')
 
-	def set_StringList(self,StringList):
-		self.add_query_param('StringList',StringList)
+	def set_HttpStatusCode(self,HttpStatusCode):
+		self.add_query_param('HttpStatusCode',HttpStatusCode)
+
+	def get_Code(self):
+		return self.get_query_params().get('Code')
+
+	def set_Code(self,Code):
+		self.add_query_param('Code',Code)
+
+	def get_Success(self):
+		return self.get_query_params().get('Success')
+
+	def set_Success(self,Success):
+		self.add_query_param('Success',Success)
+
+	def get_Message(self):
+		return self.get_query_params().get('Message')
+
+	def set_Message(self,Message):
+		self.add_query_param('Message',Message)

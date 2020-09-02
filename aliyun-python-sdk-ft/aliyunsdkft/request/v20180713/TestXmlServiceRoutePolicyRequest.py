@@ -20,10 +20,10 @@
 from aliyunsdkcore.request import RpcRequest
 from aliyunsdkft.endpoint import endpoint_data
 
-class FtIpFlowControlRequest(RpcRequest):
+class TestXmlServiceRoutePolicyRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtIpFlowControl')
+		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'TestXmlServiceRoutePolicy')
 		self.set_method('POST')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
@@ -31,8 +31,8 @@ class FtIpFlowControlRequest(RpcRequest):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
 
-	def get_StringList(self):
-		return self.get_query_params().get('StringList')
+	def get_Api(self):
+		return self.get_query_params().get('Api')
 
-	def set_StringList(self,StringList):
-		self.add_query_param('StringList',StringList)
+	def set_Api(self,Api):
+		self.add_query_param('Api',Api)

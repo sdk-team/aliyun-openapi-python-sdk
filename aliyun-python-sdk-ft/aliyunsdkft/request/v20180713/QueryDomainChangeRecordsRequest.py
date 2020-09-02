@@ -20,10 +20,10 @@
 from aliyunsdkcore.request import RpcRequest
 from aliyunsdkft.endpoint import endpoint_data
 
-class FtIpFlowControlRequest(RpcRequest):
+class QueryDomainChangeRecordsRequest(RpcRequest):
 
 	def __init__(self):
-		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'FtIpFlowControl')
+		RpcRequest.__init__(self, 'Ft', '2018-07-13', 'QueryDomainChangeRecords')
 		self.set_method('POST')
 		if hasattr(self, "endpoint_map"):
 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
@@ -31,8 +31,38 @@ class FtIpFlowControlRequest(RpcRequest):
 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
 
 
-	def get_StringList(self):
-		return self.get_query_params().get('StringList')
+	def get_Product(self):
+		return self.get_query_params().get('Product')
 
-	def set_StringList(self,StringList):
-		self.add_query_param('StringList',StringList)
+	def set_Product(self,Product):
+		self.add_query_param('Product',Product)
+
+	def get_PageSize(self):
+		return self.get_query_params().get('PageSize')
+
+	def set_PageSize(self,PageSize):
+		self.add_query_param('PageSize',PageSize)
+
+	def get_BucUid(self):
+		return self.get_query_params().get('BucUid')
+
+	def set_BucUid(self,BucUid):
+		self.add_query_param('BucUid',BucUid)
+
+	def get_CurrentPage(self):
+		return self.get_query_params().get('CurrentPage')
+
+	def set_CurrentPage(self,CurrentPage):
+		self.add_query_param('CurrentPage',CurrentPage)
+
+	def get_BucName(self):
+		return self.get_query_params().get('BucName')
+
+	def set_BucName(self,BucName):
+		self.add_query_param('BucName',BucName)
+
+	def get_BucEmpId(self):
+		return self.get_query_params().get('BucEmpId')
+
+	def set_BucEmpId(self,BucEmpId):
+		self.add_query_param('BucEmpId',BucEmpId)
