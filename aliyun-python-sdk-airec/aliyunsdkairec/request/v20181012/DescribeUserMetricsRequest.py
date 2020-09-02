@@ -32,6 +32,12 @@ class DescribeUserMetricsRequest(RoaRequest):
 	def set_MetricType(self,MetricType):
 		self.add_query_param('MetricType',MetricType)
 
+	def get_InstanceId(self):
+		return self.get_path_params().get('InstanceId')
+
+	def set_InstanceId(self,InstanceId):
+		self.add_path_param('InstanceId',InstanceId)
+
 	def get_EndTime(self):
 		return self.get_query_params().get('EndTime')
 
