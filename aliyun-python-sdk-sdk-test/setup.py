@@ -31,7 +31,7 @@ Created on 7/3/2015
 """
 
 PACKAGE = "aliyunsdksdk_test"
-NAME = "aliyun-python-sdk-sdk-test_test"
+NAME = "aliyun-python-sdk-sdk-test-test"
 DESCRIPTION = "The sdk-test module of Aliyun Python sdk."
 AUTHOR = "Aliyun"
 AUTHOR_EMAIL = "aliyun-developers-efficiency@list.alibaba-inc.com"
