@@ -49,10 +49,10 @@ class DescribeSnapshotGroupsRequest(RpcRequest):
 	def set_OwnerAccount(self,OwnerAccount):
 		self.add_query_param('OwnerAccount',OwnerAccount)
 
-	def get_SnapshotGroupId(self):
+	def get_SnapshotGroupIds(self):
 		return self.get_query_params().get('SnapshotGroupId')
 
-	def set_SnapshotGroupId(self, SnapshotGroupIds):
+	def set_SnapshotGroupIds(self, SnapshotGroupIds):
 		for depth1 in range(len(SnapshotGroupIds)):
 			if SnapshotGroupIds[depth1] is not None:
 				self.add_query_param('SnapshotGroupId.' + str(depth1 + 1) , SnapshotGroupIds[depth1])
@@ -81,10 +81,10 @@ class DescribeSnapshotGroupsRequest(RpcRequest):
 	def set_MaxResults(self,MaxResults):
 		self.add_query_param('MaxResults',MaxResults)
 
-	def get_Status(self):
+	def get_Statuss(self):
 		return self.get_query_params().get('Status')
 
-	def set_Status(self, Statuss):
+	def set_Statuss(self, Statuss):
 		for depth1 in range(len(Statuss)):
 			if Statuss[depth1] is not None:
 				self.add_query_param('Status.' + str(depth1 + 1) , Statuss[depth1])

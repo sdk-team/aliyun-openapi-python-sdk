@@ -25,10 +25,10 @@ class DescribeInstanceHistoryEventsRequest(RpcRequest):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'DescribeInstanceHistoryEvents')
 		self.set_method('POST')
 
-	def get_EventId(self):
+	def get_EventIds(self):
 		return self.get_query_params().get('EventId')
 
-	def set_EventId(self, EventIds):
+	def set_EventIds(self, EventIds):
 		for depth1 in range(len(EventIds)):
 			if EventIds[depth1] is not None:
 				self.add_query_param('EventId.' + str(depth1 + 1) , EventIds[depth1])
@@ -63,10 +63,10 @@ class DescribeInstanceHistoryEventsRequest(RpcRequest):
 	def set_PageSize(self,PageSize):
 		self.add_query_param('PageSize',PageSize)
 
-	def get_InstanceEventCycleStatus(self):
+	def get_InstanceEventCycleStatuss(self):
 		return self.get_query_params().get('InstanceEventCycleStatus')
 
-	def set_InstanceEventCycleStatus(self, InstanceEventCycleStatuss):
+	def set_InstanceEventCycleStatuss(self, InstanceEventCycleStatuss):
 		for depth1 in range(len(InstanceEventCycleStatuss)):
 			if InstanceEventCycleStatuss[depth1] is not None:
 				self.add_query_param('InstanceEventCycleStatus.' + str(depth1 + 1) , InstanceEventCycleStatuss[depth1])
@@ -77,10 +77,10 @@ class DescribeInstanceHistoryEventsRequest(RpcRequest):
 	def set_EventPublishTimeEnd(self,EventPublishTimeEnd):
 		self.add_query_param('EventPublishTime.End',EventPublishTimeEnd)
 
-	def get_InstanceEventType(self):
+	def get_InstanceEventTypes(self):
 		return self.get_query_params().get('InstanceEventType')
 
-	def set_InstanceEventType(self, InstanceEventTypes):
+	def set_InstanceEventTypes(self, InstanceEventTypes):
 		for depth1 in range(len(InstanceEventTypes)):
 			if InstanceEventTypes[depth1] is not None:
 				self.add_query_param('InstanceEventType.' + str(depth1 + 1) , InstanceEventTypes[depth1])

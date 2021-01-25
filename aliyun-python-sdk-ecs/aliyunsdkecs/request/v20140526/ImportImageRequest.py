@@ -25,10 +25,10 @@ class ImportImageRequest(RpcRequest):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'ImportImage')
 		self.set_method('POST')
 
-	def get_DiskDeviceMapping(self):
+	def get_DiskDeviceMappings(self):
 		return self.get_query_params().get('DiskDeviceMapping')
 
-	def set_DiskDeviceMapping(self, DiskDeviceMappings):
+	def set_DiskDeviceMappings(self, DiskDeviceMappings):
 		for depth1 in range(len(DiskDeviceMappings)):
 			if DiskDeviceMappings[depth1].get('OSSBucket') is not None:
 				self.add_query_param('DiskDeviceMapping.' + str(depth1 + 1) + '.OSSBucket', DiskDeviceMappings[depth1].get('OSSBucket'))
@@ -79,10 +79,10 @@ class ImportImageRequest(RpcRequest):
 	def set_ImageName(self,ImageName):
 		self.add_query_param('ImageName',ImageName)
 
-	def get_Tag(self):
+	def get_Tags(self):
 		return self.get_query_params().get('Tag')
 
-	def set_Tag(self, Tags):
+	def set_Tags(self, Tags):
 		for depth1 in range(len(Tags)):
 			if Tags[depth1].get('Value') is not None:
 				self.add_query_param('Tag.' + str(depth1 + 1) + '.Value', Tags[depth1].get('Value'))
