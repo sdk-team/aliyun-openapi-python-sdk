@@ -25,10 +25,10 @@ class CancelSimulatedSystemEventsRequest(RpcRequest):
 		RpcRequest.__init__(self, 'Ecs', '2014-05-26', 'CancelSimulatedSystemEvents')
 		self.set_method('POST')
 
-	def get_EventIds(self):
+	def get_EventId(self):
 		return self.get_query_params().get('EventId')
 
-	def set_EventIds(self, EventIds):
+	def set_EventId(self, EventIds):
 		for depth1 in range(len(EventIds)):
 			if EventIds[depth1] is not None:
 				self.add_query_param('EventId.' + str(depth1 + 1) , EventIds[depth1])

@@ -49,10 +49,10 @@ class ModifyAutoProvisioningGroupRequest(RpcRequest):
 	def set_ExcessCapacityTerminationPolicy(self,ExcessCapacityTerminationPolicy):
 		self.add_query_param('ExcessCapacityTerminationPolicy',ExcessCapacityTerminationPolicy)
 
-	def get_LaunchTemplateConfigs(self):
+	def get_LaunchTemplateConfig(self):
 		return self.get_query_params().get('LaunchTemplateConfig')
 
-	def set_LaunchTemplateConfigs(self, LaunchTemplateConfigs):
+	def set_LaunchTemplateConfig(self, LaunchTemplateConfigs):
 		for depth1 in range(len(LaunchTemplateConfigs)):
 			if LaunchTemplateConfigs[depth1].get('InstanceType') is not None:
 				self.add_query_param('LaunchTemplateConfig.' + str(depth1 + 1) + '.InstanceType', LaunchTemplateConfigs[depth1].get('InstanceType'))

@@ -37,10 +37,10 @@ class DeleteImageComponentRequest(RpcRequest):
 	def set_ImageComponentId(self,ImageComponentId):
 		self.add_query_param('ImageComponentId',ImageComponentId)
 
-	def get_TemplateTags(self):
+	def get_TemplateTag(self):
 		return self.get_query_params().get('TemplateTag')
 
-	def set_TemplateTags(self, TemplateTags):
+	def set_TemplateTag(self, TemplateTags):
 		for depth1 in range(len(TemplateTags)):
 			if TemplateTags[depth1].get('Key') is not None:
 				self.add_query_param('TemplateTag.' + str(depth1 + 1) + '.Key', TemplateTags[depth1].get('Key'))
